@@ -45,7 +45,7 @@ export function ChatHeader({
   if (!conversation) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-muted-foreground">Select a conversation to start chatting</p>
+        <p className="text-muted-foreground">选择一个会话开始聊天</p>
       </div>
     )
   }
@@ -63,15 +63,15 @@ export function ChatHeader({
   const getStatusText = () => {
     if (conversation.type === "group") {
       const onlineCount = conversationUsers.filter(user => user.status === "online").length
-      return `${conversation.participants.length} members, ${onlineCount} online`
+      return `${conversation.participants.length} 位成员，${onlineCount} 人在线`
     } else if (primaryUser) {
       switch (primaryUser.status) {
         case "online":
-          return "Active now"
+          return "正在活跃"
         case "away":
-          return "Away"
+          return "离开"
         case "offline":
-          return `Last seen ${new Date(primaryUser.lastSeen).toLocaleDateString()}`
+          return `最后上线：${new Date(primaryUser.lastSeen).toLocaleDateString()}`
         default:
           return ""
       }
@@ -117,7 +117,7 @@ export function ChatHeader({
             )}
             {conversation.type === "group" && (
               <Badge variant="secondary" className="text-xs cursor-pointer">
-                Group
+                群组
               </Badge>
             )}
           </div>
@@ -138,7 +138,7 @@ export function ChatHeader({
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Search in conversation</p>
+              <p>在会话中搜索</p>
             </TooltipContent>
           </Tooltip>
 
@@ -150,7 +150,7 @@ export function ChatHeader({
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Voice call</p>
+              <p>语音通话</p>
             </TooltipContent>
           </Tooltip>
 
@@ -162,7 +162,7 @@ export function ChatHeader({
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Video call</p>
+              <p>视频通话</p>
             </TooltipContent>
           </Tooltip>
 
@@ -179,7 +179,7 @@ export function ChatHeader({
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Conversation info</p>
+              <p>会话信息</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -199,31 +199,31 @@ export function ChatHeader({
               {conversation.isMuted ? (
                 <>
                   <Bell className="h-4 w-4 mr-2" />
-                  Unmute conversation
+                  取消静音
                 </>
               ) : (
                 <>
                   <BellOff className="h-4 w-4 mr-2" />
-                  Mute conversation
+                  静音会话
                 </>
               )}
             </DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">
               <Search className="h-4 w-4 mr-2" />
-              Search messages
+              搜索消息
             </DropdownMenuItem>
             {conversation.type === "group" && (
               <>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="cursor-pointer">
                   <Users className="h-4 w-4 mr-2" />
-                  Manage members
+                  管理成员
                 </DropdownMenuItem>
               </>
             )}
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer text-destructive">
-              Delete conversation
+              删除会话
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

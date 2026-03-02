@@ -8,64 +8,64 @@ import {
 export const categories = [
   {
     value: "bug",
-    label: "Bug",
+    label: "缺陷",
   },
   {
     value: "feature",
-    label: "Feature",
+    label: "新功能",
   },
   {
     value: "documentation",
-    label: "Docs",
+    label: "文档",
   },
   {
     value: "improvement",
-    label: "Improvement",
+    label: "改进",
   },
   {
     value: "refactor",
-    label: "Refactor",
+    label: "重构",
   },
 ]
 
 export const statuses = [
   {
     value: "pending",
-    label: "Pending",
+    label: "待处理",
     icon: Clock,
   },
   {
     value: "todo",
-    label: "Todo",
+    label: "待办",
     icon: Circle,
   },
   {
     value: "in progress",
-    label: "In Progress",
+    label: "进行中",
     icon: PlayCircle,
   },
   {
     value: "completed",
-    label: "Completed",
+    label: "已完成",
     icon: CheckCircle2,
   },
 ]
 
 export const priorities = [
   {
-    label: "Minor",
+    label: "轻微",
     value: "minor"
   },
   {
-    label: "Normal",
+    label: "普通",
     value: "normal"
   },
   {
-    label: "Important",
+    label: "重要",
     value: "important"
   },
   {
-    label: "Critical",
+    label: "紧急",
     value: "critical"
   },
 ]

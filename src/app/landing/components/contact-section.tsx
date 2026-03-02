@@ -20,19 +20,19 @@ import { Mail, MessageCircle, Github, BookOpen } from 'lucide-react'
 
 const contactFormSchema = z.object({
   firstName: z.string().min(2, {
-    message: "First name must be at least 2 characters.",
+    message: "名字至少需要2个字符。",
   }),
   lastName: z.string().min(2, {
-    message: "Last name must be at least 2 characters.",
+    message: "姓氏至少需要2个字符。",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "请输入有效的邮箱地址。",
   }),
   subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
+    message: "主题至少需要5个字符。",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "消息至少需要10个字符。",
   }),
 })
 
@@ -59,12 +59,12 @@ export function ContactSection() {
     <section id="contact" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Get In Touch</Badge>
+          <Badge variant="outline" className="mb-4">联系我们</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Need help or have questions?
+            需要帮助或有疑问？
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our team is here to help you get the most out of ShadcnStore. Choose the best way to reach out to us.
+            我们的团队随时帮助您充分利用 ShadcnStore。请选择最适合您的联系方式。
           </p>
         </div>
 
@@ -75,16 +75,16 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageCircle className="h-5 w-5 text-primary" />
-                  Discord Community
+                  Discord 社区
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-3">
-                  Join our active community for quick help and discussions with other developers.
+                  加入我们活跃的社区，与其他开发者交流获取快速帮助。
                 </p>
                 <Button variant="outline" size="sm" className="cursor-pointer" asChild>
                   <a href="https://discord.com/invite/XEQhPc9a6p" target="_blank" rel="noopener noreferrer">
-                    Join Discord
+                    加入 Discord
                   </a>
                 </Button>
               </CardContent>
@@ -99,11 +99,11 @@ export function ContactSection() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-3">
-                  Report bugs, request features, or contribute to our open source repository.
+                  报告 Bug、请求功能或为我们的开源仓库贡献代码。
                 </p>
                 <Button variant="outline" size="sm" className="cursor-pointer" asChild>
                   <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template/issues" target="_blank" rel="noopener noreferrer">
-                    View on GitHub
+                    在 GitHub 上查看
                   </a>
                 </Button>
               </CardContent>
@@ -113,16 +113,16 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <BookOpen className="h-5 w-5 text-primary" />
-                  Documentation
+                  文档
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-3">
-                  Browse our comprehensive guides, tutorials, and component documentation.
+                  浏览我们全面的指南、教程和组件文档。
                 </p>
                 <Button variant="outline" size="sm" className="cursor-pointer" asChild>
                   <a href="#">
-                    View Docs
+                    查看文档
                   </a>
                 </Button>
               </CardContent>
@@ -135,7 +135,7 @@ export function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
-                  Send us a message
+                  给我们发送消息
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -147,7 +147,7 @@ export function ContactSection() {
                         name="firstName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>First name</FormLabel>
+                            <FormLabel>名字</FormLabel>
                             <FormControl>
                               <Input placeholder="John" {...field} />
                             </FormControl>
@@ -160,7 +160,7 @@ export function ContactSection() {
                         name="lastName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Last name</FormLabel>
+                            <FormLabel>姓氏</FormLabel>
                             <FormControl>
                               <Input placeholder="Doe" {...field} />
                             </FormControl>
@@ -174,7 +174,7 @@ export function ContactSection() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email</FormLabel>
+                          <FormLabel>邮箱</FormLabel>
                           <FormControl>
                             <Input type="email" placeholder="john@example.com" {...field} />
                           </FormControl>
@@ -187,9 +187,9 @@ export function ContactSection() {
                       name="subject"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Subject</FormLabel>
+                          <FormLabel>主题</FormLabel>
                           <FormControl>
-                            <Input placeholder="Component request, bug report, general inquiry..." {...field} />
+                            <Input placeholder="组件请求、Bug反馈、一般咨询..." {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -200,10 +200,10 @@ export function ContactSection() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>消息</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Tell us how we can help you with ShadcnStore components..."
+                              placeholder="请告诉我们如何帮助您使用 ShadcnStore 组件..."
                               rows={10}
                               className="min-h-50"
                               {...field}
@@ -214,7 +214,7 @@ export function ContactSection() {
                       )}
                     />
                     <Button type="submit" className="w-full cursor-pointer">
-                      Send Message
+                      发送消息
                     </Button>
                   </form>
                 </Form>

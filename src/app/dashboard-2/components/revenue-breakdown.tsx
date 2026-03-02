@@ -17,25 +17,25 @@ const revenueData = [
 
 const chartConfig = {
   revenue: {
-    label: "Revenue",
+    label: "收入",
   },
   amount: {
-    label: "Amount",
+    label: "金额",
   },
   subscriptions: {
-    label: "Subscriptions",
+    label: "订阅",
     color: "var(--chart-1)",
   },
   sales: {
-    label: "One-time Sales",
+    label: "一次性销售",
     color: "var(--chart-2)",
   },
   services: {
-    label: "Services",
+    label: "服务",
     color: "var(--chart-3)",
   },
   partnerships: {
-    label: "Partnerships",
+    label: "合作伙伴",
     color: "var(--chart-4)",
   },
 }
@@ -56,16 +56,16 @@ export function RevenueBreakdown() {
       <ChartStyle id={id} config={chartConfig} />
       <CardHeader className="flex flex-col space-y-2 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 pb-2">
         <div>
-          <CardTitle>Revenue Breakdown</CardTitle>
-          <CardDescription>Revenue distribution by source</CardDescription>
+          <CardTitle>收入构成</CardTitle>
+          <CardDescription>按来源分布的收入</CardDescription>
         </div>
         <div className="flex items-center space-x-2">
           <Select value={activeCategory} onValueChange={setActiveCategory}>
             <SelectTrigger
               className="w-[175px] rounded-lg cursor-pointer"
-              aria-label="Select a category"
+              aria-label="选择类别"
             >
-              <SelectValue placeholder="Select category" />
+              <SelectValue placeholder="选择类别" />
             </SelectTrigger>
             <SelectContent align="end" className="rounded-lg">
               {categories.map((key) => {
@@ -96,7 +96,7 @@ export function RevenueBreakdown() {
             </SelectContent>
           </Select>
           <Button variant="outline" className="cursor-pointer">
-            Export
+            导出
           </Button>
         </div>
       </CardHeader>
@@ -155,7 +155,7 @@ export function RevenueBreakdown() {
                               y={(viewBox.cy || 0) + 24}
                               className="fill-muted-foreground"
                             >
-                              Revenue
+                              收入
                             </tspan>
                           </text>
                         )

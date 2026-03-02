@@ -29,11 +29,11 @@ export function DataTableViewOptions<TData>({
           className="ml-auto hidden h-8 lg:flex cursor-pointer mr-2"
         >
           <Settings2 />
-          View
+          视图
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
-        <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
+        <DropdownMenuLabel>切换列</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {table
           .getAllColumns()

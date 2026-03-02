@@ -8,26 +8,26 @@ const blogs = [
     {
       id: 1,
       image: 'https://ui.shadcn.com/placeholder.svg',
-      category: 'Technology',
-      title: 'AI Development Catalysts',
+      category: '技术',
+      title: 'AI开发催化剂',
       description:
-        'Exploring how AI-driven tools are transforming software development workflows and accelerating innovation.',
+        '探索 AI 驱动工具如何改变软件开发工作流程并加速创新。',
     },
     {
       id: 2,
       image: 'https://ui.shadcn.com/placeholder.svg',
-      category: 'Lifestyle',
-      title: 'Minimalist Living Guide',
+      category: '生活方式',
+      title: '极简生活指南',
       description:
-        'Minimalist living approaches that can help reduce stress and create more meaningful daily experiences.',
+        '极简生活方式可以帮助减轻压力，创造更有意义的日常体验。',
     },
     {
       id: 3,
       image: 'https://ui.shadcn.com/placeholder.svg',
-      category: 'Design',
-      title: 'Accessible UI Trends',
+      category: '设计',
+      title: '无障碍 UI 趋势',
       description:
-        'How modern UI trends are embracing accessibility while maintaining sleek, intuitive user experiences.',
+        '现代 UI 趋势如何在保持简洁直观用户体验的同时拥抱无障碍设计。',
     },
   ]
 
@@ -37,12 +37,12 @@ export function BlogSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Latest Insights</Badge>
+          <Badge variant="outline" className="mb-4">最新洞察</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            From our blog
+            来自我们的博客
           </h2>
           <p className="text-lg text-muted-foreground">
-            Stay updated with the latest trends, best practices, and insights from our team of experts.
+            紧跟最新趋势、最佳实践，以及我们专家团队的洞察见解。
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export function BlogSection() {
                     onClick={e => e.preventDefault()}
                     className="inline-flex items-center gap-2 text-primary hover:underline cursor-pointer"
                   >
-                    Learn More
+                    了解更多
                     <ArrowRight className="size-4" />
                   </a>
                 </div>

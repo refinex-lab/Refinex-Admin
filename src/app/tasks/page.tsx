@@ -49,23 +49,23 @@ export default function TaskPage() {
 
   if (loading) {
     return (
-      <BaseLayout title="Tasks" description="A powerful task and issue tracker built with Tanstack Table.">
+      <BaseLayout title="任务管理" description="基于 Tanstack Table 构建的强大任务和问题跟踪系统。">
         <div className="flex items-center justify-center h-96">
-          <div className="text-muted-foreground">Loading tasks...</div>
+          <div className="text-muted-foreground">正在加载任务...</div>
         </div>
       </BaseLayout>
     )
   }
 
   return (
-    <BaseLayout title="Tasks" description="A powerful task and issue tracker built with Tanstack Table.">
+    <BaseLayout title="任务管理" description="基于 Tanstack Table 构建的强大任务和问题跟踪系统。">
       {/* Mobile view placeholder - shows message instead of images */}
       <div className="md:hidden">
         <div className="flex items-center justify-center h-96 border rounded-lg bg-muted/20">
           <div className="text-center p-8">
-            <h3 className="text-lg font-semibold mb-2">Tasks Dashboard</h3>
+            <h3 className="text-lg font-semibold mb-2">任务管理面板</h3>
             <p className="text-muted-foreground">
-              Please use a larger screen to view the full tasks interface.
+              请使用更大屏幕查看完整任务界面。
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function TaskPage() {
             <CardContent>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-muted-foreground text-sm font-medium">Total Tasks</p>
+                  <p className="text-muted-foreground text-sm font-medium">全部任务</p>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold">{stats.total}</span>
                     <span className="flex items-center gap-0.5 text-sm text-green-500">
@@ -99,7 +99,7 @@ export default function TaskPage() {
             <CardContent>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-muted-foreground text-sm font-medium">Completed</p>
+                  <p className="text-muted-foreground text-sm font-medium">已完成</p>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold">{stats.completed}</span>
                     <span className="flex items-center gap-0.5 text-sm text-green-500">
@@ -119,7 +119,7 @@ export default function TaskPage() {
             <CardContent>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-muted-foreground text-sm font-medium">In Progress</p>
+                  <p className="text-muted-foreground text-sm font-medium">进行中</p>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold">{stats.inProgress}</span>
                     <span className="flex items-center gap-0.5 text-sm text-green-500">
@@ -139,7 +139,7 @@ export default function TaskPage() {
             <CardContent>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-muted-foreground text-sm font-medium">Pending</p>
+                  <p className="text-muted-foreground text-sm font-medium">待处理</p>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-2xl font-bold">{stats.pending}</span>
                     <span className="flex items-center gap-0.5 text-sm text-orange-500">
@@ -159,9 +159,9 @@ export default function TaskPage() {
         {/* Data Table */}
         <Card>
           <CardHeader>
-            <CardTitle>Task Management</CardTitle>
+            <CardTitle>任务管理</CardTitle>
             <CardDescription>
-              View, filter, and manage all your project tasks in one place
+              在一处查看、筛选和管理所有项目任务
             </CardDescription>
           </CardHeader>
           <CardContent>

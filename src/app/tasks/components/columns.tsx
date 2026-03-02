@@ -21,7 +21,7 @@ export const columns: ColumnDef<Task>[] = [
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
+        aria-label="全选"
         className="translate-y-[2px] cursor-pointer"
       />
     ),
@@ -29,7 +29,7 @@ export const columns: ColumnDef<Task>[] = [
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
+        aria-label="选择行"
         className="translate-y-[2px] cursor-pointer"
       />
     ),
@@ -39,7 +39,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "id",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Task" />
+      <DataTableColumnHeader column={column} title="任务" />
     ),
     cell: ({ row }) => (
       <div className="w-[90px] font-medium">{row.getValue("id")}</div>
@@ -49,7 +49,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "title",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Title" />
+      <DataTableColumnHeader column={column} title="标题" />
     ),
     cell: ({ row }) => {
       return (
@@ -64,7 +64,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "category",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Category" />
+      <DataTableColumnHeader column={column} title="分类" />
     ),
     cell: ({ row }) => {
       const category = categories.find(
@@ -90,7 +90,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="状态" />
     ),
     cell: ({ row }) => {
       const status = statuses.find(
@@ -117,7 +117,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     accessorKey: "priority",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Priority" />
+      <DataTableColumnHeader column={column} title="优先级" />
     ),
     cell: ({ row }) => {
       const priority = priorities.find(

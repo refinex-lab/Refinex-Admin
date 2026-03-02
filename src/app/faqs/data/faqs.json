@@ -1,278 +1,278 @@
 [
   {
     "id": 1,
-    "question": "What is ShadcnStore Admin?",
-    "answer": "ShadcnStore Admin is a comprehensive admin dashboard template built with React, TypeScript, and shadcn/ui components. It provides a complete solution for managing your e-commerce store or business operations.",
-    "category": "General"
+    "question": "什么是 ShadcnStore Admin？",
+    "answer": "ShadcnStore Admin 是一个基于 React、TypeScript 和 shadcn/ui 组件构建的综合管理后台模板，为管理您的电商店铺或业务运营提供完整解决方案。",
+    "category": "常规"
   },
   {
     "id": 2,
-    "question": "How do I get started?",
-    "answer": "You can get started by signing up for an account, choosing a plan that fits your needs, and following our quick setup guide to configure your dashboard.",
-    "category": "General"
+    "question": "如何开始使用？",
+    "answer": "您可以通过注册账户、选择适合您的套餐，并按照快速设置指南配置您的仪表盘来开始使用。",
+    "category": "常规"
   },
   {
     "id": 3,
-    "question": "Do you offer a free trial?",
-    "answer": "Yes, we offer a 14-day free trial for all new users. No credit card is required to start the trial, and you can explore all features during this period.",
-    "category": "General"
+    "question": "是否提供免费试用？",
+    "answer": "是的，我们为所有新用户提供 14 天免费试用。无需信用卡即可开始试用，并可在此期间探索所有功能。",
+    "category": "常规"
   },
   {
     "id": 4,
-    "question": "What browsers are supported?",
-    "answer": "We support all modern browsers including Chrome, Firefox, Safari, and Edge. For the best experience, we recommend using the latest version of your preferred browser.",
-    "category": "General"
+    "question": "支持哪些浏览器？",
+    "answer": "我们支持所有现代浏览器，包括 Chrome、Firefox、Safari 和 Edge。为获得最佳体验，建议使用您偏好浏览器的最新版本。",
+    "category": "常规"
   },
   {
     "id": 5,
-    "question": "How do I contact support?",
-    "answer": "You can contact our support team through the support page, by email at support@shadcnstore.com, or through the live chat feature available 24/7.",
-    "category": "General"
+    "question": "如何联系客服支持？",
+    "answer": "您可以通过支持页面、发送电子邮件至 support@shadcnstore.com，或使用 24/7 在线客服功能联系我们的支持团队。",
+    "category": "常规"
   },
   {
     "id": 6,
-    "question": "Is there a mobile app available?",
-    "answer": "Currently, we offer a responsive web application that works great on mobile devices. A dedicated mobile app is planned for future release.",
-    "category": "General"
+    "question": "是否有移动应用程序？",
+    "answer": "目前，我们提供适配移动设备的响应式网页应用。专属移动应用已在未来发布计划中。",
+    "category": "常规"
   },
   {
     "id": 7,
-    "question": "Can I customize the dashboard?",
-    "answer": "Yes, the dashboard is highly customizable. You can modify themes, layouts, add custom components, and configure various settings to match your brand.",
-    "category": "General"
+    "question": "我可以自定义仪表盘吗？",
+    "answer": "可以，仪表盘支持高度自定义。您可以修改主题、布局，添加自定义组件，并配置各种设置以匹配您的品牌风格。",
+    "category": "常规"
   },
   {
     "id": 8,
-    "question": "What integrations are available?",
-    "answer": "We offer integrations with popular services like Stripe, PayPal, Shopify, WooCommerce, Google Analytics, and many more through our API.",
-    "category": "General"
+    "question": "提供哪些集成？",
+    "answer": "我们通过 API 提供与 Stripe、PayPal、Shopify、WooCommerce、Google Analytics 等众多热门服务的集成。",
+    "category": "常规"
   },
   {
     "id": 9,
-    "question": "How do I reset my password?",
-    "answer": "You can reset your password by clicking on the 'Forgot Password' link on the login page. Enter your email address, and we'll send you instructions to reset your password.",
-    "category": "Account"
+    "question": "如何重置密码？",
+    "answer": "您可以在登录页面点击"忘记密码"链接来重置密码。输入您的邮箱地址，我们将发送重置密码的说明给您。",
+    "category": "账户"
   },
   {
     "id": 10,
-    "question": "How do I change my email address?",
-    "answer": "You can change your email address in your account settings under the 'User Settings' section. You'll need to verify the new email address before the change takes effect.",
-    "category": "Account"
+    "question": "如何更改邮箱地址？",
+    "answer": "您可以在账户设置的"用户设置"部分更改邮箱地址。更改生效前需要验证新邮箱地址。",
+    "category": "账户"
   },
   {
     "id": 11,
-    "question": "Can I have multiple team members?",
-    "answer": "Yes, depending on your plan, you can invite team members and assign different roles and permissions to manage your store collaboratively.",
-    "category": "Account"
+    "question": "可以添加多个团队成员吗？",
+    "answer": "可以，根据您的套餐，您可以邀请团队成员并分配不同的角色和权限，以协作管理您的店铺。",
+    "category": "账户"
   },
   {
     "id": 12,
-    "question": "How do I delete my account?",
-    "answer": "To delete your account, go to your account settings and select 'Delete Account'. Please note that this action is irreversible and all data will be permanently removed.",
-    "category": "Account"
+    "question": "如何删除账户？",
+    "answer": "要删除账户，请前往账户设置并选择"删除账户"。请注意，此操作不可撤销，所有数据将被永久删除。",
+    "category": "账户"
   },
   {
     "id": 13,
-    "question": "Can I change my username?",
-    "answer": "Yes, you can change your username in the account settings. Keep in mind that some features might reference your old username temporarily.",
-    "category": "Account"
+    "question": "可以更改用户名吗？",
+    "answer": "可以，您可以在账户设置中更改用户名。请注意，某些功能可能会暂时引用您的旧用户名。",
+    "category": "账户"
   },
   {
     "id": 14,
-    "question": "How do I enable two-factor authentication?",
-    "answer": "You can enable two-factor authentication in your account security settings. We support both SMS and authenticator app methods for added security.",
-    "category": "Account"
+    "question": "如何启用双重身份验证？",
+    "answer": "您可以在账户安全设置中启用双重身份验证。我们支持短信和身份验证器应用两种方式以增强安全性。",
+    "category": "账户"
   },
   {
     "id": 15,
-    "question": "What payment methods do you accept?",
-    "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise customers. All payments are processed securely.",
-    "category": "Billing"
+    "question": "支持哪些支付方式？",
+    "answer": "我们接受所有主流信用卡（Visa、MasterCard、American Express）、PayPal，以及面向企业客户的银行转账。所有支付均安全处理。",
+    "category": "计费"
   },
   {
     "id": 16,
-    "question": "How can I upgrade my plan?",
-    "answer": "You can upgrade your plan at any time from your account settings. Go to 'Plans & Billing' and select the plan that best fits your needs. Changes take effect immediately.",
-    "category": "Billing"
+    "question": "如何升级套餐？",
+    "answer": "您可以随时在账户设置中升级套餐。前往"套餐与账单"并选择最适合您需求的套餐，更改立即生效。",
+    "category": "计费"
   },
   {
     "id": 17,
-    "question": "Can I downgrade my plan?",
-    "answer": "Yes, you can downgrade your plan at any time. The change will take effect at the start of your next billing cycle to ensure you don't lose access to premium features.",
-    "category": "Billing"
+    "question": "可以降级套餐吗？",
+    "answer": "可以，您可以随时降级套餐。更改将在下一个计费周期开始时生效，以确保您不会失去对高级功能的访问权限。",
+    "category": "计费"
   },
   {
     "id": 18,
-    "question": "Do you offer refunds?",
-    "answer": "We offer a 30-day money-back guarantee for all plans. If you're not satisfied, contact our support team for a full refund within 30 days of purchase.",
-    "category": "Billing"
+    "question": "是否提供退款？",
+    "answer": "我们为所有套餐提供 30 天退款保证。如果您不满意，请在购买后 30 天内联系我们的支持团队申请全额退款。",
+    "category": "计费"
   },
   {
     "id": 19,
-    "question": "How does billing work?",
-    "answer": "Billing is processed monthly or annually depending on your chosen plan. You'll receive an invoice before each billing cycle, and payment is automatically charged to your selected method.",
-    "category": "Billing"
+    "question": "计费方式是怎样的？",
+    "answer": "根据您选择的套餐，按月或按年计费。每个计费周期前您将收到发票，费用将自动从您选择的支付方式中扣除。",
+    "category": "计费"
   },
   {
     "id": 20,
-    "question": "Can I change my billing cycle?",
-    "answer": "Yes, you can switch between monthly and annual billing at any time. Annual billing offers significant savings compared to monthly billing.",
-    "category": "Billing"
+    "question": "可以更改计费周期吗？",
+    "answer": "可以，您可以随时在按月和按年计费之间切换。与按月计费相比，按年计费可节省大量费用。",
+    "category": "计费"
   },
   {
     "id": 21,
-    "question": "What happens if payment fails?",
-    "answer": "If a payment fails, we'll attempt to charge your card again after 3 days. You'll receive email notifications, and your account will remain active during this grace period.",
-    "category": "Billing"
+    "question": "如果付款失败会怎样？",
+    "answer": "如果付款失败，我们将在 3 天后再次尝试扣款。您将收到邮件通知，在此宽限期内您的账户将保持活跃状态。",
+    "category": "计费"
   },
   {
     "id": 22,
-    "question": "How do I view my billing history?",
-    "answer": "You can view your complete billing history in the 'Plans & Billing' section of your account settings. All invoices and receipts are available for download.",
-    "category": "Billing"
+    "question": "如何查看账单历史？",
+    "answer": "您可以在账户设置的"套餐与账单"部分查看完整的账单历史记录。所有发票和收据均可下载。",
+    "category": "计费"
   },
   {
     "id": 23,
-    "question": "Can I export my data?",
-    "answer": "Yes, you can export your data at any time from your account settings. We provide exports in multiple formats including CSV, JSON, and PDF for different data types.",
-    "category": "Technical"
+    "question": "可以导出数据吗？",
+    "answer": "可以，您可以随时在账户设置中导出数据。我们支持以 CSV、JSON 和 PDF 等多种格式导出不同类型的数据。",
+    "category": "技术"
   },
   {
     "id": 24,
-    "question": "What APIs do you provide?",
-    "answer": "We provide comprehensive REST APIs for all major features including product management, order processing, customer data, and analytics. Full documentation is available.",
-    "category": "Technical"
+    "question": "提供哪些 API？",
+    "answer": "我们为所有主要功能提供完整的 REST API，包括产品管理、订单处理、客户数据和分析。完整文档已提供。",
+    "category": "技术"
   },
   {
     "id": 25,
-    "question": "How do I backup my data?",
-    "answer": "We automatically backup all your data daily. You can also create manual backups anytime from your settings, and restore from any backup point within the last 30 days.",
-    "category": "Technical"
+    "question": "如何备份数据？",
+    "answer": "我们每天自动备份您的所有数据。您也可以随时在设置中手动创建备份，并从最近 30 天内的任意备份点恢复。",
+    "category": "技术"
   },
   {
     "id": 26,
-    "question": "Is there a rate limit on API calls?",
-    "answer": "Yes, API rate limits vary by plan. Basic plans have 1000 calls/hour, Professional plans have 10,000 calls/hour, and Enterprise plans have unlimited calls.",
-    "category": "Technical"
+    "question": "API 调用有频率限制吗？",
+    "answer": "是的，API 频率限制因套餐而异。基础版套餐每小时 1000 次，专业版套餐每小时 10,000 次，企业版套餐不限次数。",
+    "category": "技术"
   },
   {
     "id": 27,
-    "question": "How do I set up webhooks?",
-    "answer": "Webhooks can be configured in the 'Connections' section of your settings. You can set up webhooks for various events like new orders, payment confirmations, and inventory updates.",
-    "category": "Technical"
+    "question": "如何设置 Webhook？",
+    "answer": "Webhook 可在设置的"连接"部分进行配置。您可以为新订单、付款确认和库存更新等各类事件设置 Webhook。",
+    "category": "技术"
   },
   {
     "id": 28,
-    "question": "What about system maintenance?",
-    "answer": "We perform maintenance during low-traffic hours (typically Sunday 2-4 AM UTC). You'll be notified at least 48 hours in advance of any scheduled maintenance.",
-    "category": "Technical"
+    "question": "系统维护是怎样安排的？",
+    "answer": "我们在低流量时段进行维护（通常为周日 UTC 凌晨 2-4 点）。任何计划维护将至少提前 48 小时通知您。",
+    "category": "技术"
   },
   {
     "id": 29,
-    "question": "How do I troubleshoot connection issues?",
-    "answer": "First, check your internet connection and try refreshing the page. If issues persist, check our status page or contact support with specific error messages.",
-    "category": "Technical"
+    "question": "如何排查连接问题？",
+    "answer": "首先检查您的网络连接并尝试刷新页面。如果问题持续，请查看我们的状态页面或携带具体错误信息联系支持团队。",
+    "category": "技术"
   },
   {
     "id": 30,
-    "question": "Can I use custom domains?",
-    "answer": "Yes, Professional and Enterprise plans support custom domains. You can configure your custom domain in the 'Connections' section of your account settings.",
-    "category": "Technical"
+    "question": "可以使用自定义域名吗？",
+    "answer": "可以，专业版和企业版套餐支持自定义域名。您可以在账户设置的"连接"部分配置自定义域名。",
+    "category": "技术"
   },
   {
     "id": 31,
-    "question": "What databases do you support?",
-    "answer": "We support integration with MySQL, PostgreSQL, MongoDB, and other popular databases through our Database Sync feature available in higher-tier plans.",
-    "category": "Technical"
+    "question": "支持哪些数据库？",
+    "answer": "我们通过高级套餐中的数据库同步功能，支持与 MySQL、PostgreSQL、MongoDB 及其他主流数据库的集成。",
+    "category": "技术"
   },
   {
     "id": 32,
-    "question": "How do you handle my personal data?",
-    "answer": "We follow strict data protection policies and comply with GDPR, CCPA, and other privacy regulations. Your personal data is never shared with third parties without your consent.",
-    "category": "Privacy"
+    "question": "您如何处理我的个人数据？",
+    "answer": "我们遵循严格的数据保护政策，符合 GDPR、CCPA 及其他隐私法规。您的个人数据未经您的同意绝不会共享给第三方。",
+    "category": "隐私"
   },
   {
     "id": 33,
-    "question": "Can I request my data?",
-    "answer": "Yes, you can request a complete copy of your personal data at any time. We'll provide it in a machine-readable format within 30 days of your request.",
-    "category": "Privacy"
+    "question": "可以申请获取我的数据吗？",
+    "answer": "可以，您可以随时申请获取您的完整个人数据副本。我们将在您申请后 30 天内以机器可读格式提供。",
+    "category": "隐私"
   },
   {
     "id": 34,
-    "question": "How long do you retain data?",
-    "answer": "We retain your data as long as your account is active. After account deletion, personal data is removed within 30 days, though some anonymized analytics may be retained.",
-    "category": "Privacy"
+    "question": "数据保留多久？",
+    "answer": "只要您的账户处于活跃状态，我们就会保留您的数据。账户删除后，个人数据将在 30 天内删除，但部分匿名化的分析数据可能会被保留。",
+    "category": "隐私"
   },
   {
     "id": 35,
-    "question": "Do you use cookies?",
-    "answer": "Yes, we use essential cookies for functionality and optional cookies for analytics and personalization. You can manage your cookie preferences in your account settings.",
-    "category": "Privacy"
+    "question": "您是否使用 Cookie？",
+    "answer": "是的，我们使用必要 Cookie 保障功能运行，以及可选 Cookie 用于分析和个性化。您可以在账户设置中管理 Cookie 偏好。",
+    "category": "隐私"
   },
   {
     "id": 36,
-    "question": "Is my data encrypted?",
-    "answer": "Yes, all data is encrypted both in transit (using TLS 1.3) and at rest (using AES-256 encryption). We use industry-standard security practices to protect your information.",
-    "category": "Privacy"
+    "question": "我的数据是否经过加密？",
+    "answer": "是的，所有数据在传输中（使用 TLS 1.3）和静态存储时（使用 AES-256 加密）均经过加密。我们采用行业标准安全实践保护您的信息。",
+    "category": "隐私"
   },
   {
     "id": 37,
-    "question": "How secure is my data?",
-    "answer": "We implement bank-level security with end-to-end encryption, regular security audits, and compliance with SOC 2 Type II standards. Your data security is our top priority.",
-    "category": "Security"
+    "question": "我的数据有多安全？",
+    "answer": "我们实施银行级安全措施，包括端到端加密、定期安全审计，并符合 SOC 2 Type II 标准。您的数据安全是我们的首要任务。",
+    "category": "安全"
   },
   {
     "id": 38,
-    "question": "Do you support SSO?",
-    "answer": "Yes, Enterprise plans include Single Sign-On (SSO) support with popular providers like Google, Microsoft Azure AD, and Okta for seamless team access.",
-    "category": "Security"
+    "question": "是否支持单点登录（SSO）？",
+    "answer": "是的，企业版套餐包含单点登录（SSO）支持，兼容 Google、Microsoft Azure AD 和 Okta 等主流提供商，实现团队无缝访问。",
+    "category": "安全"
   },
   {
     "id": 39,
-    "question": "What about password requirements?",
-    "answer": "We require strong passwords with at least 8 characters, including uppercase, lowercase, numbers, and special characters. We also highly recommend enabling two-factor authentication.",
-    "category": "Security"
+    "question": "密码有哪些要求？",
+    "answer": "我们要求强密码，至少 8 个字符，包含大写字母、小写字母、数字和特殊字符。我们强烈建议启用双重身份验证。",
+    "category": "安全"
   },
   {
     "id": 40,
-    "question": "How do you handle security incidents?",
-    "answer": "We have a comprehensive incident response plan. In case of any security issues, we immediately investigate, contain the issue, and notify affected users within 24 hours.",
-    "category": "Security"
+    "question": "如何处理安全事故？",
+    "answer": "我们制定了全面的事故响应计划。一旦发生安全问题，我们将立即调查、控制事态，并在 24 小时内通知受影响的用户。",
+    "category": "安全"
   },
   {
     "id": 41,
-    "question": "What support channels are available?",
-    "answer": "We offer email support, live chat, and phone support (for Enterprise customers). Our knowledge base and community forums are also available 24/7.",
-    "category": "Support"
+    "question": "提供哪些支持渠道？",
+    "answer": "我们提供邮件支持、在线聊天和电话支持（企业客户专属）。我们的知识库和社区论坛也全天候开放。",
+    "category": "支持"
   },
   {
     "id": 42,
-    "question": "What are your support hours?",
-    "answer": "Email and chat support are available 24/7. Phone support for Enterprise customers is available Monday-Friday, 9 AM-6 PM in your local timezone.",
-    "category": "Support"
+    "question": "支持服务的时间是什么？",
+    "answer": "邮件和在线聊天支持全天候提供。企业客户的电话支持时间为当地时间周一至周五上午 9 点至下午 6 点。",
+    "category": "支持"
   },
   {
     "id": 43,
-    "question": "How quickly will I get a response?",
-    "answer": "Response times vary by plan: Basic (24 hours), Professional (12 hours), Enterprise (2 hours). Critical issues are prioritized and responded to immediately.",
-    "category": "Support"
+    "question": "响应需要多长时间？",
+    "answer": "响应时间因套餐而异：基础版（24 小时）、专业版（12 小时）、企业版（2 小时）。紧急问题将优先处理并立即响应。",
+    "category": "支持"
   },
   {
     "id": 44,
-    "question": "Do you offer training?",
-    "answer": "Yes, we provide comprehensive onboarding for all plans, video tutorials, documentation, and personalized training sessions for Enterprise customers.",
-    "category": "Support"
+    "question": "是否提供培训？",
+    "answer": "是的，我们为所有套餐提供全面的入门培训、视频教程和文档，并为企业客户提供个性化培训课程。",
+    "category": "支持"
   },
   {
     "id": 45,
-    "question": "Can you help with custom implementations?",
-    "answer": "Enterprise customers get access to our professional services team for custom implementations, integrations, and consulting services.",
-    "category": "Support"
+    "question": "是否可以协助自定义实施？",
+    "answer": "企业客户可获得我们专业服务团队的支持，用于自定义实施、集成和咨询服务。",
+    "category": "支持"
   },
   {
     "id": 46,
-    "question": "Is there a community forum?",
-    "answer": "Yes, we have an active community forum where users share tips, ask questions, and get help from both our team and other community members.",
-    "category": "Support"
+    "question": "是否有社区论坛？",
+    "answer": "是的，我们拥有活跃的社区论坛，用户可以分享技巧、提问，并获得我们团队和其他社区成员的帮助。",
+    "category": "支持"
   }
 ]

@@ -60,7 +60,7 @@ export function MessageList({ messages, users, currentUserId = "current-user" }:
     if (userId === currentUserId) {
       return {
         id: currentUserId,
-        name: "You",
+        name: "我",
         avatar: "https://notion-avatars.netlify.app/api/avatar/?preset=male-7",
         status: "online" as const,
         email: "you@example.com",
@@ -77,7 +77,7 @@ export function MessageList({ messages, users, currentUserId = "current-user" }:
     if (isToday(date)) {
       return format(date, "HH:mm")
     } else if (isYesterday(date)) {
-      return `Yesterday ${format(date, "HH:mm")}`
+      return `昨天 ${format(date, "HH:mm")}`
     } else {
       return format(date, "MMM d, HH:mm")
     }
@@ -131,9 +131,9 @@ export function MessageList({ messages, users, currentUserId = "current-user" }:
   const formatDateHeader = (dateString: string) => {
     const date = new Date(dateString)
     if (isToday(date)) {
-      return "Today"
+      return "今天"
     } else if (isYesterday(date)) {
-      return "Yesterday"
+      return "昨天"
     } else {
       return format(date, "EEEE, MMMM d")
     }
@@ -234,7 +234,7 @@ export function MessageList({ messages, users, currentUserId = "current-user" }:
                           )}>
                             <span>{formatMessageTime(message.timestamp)}</span>
                             {message.isEdited && (
-                              <span className="italic">(edited)</span>
+                              <span className="italic">(已编辑)</span>
                             )}
                             {isOwnMessage && (
                               <div className="flex">
@@ -260,18 +260,18 @@ export function MessageList({ messages, users, currentUserId = "current-user" }:
                             <DropdownMenuContent align="end">
                               <DropdownMenuItem className="cursor-pointer">
                                 <Reply className="h-4 w-4 mr-2" />
-                                Reply
+                                回复
                               </DropdownMenuItem>
                               <DropdownMenuItem className="cursor-pointer">
                                 <Copy className="h-4 w-4 mr-2" />
-                                Copy
+                                复制
                               </DropdownMenuItem>
                               {isOwnMessage && (
                                 <>
                                   <DropdownMenuSeparator />
                                   <DropdownMenuItem className="cursor-pointer text-destructive">
                                     <Trash2 className="h-4 w-4 mr-2" />
-                                    Delete
+                                    删除
                                   </DropdownMenuItem>
                                 </>
                               )}

@@ -30,7 +30,7 @@ import type { Task } from "../data/schema"
 // Extended task schema for the form
 const taskFormSchema = z.object({
   id: z.string(),
-  title: z.string().min(1, "Title is required"),
+  title: z.string().min(1, "标题不能为空"),
   description: z.string().optional(),
   status: z.string(),
   category: z.string(),
@@ -127,25 +127,25 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
         {trigger || (
           <Button variant="default" size="sm" className="cursor-pointer">
             <Plus className="w-4 h-4" />
-            Add Task
+            添加任务
           </Button>
         )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[525px]">
         <DialogHeader>
-          <DialogTitle>Add New Task</DialogTitle>
+          <DialogTitle>添加新任务</DialogTitle>
           <DialogDescription>
-            Create a new task to track work and progress. Fill in the details below.
+            创建新任务以跟踪工作进度。请填写以下详细信息。
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Task Title */}
           <div className="space-y-2">
-            <Label htmlFor="title">Task Title *</Label>
+            <Label htmlFor="title">任务标题 *</Label>
             <Input
               id="title"
-              placeholder="Enter task title..."
+              placeholder="输入任务标题..."
               value={formData.title}
               onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
               className={errors.title ? "border-red-500" : ""}
@@ -157,10 +157,10 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
 
           {/* Task Description */}
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">描述</Label>
             <Textarea
               id="description"
-              placeholder="Provide additional details about the task..."
+              placeholder="提供任务的更多详细信息..."
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
               rows={3}
@@ -171,13 +171,13 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Task Status */}
             <div className="space-y-2">
-              <Label htmlFor="status">Status</Label>
+              <Label htmlFor="status">状态</Label>
               <Select
                 value={formData.status}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, status: value }))}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select status" />
+                  <SelectValue placeholder="选择状态" />
                 </SelectTrigger>
                 <SelectContent>
                   {statuses.map((status) => (
@@ -196,13 +196,13 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
 
             {/* Task Category */}
             <div className="space-y-2">
-              <Label htmlFor="category">Category</Label>
+              <Label htmlFor="category">分类</Label>
               <Select
                 value={formData.category}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, category: value }))}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select category" />
+                  <SelectValue placeholder="选择分类" />
                 </SelectTrigger>
                 <SelectContent>
                   {categories.map((category) => (
@@ -218,13 +218,13 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
           {/* Task Priority - Half Width on Desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="priority">Priority</Label>
+              <Label htmlFor="priority">优先级</Label>
               <Select
                 value={formData.priority}
                 onValueChange={(value) => setFormData(prev => ({ ...prev, priority: value }))}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select priority" />
+                  <SelectValue placeholder="选择优先级" />
                 </SelectTrigger>
                 <SelectContent>
                   {priorities.map((priority) => (
@@ -242,11 +242,11 @@ export function AddTaskModal({ onAddTask, trigger }: AddTaskModalProps) {
           {/* Action Buttons */}
           <div className="flex justify-end space-x-2 pt-4">
             <Button type="button" variant="outline" onClick={handleCancel} className="cursor-pointer">
-              Cancel
+              取消
             </Button>
             <Button type="submit" className="cursor-pointer">
               <Plus className="w-4 h-4 mr-2" />
-              Create Task
+              创建任务
             </Button>
           </div>
         </form>

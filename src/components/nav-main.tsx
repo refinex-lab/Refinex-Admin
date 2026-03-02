@@ -72,8 +72,8 @@ export function NavMain({
                           <SidebarMenuSubButton asChild className="cursor-pointer" isActive={location.pathname === subItem.url}>
                             <Link 
                               to={subItem.url}
-                              target={(item.title === "Auth Pages" || item.title === "Errors") ? "_blank" : undefined}
-                              rel={(item.title === "Auth Pages" || item.title === "Errors") ? "noopener noreferrer" : undefined}
+                              target={(item.title === "认证页面" || item.title === "错误页面") ? "_blank" : undefined}
+                              rel={(item.title === "认证页面" || item.title === "错误页面") ? "noopener noreferrer" : undefined}
                             >
                               <span>{subItem.title}</span>
                             </Link>

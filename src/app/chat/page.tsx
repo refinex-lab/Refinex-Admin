@@ -36,16 +36,16 @@ export default function ChatPage() {
 
   if (loading) {
     return (
-      <BaseLayout title="Chat" description="Team communication and messaging">
+      <BaseLayout title="消息" description="团队沟通与消息">
         <div className="flex items-center justify-center h-96">
-          <div className="text-muted-foreground">Loading chat...</div>
+          <div className="text-muted-foreground">正在加载消息...</div>
         </div>
       </BaseLayout>
     )
   }
 
   return (
-    <BaseLayout title="Chat" description="Team communication and messaging">
+    <BaseLayout title="消息" description="团队沟通与消息">
       <div className="px-4 md:px-6">
         <Chat
           conversations={conversations}

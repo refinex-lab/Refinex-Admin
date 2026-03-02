@@ -8,56 +8,56 @@ import { useState } from 'react'
 
 const plans = [
   {
-    name: 'Free',
-    description: 'Perfect for getting started with essential components',
+    name: '免费版',
+    description: '适合初学者使用基础组件',
     monthlyPrice: 0,
     yearlyPrice: 0,
     features: [
-      'Access to 50+ free components',
-      'Basic dashboard templates',
-      'Community support',
-      'GitHub repository access',
-      'Documentation and guides'
+      '访问50+免费组件',
+      '基础仪表板模板',
+      '社区支持',
+      'GitHub仓库访问',
+      '文档和指南'
     ],
-    cta: 'Get Started',
+    cta: '立即开始',
     popular: false
   },
   {
-    name: 'Pro',
-    description: 'For developers who need premium templates and components',
+    name: '专业版',
+    description: '适合需要高级模板和组件的开发者',
     monthlyPrice: 19,
     yearlyPrice: 15,
     features: [
-      'Premium template collection',
-      'Advanced dashboard layouts',
-      'Priority support',
-      'Commercial use license',
-      'Early access to new releases',
-      'Figma design files',
-      'Custom component requests',
-      'Direct developer access',
-      'Exclusive design resources'
+      '高级模板合集',
+      '进阶仪表板布局',
+      '优先支持',
+      '商业使用许可',
+      '抢先体验新版本',
+      'Figma设计文件',
+      '自定义组件请求',
+      '直接联系开发者',
+      '专属设计资源'
     ],
-    cta: 'Get Started',
+    cta: '立即开始',
     popular: true,
-    includesPrevious: 'All Free features, plus'
+    includesPrevious: '包含所有免费版功能，另加'
   },
   {
-    name: 'Lifetime',
-    description: 'One-time payment for lifetime access to everything',
+    name: '终身版',
+    description: '一次性付款，终身访问所有内容',
     monthlyPrice: 299,
     yearlyPrice: 299,
     features: [
-      'Lifetime updates and support',
-      'Private Discord channel',
-      'No recurring fees ever',
-      'Future template access',
-      'VIP support priority',
-      'Exclusive beta features'
+      '终身更新与支持',
+      '私人Discord频道',
+      '永无后续费用',
+      '未来模板访问权',
+      'VIP优先支持',
+      '专属测试版功能'
     ],
-    cta: 'Get Started',
+    cta: '立即开始',
     popular: false,
-    includesPrevious: 'All Pro features, plus'
+    includesPrevious: '包含所有专业版功能，另加'
   }
 ]
 
@@ -69,12 +69,12 @@ export function PricingSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-12">
-          <Badge variant="outline" className="mb-4">Pricing Plans</Badge>
+          <Badge variant="outline" className="mb-4">定价方案</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Choose your plan
+            选择您的套餐
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Start building with our free components or upgrade to Pro for access to premium templates and advanced features.
+            从免费组件开始构建，或升级到专业版以获取高级模板和进阶功能。
           </p>
 
           {/* Billing Toggle */}
@@ -89,19 +89,19 @@ export function PricingSection() {
                 value="monthly"
                 className="data-[state=on]:bg-background data-[state=on]:border-border border-transparent border px-6 !rounded-full data-[state=on]:text-foreground hover:bg-transparent cursor-pointer transition-colors"
               >
-                Monthly
+                按月
               </ToggleGroupItem>
               <ToggleGroupItem
                 value="yearly"
                 className="data-[state=on]:bg-background data-[state=on]:border-border border-transparent border px-6 !rounded-full data-[state=on]:text-foreground hover:bg-transparent cursor-pointer transition-colors"
               >
-                Annually
+                按年
               </ToggleGroupItem>
             </ToggleGroup>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            <span className="text-primary font-semibold">Save 20%</span> On Annual Billing
+            <span className="text-primary font-semibold">节省20%</span> 按年计费
           </p>
         </div>
 
@@ -127,16 +127,16 @@ export function PricingSection() {
                   {/* Pricing */}
                   <div>
                     <div className="text-4xl font-bold mb-1">
-                      {plan.name === 'Lifetime' ? (
+                      {plan.name === '终身版' ? (
                         `$${plan.monthlyPrice}`
-                      ) : plan.name === 'Free' ? (
+                      ) : plan.name === '免费版' ? (
                         '$0'
                       ) : (
                         `$${isYearly ? plan.yearlyPrice : plan.monthlyPrice}`
                       )}
                     </div>
                     <div className="text-muted-foreground text-sm">
-                      {plan.name === 'Lifetime' ? 'One-time payment' : 'Per month'}
+                      {plan.name === '终身版' ? '一次性付款' : '每月'}
                     </div>
                   </div>
 
@@ -179,10 +179,10 @@ export function PricingSection() {
         {/* Enterprise Note */}
         <div className="mt-16 text-center">
           <p className="text-muted-foreground">
-            Need custom components or have questions? {' '}
+            需要自定义组件或有疑问？{' '}
             <Button variant="link" className="p-0 h-auto cursor-pointer" asChild>
               <a href="#contact">
-                Contact our team
+                联系我们的团队
               </a>
             </Button>
           </p>

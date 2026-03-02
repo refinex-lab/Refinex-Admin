@@ -23,8 +23,8 @@ import {
 } from "@/components/ui/form"
 
 const loginFormSchema = z.object({
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  email: z.string().email("邮箱格式无效"),
+  password: z.string().min(6, "密码至少需要6个字符"),
 })
 
 type LoginFormValues = z.infer<typeof loginFormSchema>
@@ -45,9 +45,9 @@ export function LoginForm1({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Welcome back</CardTitle>
+          <CardTitle className="text-xl">欢迎回来</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            请输入您的邮箱以登录账号
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -60,7 +60,7 @@ export function LoginForm1({
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>邮箱</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
@@ -78,12 +78,12 @@ export function LoginForm1({
                     render={({ field }) => (
                       <FormItem>
                         <div className="flex items-center">
-                          <FormLabel>Password</FormLabel>
+                          <FormLabel>密码</FormLabel>
                           <a
                             href="/templates/dashboard/shadcn-dashboard-landing-template/auth/forgot-password"
                             className="ml-auto text-sm underline-offset-4 hover:underline"
                           >
-                            Forgot your password?
+                            忘记密码？
                           </a>
                         </div>
                         <FormControl>
@@ -94,7 +94,7 @@ export function LoginForm1({
                     )}
                   />
                   <Button type="submit" className="w-full cursor-pointer">
-                    Login
+                    登录
                   </Button>
 
                   <Button variant="outline" className="w-full cursor-pointer" type="button">
@@ -104,13 +104,13 @@ export function LoginForm1({
                         fill="currentColor"
                       />
                     </svg>
-                    Login with Google
+                    使用 Google 登录
                   </Button>
                 </div>
                 <div className="text-center text-sm">
-                  Don&apos;t have an account?{" "}
+                  还没有账号？{" "}
                   <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-up" className="underline underline-offset-4">
-                    Sign up
+                    注册
                   </a>
                 </div>
               </div>
@@ -119,8 +119,8 @@ export function LoginForm1({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+        点击继续，即表示您同意我们的 <a href="#">服务条款</a>{" "}
+        和 <a href="#">隐私政策</a>。
       </div>
     </div>
   )

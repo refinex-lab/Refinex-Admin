@@ -64,12 +64,12 @@ export function TopProducts() {
     <Card className="cursor-pointer">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
         <div>
-          <CardTitle>Top Products</CardTitle>
-          <CardDescription>Best performing products this month</CardDescription>
+          <CardTitle>热销产品</CardTitle>
+          <CardDescription>本月销售最佳产品</CardDescription>
         </div>
         <Button variant="outline" size="sm" className="cursor-pointer">
           <Eye className="h-4 w-4 mr-2" />
-          View All
+          查看全部
         </Button>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -92,7 +92,7 @@ export function TopProducts() {
                     <span className="text-xs text-muted-foreground">{product.rating}</span>
                   </div>
                   <span className="text-xs text-muted-foreground">•</span>
-                  <span className="text-xs text-muted-foreground">{product.sales} sales</span>
+                  <span className="text-xs text-muted-foreground">{product.sales} 销量</span>
                 </div>
               </div>
               <div className="text-right space-y-1">
@@ -107,7 +107,7 @@ export function TopProducts() {
                   </Badge>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className="text-xs text-muted-foreground">Stock: {product.stock}</span>
+                  <span className="text-xs text-muted-foreground">库存： {product.stock}</span>
                   <Progress
                     value={product.stock > 100 ? 100 : (product.stock / 100) * 100}
                     className="w-12 h-1"

@@ -9,23 +9,23 @@ import { Github, Code, Palette, Layout, Crown } from 'lucide-react'
 const values = [
   {
     icon: Code,
-    title: 'Developer First',
-    description: 'Every component is built with the developer experience in mind, ensuring clean code and easy integration.'
+    title: '开发者优先',
+    description: '每个组件都以开发者体验为核心构建，确保代码简洁、集成便捷。'
   },
   {
     icon: Palette,
-    title: 'Design Excellence',
-    description: 'We maintain the highest design standards, following shadcn/ui principles and modern UI patterns.'
+    title: '卓越设计',
+    description: '我们坚守最高设计标准，遵循 shadcn/ui 原则和现代 UI 设计模式。'
   },
   {
     icon: Layout,
-    title: 'Production Ready',
-    description: 'Battle-tested components used in real applications with proven performance and reliability across different environments.'
+    title: '生产就绪',
+    description: '经过实际应用验证的组件，在不同环境中具备可靠的性能与稳定性。'
   },
   {
     icon: Crown,
-    title: 'Premium Quality',
-    description: 'Hand-crafted with attention to detail and performance optimization, ensuring exceptional user experience and accessibility.'
+    title: '高级品质',
+    description: '精心打造，注重细节与性能优化，确保卓越的用户体验和可访问性。'
   }
 ]
 
@@ -36,14 +36,13 @@ export function AboutSection() {
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center mb-16">
           <Badge variant="outline" className="mb-4">
-            About ShadcnStore
+            关于 ShadcnStore
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            Built for developers, by developers
+            由开发者为开发者构建
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            We're passionate about creating the best marketplace for shadcn/ui components and templates.
-            Our mission is to accelerate development and help developers build beautiful admin interfaces faster.
+            我们热衷于为 shadcn/ui 组件和模板打造最佳市场。我们的使命是加速开发，帮助开发者更快地构建美观的管理界面。
           </p>
         </div>
 
@@ -67,18 +66,18 @@ export function AboutSection() {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="flex items-center justify-center gap-2 mb-6">
-            <span className="text-muted-foreground">❤️ Made with love for the developer community</span>
+            <span className="text-muted-foreground">❤️ 为开发者社区用心打造</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="cursor-pointer" asChild>
               <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
-                Star on GitHub
+                在 GitHub 上加星
               </a>
             </Button>
             <Button size="lg" variant="outline" className="cursor-pointer" asChild>
               <a href="https://discord.com/invite/XEQhPc9a6p" target="_blank" rel="noopener noreferrer">
-                Join Discord Community
+                加入 Discord 社区
               </a>
             </Button>
           </div>

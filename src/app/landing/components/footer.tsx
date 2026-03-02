@@ -18,34 +18,34 @@ import { Github, Twitter, Linkedin, Youtube, Heart } from 'lucide-react'
 
 const newsletterSchema = z.object({
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "请输入有效的邮箱地址。",
   }),
 })
 
 const footerLinks = {
   product: [
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: '功能', href: '#features' },
+    { name: '定价', href: '#pricing' },
     { name: 'API', href: '#api' },
-    { name: 'Documentation', href: '#docs' },
+    { name: '文档', href: '#docs' },
   ],
   company: [
-    { name: 'About', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Press', href: '#press' },
+    { name: '关于', href: '#about' },
+    { name: '博客', href: '#blog' },
+    { name: '招聘', href: '#careers' },
+    { name: '媒体', href: '#press' },
   ],
   resources: [
-    { name: 'Help Center', href: '#help' },
-    { name: 'Community', href: '#community' },
-    { name: 'Guides', href: '#guides' },
-    { name: 'Webinars', href: '#webinars' },
+    { name: '帮助中心', href: '#help' },
+    { name: '社区', href: '#community' },
+    { name: '指南', href: '#guides' },
+    { name: '网络研讨会', href: '#webinars' },
   ],
   legal: [
-    { name: 'Privacy', href: '#privacy' },
-    { name: 'Terms', href: '#terms' },
-    { name: 'Security', href: '#security' },
-    { name: 'Status', href: '#status' },
+    { name: '隐私政策', href: '#privacy' },
+    { name: '服务条款', href: '#terms' },
+    { name: '安全', href: '#security' },
+    { name: '状态', href: '#status' },
   ],
 }
 
@@ -77,9 +77,9 @@ export function LandingFooter() {
         {/* Newsletter Section */}
         <div className="mb-16">
           <div className="mx-auto max-w-2xl text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay updated</h3>
+            <h3 className="text-2xl font-bold mb-4">保持更新</h3>
             <p className="text-muted-foreground mb-6">
-              Get the latest updates, articles, and resources sent to your inbox weekly.
+              每周获取最新动态、文章和资源，直接发送到您的邮箱。
             </p>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-2 max-w-md mx-auto sm:flex-row">
@@ -91,7 +91,7 @@ export function LandingFooter() {
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="Enter your email"
+                          placeholder="请输入您的邮箱"
                           {...field}
                         />
                       </FormControl>
@@ -99,7 +99,7 @@ export function LandingFooter() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="cursor-pointer">Subscribe</Button>
+                <Button type="submit" className="cursor-pointer">订阅</Button>
               </form>
             </Form>
           </div>
@@ -136,7 +136,7 @@ export function LandingFooter() {
 
           {/* Links Columns */}
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Product</h4>
+            <h4 className="font-semibold mb-4">产品</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
@@ -152,7 +152,7 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">公司</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -168,7 +168,7 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Resources</h4>
+            <h4 className="font-semibold mb-4">资源</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -184,7 +184,7 @@ export function LandingFooter() {
           </div>
 
           <div className='max-md:col-span-2 lg:col-span-1'>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">法律</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
@@ -206,25 +206,25 @@ export function LandingFooter() {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-2">
           <div className="flex flex-col sm:flex-row items-center gap-2 text-muted-foreground text-sm">
             <div className="flex items-center gap-1">
-              <span>Made with</span>
+              <span>用</span>
               <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>by</span>
+              <span>心打造，作者</span>
               <a href="https://shadcnstore.com" target='_blank' className="font-semibold text-foreground hover:text-primary transition-colors cursor-pointer">
                 ShadcnStore
               </a>
             </div>
             <span className="hidden sm:inline">•</span>
-            <span>© {new Date().getFullYear()} for the developer community</span>
+            <span>© {new Date().getFullYear()} 为开发者社区</span>
           </div>
           <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-4 md:mt-0">
             <a href="#privacy" className="hover:text-foreground transition-colors">
-              Privacy Policy
+              隐私政策
             </a>
             <a href="#terms" className="hover:text-foreground transition-colors">
-              Terms of Service
+              服务条款
             </a>
             <a href="#cookies" className="hover:text-foreground transition-colors">
-              Cookie Policy
+              Cookie 政策
             </a>
           </div>
         </div>

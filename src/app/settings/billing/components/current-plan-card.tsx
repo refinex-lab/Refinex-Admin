@@ -24,9 +24,9 @@ export function CurrentPlanCard({ plan }: CurrentPlanCardProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Current Plan</CardTitle>
+        <CardTitle>当前套餐</CardTitle>
         <CardDescription>
-          You are currently on the {plan.planName}.
+          您当前使用的是 {plan.planName}。
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -38,7 +38,7 @@ export function CurrentPlanCard({ plan }: CurrentPlanCardProps) {
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold">{plan.price}</div>
-            <div className="text-sm text-muted-foreground">Next billing: {plan.nextBilling}</div>
+            <div className="text-sm text-muted-foreground">下次账单： {plan.nextBilling}</div>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export function CurrentPlanCard({ plan }: CurrentPlanCardProps) {
               <div className="flex items-start gap-3">
                 <AlertTriangle className="h-5 w-5 text-neutral-600 mt-0.5 dark:text-neutral-400" />
                 <div className="space-y-1">
-                  <p className="font-medium text-neutral-800 dark:text-neutral-400">We need your attention!</p>
+                  <p className="font-medium text-neutral-800 dark:text-neutral-400">需要您的关注！</p>
                   <p className="text-sm text-neutral-700 dark:text-neutral-400">{plan.attentionMessage}</p>
                 </div>
               </div>
@@ -56,11 +56,11 @@ export function CurrentPlanCard({ plan }: CurrentPlanCardProps) {
               {/* Progress Section */}
               <div className="mt-4 space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground font-medium">Days</span>
-                  <span className="text-sm text-muted-foreground font-medium">{plan.daysUsed} of {plan.totalDays} Days</span>
+                  <span className="text-sm text-muted-foreground font-medium">天数</span>
+                  <span className="text-sm text-muted-foreground font-medium">{plan.daysUsed} / {plan.totalDays} 天</span>
                 </div>
                 <Progress value={plan.progressPercentage} className="h-2" />
-                <p className="text-xs text-muted-foreground">{plan.remainingDays} days remaining until your plan requires update</p>
+                <p className="text-xs text-muted-foreground">您的套餐还有 {plan.remainingDays} 天需要更新</p>
               </div>
             </CardContent>
           </Card>

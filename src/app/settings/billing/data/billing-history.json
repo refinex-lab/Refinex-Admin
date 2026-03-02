@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "month": "December 2024",
-    "plan": "Professional Plan",
+    "month": "2024年12月",
+    "plan": "专业版套餐",
     "amount": "$79.00",
-    "status": "Paid"
+    "status": "已支付"
   },
   {
     "id": 2,
-    "month": "November 2024",
-    "plan": "Professional Plan",
+    "month": "2024年11月",
+    "plan": "专业版套餐",
     "amount": "$79.00",
-    "status": "Paid"
+    "status": "已支付"
   },
   {
     "id": 3,
-    "month": "October 2024",
-    "plan": "Professional Plan",
+    "month": "2024年10月",
+    "plan": "专业版套餐",
     "amount": "$79.00",
-    "status": "Paid"
+    "status": "已支付"
   }
 ]

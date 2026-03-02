@@ -26,13 +26,13 @@ export function LoginForm3({
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold">Welcome back</h1>
+                <h1 className="text-2xl font-bold">欢迎回来</h1>
                 <p className="text-muted-foreground text-balance">
-                  Login to your ShadcnStore account
+                  登录您的 ShadcnStore 账号
                 </p>
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">邮箱</Label>
                 <Input
                   id="email"
                   type="email"
@@ -43,22 +43,22 @@ export function LoginForm3({
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
-                  <Label htmlFor="password">Password</Label>
+                  <Label htmlFor="password">密码</Label>
                   <a
                     href="/templates/dashboard/shadcn-dashboard-landing-template/auth/forgot-password-3"
                     className="ml-auto text-sm underline-offset-2 hover:underline"
                   >
-                    Forgot your password?
+                    忘记密码？
                   </a>
                 </div>
                 <Input id="password" type="password" defaultValue="password" required />
               </div>
               <Button type="submit" className="w-full cursor-pointer">
-                Login
+                登录
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
-                  Or continue with
+                  或使用以下方式继续
                 </span>
               </div>
               <div className="grid grid-cols-3 gap-4">
@@ -69,7 +69,7 @@ export function LoginForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Login with Apple</span>
+                  <span className="sr-only">使用 Apple 登录</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ export function LoginForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Login with Google</span>
+                  <span className="sr-only">使用 Google 登录</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -87,13 +87,13 @@ export function LoginForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Login with Meta</span>
+                  <span className="sr-only">使用 Meta 登录</span>
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Don&apos;t have an account?{" "}
+                还没有账号？{" "}
                 <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-up-3" className="underline underline-offset-4">
-                  Sign up
+                  注册
                 </a>
               </div>
             </div>
@@ -108,8 +108,8 @@ export function LoginForm3({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+        点击继续，即表示您同意我们的 <a href="#">服务条款</a>{" "}
+        和 <a href="#">隐私政策</a>。
       </div>
     </div>
   )

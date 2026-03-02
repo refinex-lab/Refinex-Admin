@@ -28,40 +28,40 @@ const defaultPlans: PricingPlan[] = [
   {
     id: 'basic',
     name: 'Basic',
-    description: 'Perfect for small online stores',
+    description: '适合小型在线商店',
     price: '$19',
     frequency: '/month',
-    features: ['Up to 10 products', 'Basic inventory tracking', 'Email support', 'Mobile-responsive themes'],
+    features: ['最多10个产品', '基础库存追踪', '邮件支持', '移动端响应式主题'],
   },
   {
     id: 'professional',
     name: 'Professional',
-    description: 'Ideal for growing businesses',
+    description: '适合成长型企业',
     price: '$79',
     frequency: '/month',
     features: [
-      'Up to 100 products',
-      'Advanced analytics',
-      'Priority email & chat support',
-      'API access',
-      'Custom domain',
-      'Abandoned cart recovery',
+      '最多100个产品',
+      '高级分析',
+      '优先邮件和聊天支持',
+      'API访问',
+      '自定义域名',
+      '购物车挽回',
     ],
     popular: true,
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
-    description: 'For high-volume stores',
+    description: '适合高流量商店',
     price: '$199',
     frequency: '/month',
     features: [
-      'Unlimited products',
-      'Advanced reporting',
-      '24/7 priority support',
-      'Custom integrations',
-      'Dedicated account manager',
-      'Advanced security features',
+      '无限产品',
+      '高级报告',
+      '24/7优先支持',
+      '自定义集成',
+      '专属客户经理',
+      '高级安全功能',
     ],
   },
 ]
@@ -75,18 +75,18 @@ export function PricingPlans({
   const getButtonText = (plan: PricingPlan) => {
     if (mode === 'billing') {
       if (currentPlanId === plan.id) {
-        return 'Current Plan'
+        return '当前套餐'
       }
       const currentIndex = plans.findIndex(p => p.id === currentPlanId)
       const planIndex = plans.findIndex(p => p.id === plan.id)
       
       if (planIndex > currentIndex) {
-        return 'Upgrade Plan'
+        return '升级套餐'
       } else if (planIndex < currentIndex) {
-        return 'Downgrade Plan'
+        return '降级套餐'
       }
     }
-    return 'Get Started'
+    return '立即开始'
   }
 
   const getButtonVariant = (plan: PricingPlan) => {
@@ -116,10 +116,10 @@ export function PricingPlans({
               <Badge className='mx-auto flex w-fit gap-1.5 rounded-full font-medium'>
                 <Sparkles className='!size-4' />
                 {mode === 'pricing' && (
-                <span>Most Popular</span>
+                <span>最受欢迎</span>
                 )}
                 {currentPlanId === tier.id && mode === 'billing' && (
-                  <span>Current Plan</span>
+                  <span>当前套餐</span>
                 )}
               </Badge>
             </div>

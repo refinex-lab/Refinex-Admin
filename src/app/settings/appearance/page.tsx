@@ -24,10 +24,10 @@ const appearanceFormSchema = z.object({
   contentWidth: z.string().optional(),
 })
 
-type AppearanceFormValues = z.infer<typeof appearanceFormSchema>
+type 外观FormValues = z.infer<typeof appearanceFormSchema>
 
-export default function AppearanceSettings() {
-  const form = useForm<AppearanceFormValues>({
+export default function 外观Settings() {
+  const form = useForm<外观FormValues>({
     resolver: zodResolver(appearanceFormSchema),
     defaultValues: {
       theme: "dark",
@@ -38,7 +38,7 @@ export default function AppearanceSettings() {
     },
   })
 
-  function onSubmit(data: AppearanceFormValues) {
+  function onSubmit(data: 外观FormValues) {
     console.log("Form submitted:", data)
     // Here you would typically save the data
   }
@@ -47,16 +47,16 @@ export default function AppearanceSettings() {
     <BaseLayout>
       <div className="space-y-6 px-4 lg:px-6">
         <div>
-          <h1 className="text-3xl font-bold">Appearance</h1>
+          <h1 className="text-3xl font-bold">外观</h1>
           <p className="text-muted-foreground">
-            Customize the appearance of the application.
+            自定义应用程序的外观。
           </p>
         </div>
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            {/* Theme Section */}
-            <h3 className="text-lg font-medium mb-2">Theme</h3>
+            {/* 主题 Section */}
+            <h3 className="text-lg font-medium mb-2">主题</h3>
             <FormField
               control={form.control}
               name="theme"
@@ -89,7 +89,7 @@ export default function AppearanceSettings() {
                                   </div>
                                 </div>
                               </div>
-                              <span className="text-sm font-medium">Light</span>
+                              <span className="text-sm font-medium">浅色</span>
                             </div>
                           </div>
                         </FormLabel>
@@ -115,7 +115,7 @@ export default function AppearanceSettings() {
                                   </div>
                                 </div>
                               </div>
-                              <span className="text-sm font-medium">Dark</span>
+                              <span className="text-sm font-medium">深色</span>
                             </div>
                           </div>
                         </FormLabel>
@@ -132,17 +132,17 @@ export default function AppearanceSettings() {
               name="fontFamily"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Font Family</FormLabel>
+                  <FormLabel>字体</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="cursor-pointer">
-                        <SelectValue placeholder="Select a font" />
+                        <SelectValue placeholder="选择字体" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
                       <SelectItem value="inter">Inter</SelectItem>
                       <SelectItem value="roboto">Roboto</SelectItem>
-                      <SelectItem value="system">System Default</SelectItem>
+                      <SelectItem value="system">系统默认</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -154,17 +154,17 @@ export default function AppearanceSettings() {
               name="fontSize"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Font Size</FormLabel>
+                  <FormLabel>字体大小</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="cursor-pointer">
-                        <SelectValue placeholder="Select font size" />
+                        <SelectValue placeholder="选择字体大小" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="small">Small</SelectItem>
-                      <SelectItem value="medium">Medium</SelectItem>
-                      <SelectItem value="large">Large</SelectItem>
+                      <SelectItem value="small">小</SelectItem>
+                      <SelectItem value="medium">中</SelectItem>
+                      <SelectItem value="large">大</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -178,17 +178,17 @@ export default function AppearanceSettings() {
               name="sidebarWidth"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Sidebar Width</FormLabel>
+                  <FormLabel>侧边栏宽度</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="cursor-pointer">
-                        <SelectValue placeholder="Select sidebar width" />
+                        <SelectValue placeholder="选择侧边栏宽度" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="compact">Compact</SelectItem>
-                      <SelectItem value="comfortable">Comfortable</SelectItem>
-                      <SelectItem value="spacious">Spacious</SelectItem>
+                      <SelectItem value="compact">紧凑</SelectItem>
+                      <SelectItem value="comfortable">舒适</SelectItem>
+                      <SelectItem value="spacious">宽松</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -200,17 +200,17 @@ export default function AppearanceSettings() {
               name="contentWidth"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Content Width</FormLabel>
+                  <FormLabel>内容宽度</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger className="cursor-pointer">
-                        <SelectValue placeholder="Select content width" />
+                        <SelectValue placeholder="选择内容宽度" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="fixed">Fixed</SelectItem>
-                      <SelectItem value="fluid">Fluid</SelectItem>
-                      <SelectItem value="container">Container</SelectItem>
+                      <SelectItem value="fixed">固定</SelectItem>
+                      <SelectItem value="fluid">流式</SelectItem>
+                      <SelectItem value="container">容器</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -220,9 +220,9 @@ export default function AppearanceSettings() {
 
             <div className="flex space-x-2 mt-12">
               <Button type="submit" className="cursor-pointer">
-                Save Preferences
+                保存偏好
               </Button>
-              <Button variant="outline" type="button" className="cursor-pointer">Cancel</Button>
+              <Button variant="outline" type="button" className="cursor-pointer">取消</Button>
             </div>
           </form>
         </Form>

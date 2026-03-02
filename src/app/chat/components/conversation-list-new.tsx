@@ -38,7 +38,7 @@ function formatMessageTime(timestamp: string): string {
   if (isToday(date)) {
     return format(date, 'h:mm a') // 3:30 PM
   } else if (isYesterday(date)) {
-    return 'Yesterday'
+    return '昨天'
   } else if (isThisWeek(date)) {
     return format(date, 'EEEE') // Day name
   } else if (isThisYear(date)) {
@@ -80,7 +80,7 @@ export function ConversationList({
     <div className="flex flex-col h-full overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b flex-shrink-0">
-        <h2 className="text-lg font-semibold">Messages</h2>
+        <h2 className="text-lg font-semibold">消息</h2>
       </div>
 
       {/* Search */}
@@ -89,7 +89,7 @@ export function ConversationList({
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder="Search conversations..."
+            placeholder="搜索会话..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-9 cursor-text"
@@ -193,7 +193,7 @@ export function ConversationList({
                       className="cursor-pointer"
                     >
                       <Pin className="h-4 w-4 mr-2" />
-                      {conversation.isPinned ? "Unpin" : "Pin"}
+                      {conversation.isPinned ? "取消置顶" : "置顶"}
                     </DropdownMenuItem>
                     <DropdownMenuItem 
                       onClick={(e) => {
@@ -203,11 +203,11 @@ export function ConversationList({
                       className="cursor-pointer"
                     >
                       <VolumeX className="h-4 w-4 mr-2" />
-                      {conversation.isMuted ? "Unmute" : "Mute"}
+                      {conversation.isMuted ? "取消静音" : "静音"}
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem className="cursor-pointer text-destructive">
-                      Delete conversation
+                      删除会话
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>

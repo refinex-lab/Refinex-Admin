@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "question": "Can I change my plan anytime?",
-    "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle, and you'll be charged or credited accordingly."
+    "question": "可以随时更改套餐吗？",
+    "answer": "可以，您可以随时升级或降级套餐。更改将体现在下一个计费周期，并根据情况进行相应的收费或退款。"
   },
   {
     "id": 2,
-    "question": "Is there a free trial available?",
-    "answer": "Yes, all plans come with a 14-day free trial. No credit card is required to start your trial, and you can explore all features during this period."
+    "question": "是否提供免费试用？",
+    "answer": "是的，所有套餐均提供 14 天免费试用。无需信用卡即可开始试用，并可在此期间探索所有功能。"
   },
   {
     "id": 3,
-    "question": "What payment methods do you accept?",
-    "answer": "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise customers. All payments are processed securely."
+    "question": "支持哪些支付方式？",
+    "answer": "我们接受所有主流信用卡（Visa、MasterCard、American Express）、PayPal，以及面向企业客户的银行转账。所有支付均安全处理。"
   },
   {
     "id": 4,
-    "question": "Do you offer discounts for annual plans?",
-    "answer": "Yes, save 20% when you choose annual billing on any plan. You can switch to annual billing from your account settings at any time."
+    "question": "年度套餐是否有折扣？",
+    "answer": "是的，选择任意套餐的年度计费可节省 20%。您可以随时在账户设置中切换到年度计费。"
   },
   {
     "id": 5,
-    "question": "What happens if I exceed my plan limits?",
-    "answer": "If you exceed your plan limits, we'll notify you in advance. You can either upgrade your plan or purchase additional resources as needed."
+    "question": "如果超出套餐限制会怎样？",
+    "answer": "如果您超出套餐限制，我们将提前通知您。您可以根据需要升级套餐或购买额外资源。"
   },
   {
     "id": 6,
-    "question": "Can I cancel my subscription anytime?",
-    "answer": "Yes, you can cancel your subscription at any time from your account settings. You'll continue to have access to all features until the end of your current billing period."
+    "question": "可以随时取消订阅吗？",
+    "answer": "可以，您可以随时在账户设置中取消订阅。在当前计费周期结束前，您将继续享有所有功能的访问权限。"
   }
 ]

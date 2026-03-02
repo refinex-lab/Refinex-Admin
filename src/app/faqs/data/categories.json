@@ -1,10 +1,10 @@
 [
-  { "name": "All", "count": 46 },
-  { "name": "General", "count": 8 },
-  { "name": "Account", "count": 6 },
-  { "name": "Billing", "count": 8 },
-  { "name": "Technical", "count": 9 },
-  { "name": "Privacy", "count": 5 },
-  { "name": "Security", "count": 4 },
-  { "name": "Support", "count": 6 }
+  { "name": "全部", "count": 46 },
+  { "name": "常规", "count": 8 },
+  { "name": "账户", "count": 6 },
+  { "name": "计费", "count": 8 },
+  { "name": "技术", "count": 9 },
+  { "name": "隐私", "count": 5 },
+  { "name": "安全", "count": 4 },
+  { "name": "支持", "count": 6 }
 ]

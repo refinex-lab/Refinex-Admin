@@ -17,7 +17,7 @@ const transactions = [
       avatar: assetUrl("https://notion-avatars.netlify.app/api/avatar/?preset=female-"),
     },
     amount: "$1,999.00",
-    status: "completed",
+    status: "已完成",
     date: "2 hours ago",
   },
   {
@@ -28,7 +28,7 @@ const transactions = [
       avatar: assetUrl("https://notion-avatars.netlify.app/api/avatar/?preset=male-1"),
     },
     amount: "$2,999.00",
-    status: "pending",
+    status: "待处理",
     date: "5 hours ago",
   },
   {
@@ -39,7 +39,7 @@ const transactions = [
       avatar: assetUrl("https://notion-avatars.netlify.app/api/avatar/?preset=female-2"),
     },
     amount: "$39.00",
-    status: "completed",
+    status: "已完成",
     date: "1 day ago",
   },
   {
@@ -50,7 +50,7 @@ const transactions = [
       avatar: assetUrl("https://notion-avatars.netlify.app/api/avatar/?preset=male-5"),
     },
     amount: "$299.00",
-    status: "failed",
+    status: "已失败",
     date: "2 days ago",
   },
   {
@@ -61,7 +61,7 @@ const transactions = [
       avatar: assetUrl("https://notion-avatars.netlify.app/api/avatar/?preset=female-4"),
     },
     amount: "$99.00",
-    status: "completed",
+    status: "已完成",
     date: "3 days ago",
   },
 ]
@@ -71,12 +71,12 @@ export function RecentTransactions() {
     <Card className="cursor-pointer">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
         <div>
-          <CardTitle>Recent Transactions</CardTitle>
-          <CardDescription>Latest customer transactions</CardDescription>
+          <CardTitle>最近交易</CardTitle>
+          <CardDescription>最新客户交易记录</CardDescription>
         </div>
         <Button variant="outline" size="sm" className="cursor-pointer">
           <Eye className="h-4 w-4 mr-2" />
-          View All
+          查看全部
         </Button>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -97,8 +97,8 @@ export function RecentTransactions() {
                 <div className="flex items-center space-x-3">
                   <Badge
                     variant={
-                      transaction.status === "completed" ? "default" :
-                      transaction.status === "pending" ? "secondary" : "destructive"
+                      transaction.status === "已完成" ? "default" :
+                      transaction.status === "待处理" ? "secondary" : "destructive"
                     }
                     className="cursor-pointer"
                   >
@@ -115,9 +115,9 @@ export function RecentTransactions() {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                      <DropdownMenuItem className="cursor-pointer">View Details</DropdownMenuItem>
-                      <DropdownMenuItem className="cursor-pointer">Download Receipt</DropdownMenuItem>
-                      <DropdownMenuItem className="cursor-pointer">Contact Customer</DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer">查看详情</DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer">下载收据</DropdownMenuItem>
+                      <DropdownMenuItem className="cursor-pointer">联系客户</DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>

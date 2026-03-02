@@ -68,8 +68,8 @@ export default function UsersPage() {
 
   return (
     <BaseLayout 
-      title="Users" 
-      description="Manage your users and their permissions"
+      title="用户管理" 
+      description="管理您的用户及其权限"
     >
       <div className="flex flex-col gap-4">
         <div className="@container/main px-4 lg:px-6">

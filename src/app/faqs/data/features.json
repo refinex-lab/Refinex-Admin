@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "title": "Premium Quality",
-    "description": "Handcrafted with premium materials and meticulous attention to detail.",
+    "title": "优质品质",
+    "description": "采用优质材料精心制作，注重每一处细节。",
     "icon": "Sparkles"
   },
   {
     "id": 2,
-    "title": "Secure Shopping",
-    "description": "100% secure payment processing with end-to-end encryption.",
+    "title": "安全购物",
+    "description": "100% 安全的支付处理，采用端到端加密。",
     "icon": "Shield"
   },
   {
     "id": 3,
-    "title": "Fast Delivery",
-    "description": "Free worldwide shipping and hassle-free returns within 30 days.",
+    "title": "快速配送",
+    "description": "全球免运费，30 天内轻松退换货。",
     "icon": "Truck"
   },
   {
     "id": 4,
-    "title": "24/7 Support",
-    "description": "Round-the-clock customer support to assist you anytime.",
+    "title": "全天候支持",
+    "description": "全天候客户支持，随时为您提供帮助。",
     "icon": "Clock"
   }
 ]

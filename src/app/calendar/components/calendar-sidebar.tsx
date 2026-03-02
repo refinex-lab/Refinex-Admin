@@ -33,7 +33,7 @@ export function CalendarSidebar({
           onClick={onNewEvent}
         >
           <Plus className="w-4 h-4 mr-2" />
-          Add New Event
+          添加新事件
         </Button>
       </div>
 
@@ -70,7 +70,7 @@ export function CalendarSidebar({
           onClick={onNewCalendar}
         >
           <Plus className="w-4 h-4 mr-2" />
-          New Calendar
+          新建日历
         </Button>
       </div>
     </div>

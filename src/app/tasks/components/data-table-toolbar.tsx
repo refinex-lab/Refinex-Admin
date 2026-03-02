@@ -71,10 +71,10 @@ export function DataTableToolbar<TData>({
             onValueChange={handleStatusChange}
           >
             <SelectTrigger className="w-full cursor-pointer">
-              <SelectValue placeholder="Status" />
+              <SelectValue placeholder="状态" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all" className="cursor-pointer">All Status</SelectItem>
+              <SelectItem value="all" className="cursor-pointer">全部状态</SelectItem>
               {statuses.map((status) => (
                 <SelectItem
                   key={status.value}
@@ -98,10 +98,10 @@ export function DataTableToolbar<TData>({
             onValueChange={handleCategoryChange}
           >
             <SelectTrigger className="w-full cursor-pointer">
-              <SelectValue placeholder="Category" />
+              <SelectValue placeholder="分类" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all" className="cursor-pointer">All Categories</SelectItem>
+              <SelectItem value="all" className="cursor-pointer">全部分类</SelectItem>
               {categories.map((category) => (
                 <SelectItem
                   key={category.value}
@@ -120,10 +120,10 @@ export function DataTableToolbar<TData>({
             onValueChange={handlePriorityChange}
           >
             <SelectTrigger className="w-full cursor-pointer">
-              <SelectValue placeholder="Priority" />
+              <SelectValue placeholder="优先级" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all" className="cursor-pointer">All Priorities</SelectItem>
+              <SelectItem value="all" className="cursor-pointer">全部优先级</SelectItem>
               {priorities.map((priority) => (
                 <SelectItem
                   key={priority.value}
@@ -147,7 +147,7 @@ export function DataTableToolbar<TData>({
       <div className="flex items-center justify-between">
         <div className="flex flex-1 items-center space-x-2">
           <Input
-            placeholder="Search Task"
+            placeholder="搜索任务"
             value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
             onChange={(event) =>
               table.getColumn("title")?.setFilterValue(event.target.value)
@@ -161,7 +161,7 @@ export function DataTableToolbar<TData>({
             disabled={!isFiltered}
           >
             <RefreshCcw className="h-4 w-4" />
-            <span className="hidden lg:block">Reset Filters</span>
+            <span className="hidden lg:block">重置筛选</span>
           </Button>
         </div>
         <div className="flex items-center space-x-2">

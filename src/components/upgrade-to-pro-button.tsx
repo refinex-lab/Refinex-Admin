@@ -22,7 +22,7 @@ export function UpgradeToProButton() {
             className="px-6 py-3 bg-gradient-to-br shadow-lg from-slate-900 cursor-pointer to-slate-400 text-white font-bold"
             style={{ minWidth: 180 }} onClick={() => window.open(SHADCN_BLOCKS_URL, "_blank")}
           >
-            Upgrade to Pro
+            升级到专业版
             <Rocket size={30} className="ml-1" />
           </Button>
         </HoverCardTrigger>
@@ -31,7 +31,7 @@ export function UpgradeToProButton() {
             <a href={SHADCN_BLOCKS_URL} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                             <img 
                 src={assetUrl("hero-images-container.png")}
-                alt="Dashboard Preview" 
+                alt="仪表盘预览" 
                 className="rounded-lg border shadow-lg"
                 width={400}
                 height={300}
@@ -39,18 +39,18 @@ export function UpgradeToProButton() {
             </a>
             <h3 className="font-bold text-lg flex items-center py-2 gap-2">
               <Rocket size={18} className="text-primary" />
-              Unlock Premium Blocks 
-              <Badge variant="destructive" className="text-xs px-2 py-0.5 rounded-full shadow">Live</Badge>
+              解锁高级组件块
+              <Badge variant="destructive" className="text-xs px-2 py-0.5 rounded-full shadow">上线</Badge>
             </h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Get access to exclusive premium blocks and dashboards for your next project. Elevate your UI instantly!
+              获取专属高级组件块和仪表盘，提升您的下一个项目。立即升级您的 UI！
             </p>
             <div className="flex flex-row gap-2 w-full mt-2 justify-center">
               <div className="relative w-1/2">
                 <a href={SHADCN_BLOCKS_URL} target="_blank" rel="noopener noreferrer">
                   <Button className="w-full flex items-center justify-center cursor-pointer" variant="default">
                     <Blocks size={16} />
-                    Pro Blocks
+                    专业版组件块
                     <ArrowRight size={16} />
                   </Button>
                 </a>
@@ -58,10 +58,10 @@ export function UpgradeToProButton() {
               <div className="relative w-1/2">
                 <Button className="w-full flex items-center justify-center" variant="default" disabled>
                   <LayoutDashboard size={16} />
-                  Pro Dashboards
+                  专业版仪表盘
                 </Button>
                 <span className="absolute -top-5 -right-1">
-                  <Badge variant="outline" className="bg-yellow-400 text-yellow-900 border-yellow-400 text-xs px-2 py-0.5 rounded-full shadow">Coming soon</Badge>
+                  <Badge variant="outline" className="bg-yellow-400 text-yellow-900 border-yellow-400 text-xs px-2 py-0.5 rounded-full shadow">即将推出</Badge>
                 </span>
               </div>
             </div>

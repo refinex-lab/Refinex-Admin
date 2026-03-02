@@ -105,7 +105,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
   }
 
   const renderCalendarGrid = () => {
-    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const weekDays = ['日', '一', '二', '三', '四', '五', '六']
     
     return (
       <div className="flex-1 bg-background">
@@ -164,7 +164,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
                   ))}
                   {dayEvents.length > 3 && (
                     <div className="text-xs text-muted-foreground px-2">
-                      +{dayEvents.length - 3} more
+                      +{dayEvents.length - 3} 更多
                     </div>
                   )}
                 </div>
@@ -180,7 +180,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
     <div className="w-full h-full bg-background border-r">
       <div className="p-4 border-b">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold">Calendar</h2>
+          <h2 className="font-semibold">日历</h2>
           <Button size="sm" onClick={handleNewEvent}>
             <Plus className="h-4 w-4 mr-1" />
             Event
@@ -205,7 +205,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
       {/* Mini Calendars List */}
       <div className="p-4">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-medium">My Calendars</h3>
+          <h3 className="text-sm font-medium">我的日历</h3>
           <Button variant="ghost" size="sm" onClick={handleNewCalendar}>
             <Plus className="h-4 w-4" />
           </Button>
@@ -261,7 +261,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
                 </div>
 
                 <Button variant="outline" size="sm" onClick={goToToday}>
-                  Today
+                  今天
                 </Button>
               </div>
 
@@ -269,7 +269,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
                 <div className="hidden sm:flex items-center space-x-2">
                   <Button variant="ghost" size="sm" className="text-xs">
                     <Search className="h-4 w-4 mr-1" />
-                    Search
+                    搜索
                   </Button>
                 </div>
 
@@ -278,26 +278,26 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="sm">
                       <Grid3X3 className="h-4 w-4 mr-1" />
-                      {viewMode === "month" ? "Month" : viewMode === "week" ? "Week" : viewMode === "day" ? "Day" : "List"}
+                      {viewMode === "month" ? "月" : viewMode === "week" ? "周" : viewMode === "day" ? "日" : "列表"}
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setViewMode("month")}>
                       <Grid3X3 className="h-4 w-4 mr-2" />
-                      Month
+                      月
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setViewMode("week")}>
                       <List className="h-4 w-4 mr-2" />
-                      Week
+                      周
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setViewMode("day")}>
                       <CalendarIcon className="h-4 w-4 mr-2" />
-                      Day
+                      日
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setViewMode("list")}>
                       <List className="h-4 w-4 mr-2" />
-                      List
+                      列表
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -314,9 +314,9 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
       <Sheet open={showCalendarSheet} onOpenChange={setShowCalendarSheet}>
         <SheetContent side="left" className="w-80 p-0">
           <SheetHeader className="p-4 pb-2">
-            <SheetTitle>Calendar</SheetTitle>
+            <SheetTitle>日历</SheetTitle>
             <SheetDescription>
-              Browse dates and manage your calendar events
+              浏览日期并管理您的日历事件
             </SheetDescription>
           </SheetHeader>
           {renderSidebar()}
@@ -329,7 +329,7 @@ export function CalendarMain({ eventDates = [] }: CalendarMainProps) {
           <DialogHeader>
             <DialogTitle>{selectedEvent?.title}</DialogTitle>
             <DialogDescription>
-              Event details and information
+              事件详情与信息
             </DialogDescription>
           </DialogHeader>
           {selectedEvent && (

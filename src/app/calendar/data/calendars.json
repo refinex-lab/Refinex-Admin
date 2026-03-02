@@ -1,35 +1,35 @@
 [
   {
     "id": "personal",
-    "name": "Personal",
+    "name": "个人",
     "color": "bg-blue-500",
     "visible": true,
     "type": "personal"
   },
   {
     "id": "work",
-    "name": "Work",
+    "name": "工作",
     "color": "bg-green-500",
     "visible": true,
     "type": "work"
   },
   {
     "id": "shared",
-    "name": "Team Calendar",
+    "name": "团队日历",
     "color": "bg-purple-500",
     "visible": true,
     "type": "shared"
   },
   {
     "id": "meetings",
-    "name": "Meetings",
+    "name": "会议",
     "color": "bg-orange-500",
     "visible": true,
     "type": "work"
   },
   {
     "id": "events",
-    "name": "Events",
+    "name": "活动",
     "color": "bg-pink-500",
     "visible": true,
     "type": "shared"

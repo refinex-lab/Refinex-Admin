@@ -109,7 +109,7 @@ export function Chat({
         `}>
           {/* Sidebar Header with Close Button (Mobile Only) */}
           <div className="lg:hidden p-4 border-b flex items-center justify-between bg-background">
-            <h2 className="text-lg font-semibold">Messages</h2>
+            <h2 className="text-lg font-semibold">消息</h2>
             <Button
               variant="ghost"
               size="sm"
@@ -165,15 +165,15 @@ export function Chat({
                 {/* Message Input */}
                 <MessageInput
                   onSendMessage={handleSendMessage}
-                  placeholder={`Message ${currentConversation?.name || ""}...`}
+                  placeholder={`给 ${currentConversation?.name || ""} 发消息...`}
                 />
               </>
             ) : (
               <div className="flex-1 flex items-center justify-center">
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold mb-2">Welcome to Chat</h3>
+                  <h3 className="text-lg font-semibold mb-2">欢迎使用消息</h3>
                   <p className="text-muted-foreground">
-                    Select a conversation to start messaging
+                    选择一个会话开始发送消息
                   </p>
                 </div>
               </div>

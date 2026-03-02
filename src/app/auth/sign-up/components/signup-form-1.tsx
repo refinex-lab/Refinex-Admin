@@ -24,14 +24,14 @@ import {
 import { Checkbox } from "@/components/ui/checkbox"
 
 const signupFormSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  confirmPassword: z.string().min(6, "Please confirm your password"),
-  terms: z.boolean().refine(val => val === true, "You must agree to the terms"),
+  firstName: z.string().min(1, "请输入名字"),
+  lastName: z.string().min(1, "请输入姓氏"),
+  email: z.string().email("邮箱格式无效"),
+  password: z.string().min(6, "密码至少需要6个字符"),
+  confirmPassword: z.string().min(6, "请确认您的密码"),
+  terms: z.boolean().refine(val => val === true, "您必须同意条款"),
 }).refine((data) => data.password === data.confirmPassword, {
-  message: "Passwords don't match",
+  message: "两次密码不一致",
   path: ["confirmPassword"],
 })
 
@@ -62,9 +62,9 @@ export function SignupForm1({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Create Account</CardTitle>
+          <CardTitle className="text-xl">创建账号</CardTitle>
           <CardDescription>
-            Enter your information to create a new account
+            请填写信息以创建新账号
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -78,7 +78,7 @@ export function SignupForm1({
                       name="firstName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>First Name</FormLabel>
+                          <FormLabel>名字</FormLabel>
                           <FormControl>
                             <Input placeholder="John" {...field} />
                           </FormControl>
@@ -91,7 +91,7 @@ export function SignupForm1({
                       name="lastName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Last Name</FormLabel>
+                          <FormLabel>姓氏</FormLabel>
                           <FormControl>
                             <Input placeholder="Doe" {...field} />
                           </FormControl>
@@ -105,7 +105,7 @@ export function SignupForm1({
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>邮箱</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
@@ -122,7 +122,7 @@ export function SignupForm1({
                     name="password"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Password</FormLabel>
+                        <FormLabel>密码</FormLabel>
                         <FormControl>
                           <Input type="password" {...field} />
                         </FormControl>
@@ -135,7 +135,7 @@ export function SignupForm1({
                     name="confirmPassword"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Confirm Password</FormLabel>
+                        <FormLabel>确认密码</FormLabel>
                         <FormControl>
                           <Input type="password" {...field} />
                         </FormControl>
@@ -156,13 +156,13 @@ export function SignupForm1({
                           />
                         </FormControl>
                         <FormLabel className="text-sm">
-                          I agree to the terms of service and privacy policy
+                          我同意服务条款和隐私政策
                         </FormLabel>
                       </FormItem>
                     )}
                   />
                   <Button type="submit" className="w-full cursor-pointer">
-                    Create Account
+                    创建账号
                   </Button>
 
                   <Button variant="outline" className="w-full cursor-pointer" type="button">
@@ -172,13 +172,13 @@ export function SignupForm1({
                         fill="currentColor"
                       />
                     </svg>
-                    Sign up with Google
+                    使用 Google 注册
                   </Button>
                 </div>
                 <div className="text-center text-sm">
-                  Already have an account?{" "}
+                  已有账号？{" "}
                   <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-in" className="underline underline-offset-4">
-                    Sign in
+                    登录
                   </a>
                 </div>
               </div>
@@ -187,8 +187,8 @@ export function SignupForm1({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+        点击继续，即表示您同意我们的 <a href="#">服务条款</a>{" "}
+        和 <a href="#">隐私政策</a>。
       </div>
     </div>
   )

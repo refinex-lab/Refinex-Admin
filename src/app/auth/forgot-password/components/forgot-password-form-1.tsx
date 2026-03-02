@@ -20,9 +20,9 @@ export function ForgotPasswordForm1({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Forgot your password?</CardTitle>
+          <CardTitle className="text-xl">忘记密码？</CardTitle>
           <CardDescription>
-            Enter your email address and we'll send you a link to reset your password
+            请输入您的邮箱，我们将发送重置密码链接
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -30,7 +30,7 @@ export function ForgotPasswordForm1({
             <div className="grid gap-6">
               <div className="grid gap-6">
                 <div className="grid gap-3">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">邮箱</Label>
                   <Input
                     id="email"
                     type="email"
@@ -39,13 +39,13 @@ export function ForgotPasswordForm1({
                   />
                 </div>
                 <Button type="submit" className="w-full cursor-pointer">
-                  Send Reset Link
+                  发送重置链接
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Remember your password?{" "}
+                想起密码了？{" "}
                 <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-in" className="underline underline-offset-4">
-                  Back to sign in
+                  返回登录
                 </a>
               </div>
             </div>

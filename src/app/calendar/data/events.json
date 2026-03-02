@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "title": "Team Standup",
+    "title": "每日站会",
     "date": "11T09:00:00.000Z",
     "time": "9:00 AM",
-    "duration": "30 min",
+    "duration": "30 分钟",
     "type": "meeting",
     "attendees": ["JD", "SM", "AR"],
-    "location": "Conference Room A",
+    "location": "会议室 A",
     "color": "bg-blue-500",
-    "description": "Daily team standup meeting to discuss progress and blockers"
+    "description": "每日团队站会，讨论进度和阻碍"
   },
   {
     "id": 2,
-    "title": "Design Review",
+    "title": "设计评审",
     "date": "11T14:00:00.000Z",
     "time": "2:00 PM",
-    "duration": "1 hour",
+    "duration": "1 小时",
     "type": "meeting",
     "attendees": ["ER", "LC"],
-    "location": "Virtual",
+    "location": "线上",
     "color": "bg-purple-500",
-    "description": "Review new UI designs and provide feedback"
+    "description": "评审新 UI 设计并提供反馈"
   },
   {
     "id": 3,
-    "title": "Product Launch",
+    "title": "产品发布",
     "date": "15T10:00:00.000Z",
     "time": "10:00 AM",
-    "duration": "2 hours",
+    "duration": "2 小时",
     "type": "event",
     "attendees": ["TL", "ST"],
-    "location": "Main Hall",
+    "location": "主会场",
     "color": "bg-green-500",
-    "description": "Official product launch event with stakeholders"
+    "description": "与利益相关者举办的官方产品发布活动"
   },
   {
     "id": 4,
-    "title": "Client Presentation",
+    "title": "客户演示",
     "date": "18T15:00:00.000Z",
     "time": "3:00 PM",
-    "duration": "1 hour",
+    "duration": "1 小时",
     "type": "meeting",
     "attendees": ["AT", "SM"],
-    "location": "Client Office",
+    "location": "客户办公室",
     "color": "bg-orange-500",
-    "description": "Present project progress to client stakeholders"
+    "description": "向客户利益相关者展示项目进度"
   },
   {
     "id": 5,
-    "title": "Birthday Party 🎉",
+    "title": "生日派对 🎉",
     "date": "20T19:00:00.000Z",
     "time": "7:00 PM",
-    "duration": "3 hours",
+    "duration": "3 小时",
     "type": "personal",
     "attendees": ["PB", "VB"],
-    "location": "Home",
+    "location": "家",
     "color": "bg-pink-500",
-    "description": "Birthday celebration with friends and family"
+    "description": "与朋友和家人共庆生日"
   }
 ]

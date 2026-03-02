@@ -26,9 +26,9 @@ export function FeaturesGrid({ features }: FeaturesGridProps) {
   return (
     <Card>
       <CardHeader className="text-center">
-        <CardTitle className="text-2xl">All Plans Include</CardTitle>
+        <CardTitle className="text-2xl">所有套餐均包含</CardTitle>
         <CardDescription>
-          Every plan comes with these essential features to help your team succeed
+          每个套餐都包含这些基本功能，帮助您的团队取得成功
         </CardDescription>
       </CardHeader>
       <CardContent>

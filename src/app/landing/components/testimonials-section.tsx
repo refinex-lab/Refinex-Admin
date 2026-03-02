@@ -14,82 +14,82 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: 'Alexandra Mitchell',
-    role: 'Senior Frontend Developer',
+    role: '高级前端开发工程师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-1',
     quote:
-      'This platform has completely transformed our development workflow. The component system is so well-architected that even complex applications feel simple to build.',
+      '这个平台彻底改变了我们的开发工作流程。组件系统架构精良，即使是复杂的应用程序也变得简单易建。',
   },
   {
     name: 'James Thompson',
-    role: 'Technical Lead',
+    role: '技术负责人',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-1',
-    quote: 'After trying countless frameworks, this is the one that finally clicked. The documentation is exceptional.',
+    quote: '尝试了无数框架之后，这是真正让我豁然开朗的那一个。文档质量卓越。',
   },
   {
     name: 'Priya Sharma',
-    role: 'Product Designer',
+    role: '产品设计师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-2',
     quote:
-      'The design system is beautiful and consistent. I can prototype ideas quickly and hand them off to developers with confidence that the implementation will match perfectly.',
+      '设计系统美观而统一。我可以快速原型化想法，并自信地交付给开发者，确信实现效果与设计完美匹配。',
   },
   {
     name: 'Robert Kim',
-    role: 'Engineering Manager',
+    role: '工程总监',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-2',
     quote:
-      'We migrated our entire application to this platform in just two weeks. The performance improvements were immediate.',
+      '我们仅用两周就完成了整个应用的迁移，性能提升立竿见影。',
   },
   {
     name: 'Maria Santos',
-    role: 'Full Stack Engineer',
+    role: '全栈工程师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-3',
     quote:
-      'The accessibility features are top-notch. Building inclusive applications has never been easier. Every component follows best practices out of the box, and the automated testing suite ensures we maintain high accessibility standards throughout our development process.',
+      '无障碍功能一流，构建包容性应用从未如此简便。每个组件都遵循最佳实践，自动化测试套件确保我们在整个开发过程中始终保持高可访问性标准。',
   },
   {
     name: 'Thomas Anderson',
-    role: 'Solutions Architect',
+    role: '解决方案架构师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-3',
-    quote: 'Scalability was our biggest concern, but this platform handles enterprise-level complexity with ease.',
+    quote: '可扩展性是我们最大的顾虑，但这个平台从容应对企业级复杂性。',
   },
   {
     name: 'Lisa Chang',
-    role: 'UX Researcher',
+    role: '用户体验研究员',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-4',
     quote:
-      'User testing results have been consistently positive since we adopted this platform. The user experience is intuitive and the performance is stellar. Our user satisfaction scores have increased by 40% since the migration.',
+      '自从采用这个平台，用户测试结果始终积极向好。用户体验直观，性能出色。自迁移以来，我们的用户满意度得分提升了40%。',
   },
   {
     name: 'Michael Foster',
-    role: 'DevOps Engineer',
+    role: 'DevOps 工程师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-4',
-    quote: 'Deployment and maintenance are a breeze. The platform integrates seamlessly with our CI/CD pipeline.',
+    quote: '部署和维护轻而易举，平台与我们的 CI/CD 流水线无缝集成。',
   },
   {
     name: 'Sophie Laurent',
-    role: 'Creative Director',
+    role: '创意总监',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-5',
     quote:
-      'The creative possibilities are endless. We can bring any design concept to life without compromising on technical quality or user experience.',
+      '创意空间无限广阔，任何设计概念都能落地实现，且不牺牲技术质量或用户体验。',
   },
   {
     name: 'Daniel Wilson',
-    role: 'Backend Developer',
+    role: '后端开发工程师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-5',
-    quote: 'The API design is exceptional. Clean, intuitive, and well-documented.',
+    quote: 'API 设计卓越，简洁直观，文档完善。',
   },
   {
     name: 'Natasha Petrov',
-    role: 'Mobile App Developer',
+    role: '移动应用开发工程师',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-6',
     quote:
-      'Cross-platform development has never been this efficient. One codebase, multiple platforms, consistent user experience. This is the future. The responsive design system ensures our apps look perfect on every device.',
+      '跨平台开发从未如此高效——一套代码库，多个平台，一致的用户体验。这就是未来。响应式设计系统确保我们的应用在每台设备上都完美呈现。',
   },
   {
     name: 'Carlos Rivera',
-    role: 'Startup Founder',
+    role: '创业公司创始人',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-6',
-    quote: 'As a non-technical founder, this platform gave me the confidence to build our MVP quickly.',
+    quote: '作为非技术背景的创始人，这个平台让我有信心快速构建我们的 MVP。',
   },
 ]
 
@@ -99,12 +99,12 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-8 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Testimonials</Badge>
+          <Badge variant="outline" className="mb-4">用户评价</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Empowering Innovation Worldwide
+            赋能全球创新
           </h2>
           <p className="text-lg text-muted-foreground">
-            Join thousands of developers and teams who trust our platform to build exceptional digital experiences.
+            加入数千名开发者和团队，信赖我们的平台构建卓越的数字体验。
           </p>
         </div>
 

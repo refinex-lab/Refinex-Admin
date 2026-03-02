@@ -18,46 +18,46 @@ import { Image3D } from '@/components/image-3d'
 const mainFeatures = [
   {
     icon: Package,
-    title: 'Curated Component Library',
-    description: 'Hand-picked blocks and templates for quality and reliability.'
+    title: '精选组件库',
+    description: '精心挑选的组件块和模板，质量可靠、性能稳定。'
   },
   {
     icon: Crown,
-    title: 'Free & Premium Options',
-    description: 'Start free, upgrade to premium collections when you need more.'
+    title: '免费与高级版本',
+    description: '从免费版开始，按需升级到高级合集。'
   },
   {
     icon: Layout,
-    title: 'Ready-to-Use Templates',
-    description: 'Copy-paste components that just work out of the box.'
+    title: '即用模板',
+    description: '复制即用，开箱即可运行的组件。'
   },
   {
     icon: Zap,
-    title: 'Regular Updates',
-    description: 'New blocks and templates added weekly to keep you current.'
+    title: '定期更新',
+    description: '每周新增组件块和模板，持续保持最新。'
   }
 ]
 
 const secondaryFeatures = [
   {
     icon: BarChart3,
-    title: 'Multiple Frameworks',
-    description: 'React, Next.js, and Vite compatibility for flexible development.'
+    title: '多框架支持',
+    description: '兼容 React、Next.js 和 Vite，灵活开发。'
   },
   {
     icon: Palette,
-    title: 'Modern Tech Stack',
-    description: 'Built with shadcn/ui, Tailwind CSS, and TypeScript.'
+    title: '现代技术栈',
+    description: '基于 shadcn/ui、Tailwind CSS 和 TypeScript 构建。'
   },
   {
     icon: Users,
-    title: 'Responsive Design',
-    description: 'Mobile-first components for all screen sizes and devices.'
+    title: '响应式设计',
+    description: '移动端优先，适配所有屏幕尺寸和设备。'
   },
   {
     icon: Database,
-    title: 'Developer-Friendly',
-    description: 'Clean code, well-documented, easy integration and customization.'
+    title: '开发者友好',
+    description: '代码简洁、文档完善，易于集成和自定义。'
   }
 ]
 
@@ -67,12 +67,12 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <Badge variant="outline" className="mb-4">Marketplace Features</Badge>
+          <Badge variant="outline" className="mb-4">市场功能</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Everything you need to build amazing web applications
+            构建出色网络应用所需的一切
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our marketplace provides curated blocks, templates, landing pages, and admin dashboards to help you build professional applications faster than ever.
+            我们的市场提供精选的组件块、模板、落地页和管理后台，帮助您比以往更快地构建专业应用。
           </p>
         </div>
 
@@ -82,17 +82,17 @@ export function FeaturesSection() {
           <Image3D
             lightSrc="feature-1-light.png"
             darkSrc="feature-1-dark.png"
-            alt="Analytics dashboard"
+            alt="分析仪表板"
             direction="left"
           />
           {/* Right Content */}
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-                Components that accelerate development
+                加速开发的组件
               </h3>
               <p className="text-muted-foreground text-base text-pretty">
-                Our curated marketplace offers premium blocks and templates designed to save time and ensure consistency across your admin projects.
+                我们的精选市场提供优质的组件块和模板，旨在节省时间并确保管理项目的一致性。
               </p>
             </div>
 
@@ -113,13 +113,13 @@ export function FeaturesSection() {
             <div className="flex flex-col sm:flex-row gap-4 pe-4 pt-2">
               <Button size="lg" className="cursor-pointer">
                 <a href="https://shadcnstore.com/templates" className='flex items-center'>
-                  Browse Templates
+                  浏览模板
                   <ArrowRight className="ms-2 size-4" aria-hidden="true" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="cursor-pointer">
                 <a href="https://shadcnstore.com/blocks">
-                  View Components
+                  查看组件
                 </a>
               </Button>
             </div>
@@ -132,10 +132,10 @@ export function FeaturesSection() {
           <div className="space-y-6 order-2 lg:order-1">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-                Built for modern development workflows
+                为现代开发工作流构建
               </h3>
               <p className="text-muted-foreground text-base text-pretty">
-                Every component follows best practices with TypeScript, responsive design, and clean code architecture that integrates seamlessly into your projects.
+                每个组件都遵循最佳实践，采用 TypeScript、响应式设计和简洁的代码架构，可无缝集成到您的项目中。
               </p>
             </div>
 
@@ -156,13 +156,13 @@ export function FeaturesSection() {
             <div className="flex flex-col sm:flex-row gap-4 pe-4 pt-2">
               <Button size="lg" className="cursor-pointer">
                 <a href="#" className='flex items-center'>
-                  View Documentation
+                  查看文档
                   <ArrowRight className="ms-2 size-4" aria-hidden="true" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="cursor-pointer">
                 <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer">
-                  GitHub Repository
+                  GitHub 仓库
                 </a>
               </Button>
             </div>
@@ -172,7 +172,7 @@ export function FeaturesSection() {
           <Image3D
             lightSrc="feature-2-light.png"
             darkSrc="feature-2-dark.png"
-            alt="Performance dashboard"
+            alt="性能仪表板"
             direction="right"
             className="order-1 lg:order-2"
           />

@@ -18,9 +18,9 @@ export function BillingHistoryCard({ history }: BillingHistoryCardProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Billing History</CardTitle>
+        <CardTitle>账单历史</CardTitle>
         <CardDescription>
-          View your past invoices and payments.
+          查看您过去的发票和付款记录。
         </CardDescription>
       </CardHeader>
       <CardContent>

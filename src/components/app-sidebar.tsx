@@ -40,167 +40,167 @@ const data = {
   },
   navGroups: [
     {
-      label: "Dashboards",
+      label: "仪表盘",
       items: [
         {
-          title: "Dashboard 1",
+          title: "仪表盘 1",
           url: "/dashboard",
           icon: LayoutDashboard,
         },
         {
-          title: "Dashboard 2",
+          title: "仪表盘 2",
           url: "/dashboard-2",
           icon: LayoutPanelLeft,
         },
       ],
     },
     {
-      label: "Apps",
+      label: "应用",
       items: [
         {
-          title: "Mail",
+          title: "邮件",
           url: "/mail",
           icon: Mail,
         },
         {
-          title: "Tasks",
+          title: "任务",
           url: "/tasks",
           icon: CheckSquare,
         },
         {
-          title: "Chat",
+          title: "消息",
           url: "/chat",
           icon: MessageCircle,
         },
         {
-          title: "Calendar",
+          title: "日历",
           url: "/calendar",
           icon: Calendar,
         },
         {
-          title: "Users",
+          title: "用户管理",
           url: "/users",
           icon: Users,
         },
       ],
     },
     {
-      label: "Pages",
+      label: "页面",
       items: [
         {
-          title: "Landing",
+          title: "落地页",
           url: "/landing",
           target: "_blank",
           icon: LayoutTemplate,
         },
         {
-          title: "Auth Pages",
+          title: "认证页面",
           url: "#",
           icon: Shield,
           items: [
             {
-              title: "Sign In 1",
+              title: "登录 1",
               url: "/auth/sign-in",
             },
             {
-              title: "Sign In 2",
+              title: "登录 2",
               url: "/auth/sign-in-2",
             },
             {
-              title: "Sign In 3",
+              title: "登录 3",
               url: "/auth/sign-in-3",
             },
             {
-              title: "Sign Up 1",
+              title: "注册 1",
               url: "/auth/sign-up",
             },
             {
-              title: "Sign Up 2",
+              title: "注册 2",
               url: "/auth/sign-up-2",
             },
             {
-              title: "Sign Up 3",
+              title: "注册 3",
               url: "/auth/sign-up-3",
             },
             {
-              title: "Forgot Password 1",
+              title: "忘记密码 1",
               url: "/auth/forgot-password",
             },
             {
-              title: "Forgot Password 2",
+              title: "忘记密码 2",
               url: "/auth/forgot-password-2",
             },
             {
-              title: "Forgot Password 3",
+              title: "忘记密码 3",
               url: "/auth/forgot-password-3",
             }
           ],
         },
         {
-          title: "Errors",
+          title: "错误页面",
           url: "#",
           icon: AlertTriangle,
           items: [
             {
-              title: "Unauthorized",
+              title: "未授权",
               url: "/errors/unauthorized",
             },
             {
-              title: "Forbidden",
+              title: "禁止访问",
               url: "/errors/forbidden",
             },
             {
-              title: "Not Found",
+              title: "页面未找到",
               url: "/errors/not-found",
             },
             {
-              title: "Internal Server Error",
+              title: "服务器内部错误",
               url: "/errors/internal-server-error",
             },
             {
-              title: "Under Maintenance",
+              title: "维护中",
               url: "/errors/under-maintenance",
             },
           ],
         },
         {
-          title: "Settings",
+          title: "设置",
           url: "#",
           icon: Settings,
           items: [
             {
-              title: "User Settings",
+              title: "用户设置",
               url: "/settings/user",
             },
             {
-              title: "Account Settings",
+              title: "账号设置",
               url: "/settings/account",
             },
             {
-              title: "Plans & Billing",
+              title: "套餐与账单",
               url: "/settings/billing",
             },
             {
-              title: "Appearance",
+              title: "外观",
               url: "/settings/appearance",
             },
             {
-              title: "Notifications",
+              title: "通知",
               url: "/settings/notifications",
             },
             {
-              title: "Connections",
+              title: "连接",
               url: "/settings/connections",
             },
           ],
         },
         {
-          title: "FAQs",
+          title: "常见问题",
           url: "/faqs",
           icon: HelpCircle,
         },
         {
-          title: "Pricing",
+          title: "定价",
           url: "/pricing",
           icon: CreditCard,
         },
@@ -222,7 +222,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">ShadcnStore</span>
-                  <span className="truncate text-xs">Admin Dashboard</span>
+                  <span className="truncate text-xs">管理后台</span>
                 </div>
               </Link>
             </SidebarMenuButton>

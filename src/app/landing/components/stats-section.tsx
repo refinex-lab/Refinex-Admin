@@ -14,26 +14,26 @@ const stats = [
   {
     icon: Package,
     value: '500+',
-    label: 'Components',
-    description: 'Ready-to-use blocks'
+    label: '组件',
+    description: '即用组件块'
   },
   {
     icon: Download,
     value: '25K+',
-    label: 'Downloads',
-    description: 'Trusted worldwide'
+    label: '下载量',
+    description: '全球信赖'
   },
   {
     icon: Users,
     value: '10K+',
-    label: 'Developers',
-    description: 'Active community'
+    label: '开发者',
+    description: '活跃社区'
   },
   {
     icon: Star,
     value: '4.9',
-    label: 'Rating',
-    description: 'User satisfaction'
+    label: '评分',
+    description: '用户满意度'
   }
 ]
 

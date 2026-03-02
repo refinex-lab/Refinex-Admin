@@ -1,12 +1,12 @@
 {
-  "planName": "Professional Plan",
+  "planName": "专业版套餐",
   "price": "$79/month",
   "nextBilling": "Aug 15, 2025",
-  "status": "Current",
+  "status": "当前",
   "daysUsed": 18,
   "totalDays": 30,
   "progressPercentage": 60,
   "remainingDays": 12,
   "needsAttention": true,
-  "attentionMessage": "Your plan requires update"
+  "attentionMessage": "您的套餐需要更新"
 }

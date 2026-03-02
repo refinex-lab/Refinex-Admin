@@ -27,14 +27,14 @@ export function SignupForm3({
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold">Create your account</h1>
+                <h1 className="text-2xl font-bold">创建您的账号</h1>
                 <p className="text-muted-foreground text-balance">
-                  Enter your information to create a new account
+                  请填写信息以创建新账号
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="grid gap-3">
-                  <Label htmlFor="firstName">First Name</Label>
+                  <Label htmlFor="firstName">名字</Label>
                   <Input
                     id="firstName"
                     placeholder="John"
@@ -42,7 +42,7 @@ export function SignupForm3({
                   />
                 </div>
                 <div className="grid gap-3">
-                  <Label htmlFor="lastName">Last Name</Label>
+                  <Label htmlFor="lastName">姓氏</Label>
                   <Input
                     id="lastName"
                     placeholder="Doe"
@@ -51,7 +51,7 @@ export function SignupForm3({
                 </div>
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">邮箱</Label>
                 <Input
                   id="email"
                   type="email"
@@ -60,32 +60,32 @@ export function SignupForm3({
                 />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">密码</Label>
                 <Input id="password" type="password" required />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                <Label htmlFor="confirmPassword">确认密码</Label>
                 <Input id="confirmPassword" type="password" required />
               </div>
               <div className="flex items-center space-x-2">
                 <Checkbox id="terms" required />
                 <Label htmlFor="terms" className="text-sm">
-                  I agree to the{" "}
+                  我同意{" "}
                   <a href="#" className="underline underline-offset-4 hover:text-primary">
-                    Terms of Service
+                    服务条款
                   </a>{" "}
-                  and{" "}
+                  和{" "}
                   <a href="#" className="underline underline-offset-4 hover:text-primary">
-                    Privacy Policy
+                    隐私政策
                   </a>
                 </Label>
               </div>
               <Button type="submit" className="w-full cursor-pointer">
-                Create Account
+                创建账号
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
-                  Or continue with
+                  或使用以下方式继续
                 </span>
               </div>
               <div className="grid grid-cols-3 gap-4">
@@ -96,7 +96,7 @@ export function SignupForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Sign up with Apple</span>
+                  <span className="sr-only">使用 Apple 注册</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export function SignupForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Sign up with Google</span>
+                  <span className="sr-only">使用 Google 注册</span>
                 </Button>
                 <Button variant="outline" type="button" className="w-full cursor-pointer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -114,13 +114,13 @@ export function SignupForm3({
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="sr-only">Sign up with Meta</span>
+                  <span className="sr-only">使用 Meta 注册</span>
                 </Button>
               </div>
               <div className="text-center text-sm">
-                Already have an account?{" "}
+                已有账号？{" "}
                 <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-in-3" className="underline underline-offset-4">
-                  Sign in
+                  登录
                 </a>
               </div>
             </div>
@@ -135,8 +135,8 @@ export function SignupForm3({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+        点击继续，即表示您同意我们的 <a href="#">服务条款</a>{" "}
+        和 <a href="#">隐私政策</a>。
       </div>
     </div>
   )

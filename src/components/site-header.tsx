@@ -43,7 +43,7 @@ export function SiteHeader() {
                 target="_blank"
                 className="dark:text-foreground"
               >
-                Blocks
+                组件块
               </a>
             </Button>
             <Button variant="ghost" asChild size="sm" className="hidden sm:flex">
@@ -53,7 +53,7 @@ export function SiteHeader() {
                 target="_blank"
                 className="dark:text-foreground"
               >
-                Landing Page
+                落地页
               </a>
             </Button>
             <Button variant="ghost" asChild size="sm" className="hidden sm:flex">

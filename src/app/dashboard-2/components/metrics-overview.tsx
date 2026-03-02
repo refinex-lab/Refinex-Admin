@@ -13,44 +13,44 @@ import { Badge } from "@/components/ui/badge"
 
 const metrics = [
   {
-    title: "Total Revenue",
+    title: "总收入",
     value: "$54,230",
-    description: "Monthly revenue",
+    description: "月收入",
     change: "+12%",
     trend: "up",
     icon: DollarSign,
-    footer: "Trending up this month",
-    subfooter: "Revenue for the last 6 months"
+    footer: "本月上升趋势",
+    subfooter: "过去6个月收入数据"
   },
   {
-    title: "Active Customers",
+    title: "活跃客户",
     value: "2,350",
-    description: "Total active users",
+    description: "总活跃用户数",
     change: "+5.2%", 
     trend: "up",
     icon: Users,
-    footer: "Strong user retention",
-    subfooter: "Engagement exceeds targets"
+    footer: "用户留存良好",
+    subfooter: "参与度超出目标"
   },
   {
-    title: "Total Orders",
+    title: "订单总数",
     value: "1,247",
-    description: "Orders this month",
+    description: "本月订单",
     change: "-2.1%",
     trend: "down", 
     icon: ShoppingCart,
-    footer: "Down 2% this period",
-    subfooter: "Order volume needs attention"
+    footer: "本期下降2%",
+    subfooter: "订单量需关注"
   },
   {
-    title: "Conversion Rate",
+    title: "转化率",
     value: "3.24%",
-    description: "Average conversion",
+    description: "平均转化率",
     change: "+8.3%",
     trend: "up",
     icon: BarChart3,
-    footer: "Steady performance increase",
-    subfooter: "Meets conversion projections"
+    footer: "业绩持续增长",
+    subfooter: "符合转化率预期"
   },
 ]
 

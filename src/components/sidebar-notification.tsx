@@ -21,14 +21,14 @@ export function SidebarNotification() {
           onClick={() => setIsVisible(false)}
         >
           <X className="h-3 w-3" />
-          <span className="sr-only">Close notification</span>
+          <span className="sr-only">关闭通知</span>
         </Button>
         
         <div className="pr-6">
           <h3 className="flex items-center gap-3 font-semibold text-neutral-900 dark:text-neutral-100 mb-2 mt-1">
             <Logo size={42} className="-mt-1" />
             <div>
-              Welcome to{" "}
+              欢迎使用{" "}
               <a 
                 href="https://shadcnstore.com" 
                 target="_blank" 
@@ -40,16 +40,16 @@ export function SidebarNotification() {
             </div>
           </h3>
           <p className="text-sm text-muted-foreground dark:text-neutral-400 leading-relaxed">
-            Explore our premium Shadcn UI{" "}
+            探索我们的精品 Shadcn UI{" "}
             <a 
               href="https://shadcnstore.com/blocks" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary underline"
             >
-              blocks
+              组件块
             </a>{" "}
-            to build your next project faster.
+            ，助力您更快地构建下一个项目。
           </p>
         </div>
       </CardContent>

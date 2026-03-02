@@ -44,26 +44,26 @@ interface CalendarsProps {
 // Enhanced calendar data with colors and visibility
 const enhancedCalendars: CalendarGroup[] = [
   {
-    name: "My Calendars",
+    name: "我的日历",
     items: [
-      { id: "personal", name: "Personal", color: "bg-blue-500", visible: true, type: "personal" },
-      { id: "work", name: "Work", color: "bg-green-500", visible: true, type: "work" },
-      { id: "family", name: "Family", color: "bg-pink-500", visible: true, type: "personal" }
+      { id: "personal", name: "个人", color: "bg-blue-500", visible: true, type: "personal" },
+      { id: "work", name: "工作", color: "bg-green-500", visible: true, type: "work" },
+      { id: "family", name: "家庭", color: "bg-pink-500", visible: true, type: "personal" }
     ]
   },
   {
-    name: "Favorites",
+    name: "收藏",
     items: [
-      { id: "holidays", name: "Holidays", color: "bg-red-500", visible: true, type: "shared" },
-      { id: "birthdays", name: "Birthdays", color: "bg-purple-500", visible: true, type: "personal" }
+      { id: "holidays", name: "节假日", color: "bg-red-500", visible: true, type: "shared" },
+      { id: "birthdays", name: "生日", color: "bg-purple-500", visible: true, type: "personal" }
     ]
   },
   {
-    name: "Other",
+    name: "其他",
     items: [
-      { id: "travel", name: "Travel", color: "bg-orange-500", visible: false, type: "personal" },
-      { id: "reminders", name: "Reminders", color: "bg-yellow-500", visible: true, type: "personal" },
-      { id: "deadlines", name: "Deadlines", color: "bg-red-600", visible: true, type: "work" }
+      { id: "travel", name: "旅行", color: "bg-orange-500", visible: false, type: "personal" },
+      { id: "reminders", name: "提醒", color: "bg-yellow-500", visible: true, type: "personal" },
+      { id: "deadlines", name: "截止日期", color: "bg-red-600", visible: true, type: "work" }
     ]
   }
 ]
@@ -172,20 +172,20 @@ export function Calendars({
                               onClick={() => onCalendarEdit?.(item.id)}
                               className="cursor-pointer"
                             >
-                              Edit calendar
+                              编辑日历
                             </DropdownMenuItem>
                             <DropdownMenuItem 
                               onClick={() => handleToggleVisibility(item.id)}
                               className="cursor-pointer"
                             >
-                              {item.visible ? "Hide" : "Show"} calendar
+                              {item.visible ? "隐藏" : "显示"} 日历
                             </DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem 
                               onClick={() => onCalendarDelete?.(item.id)}
                               className="cursor-pointer text-destructive"
                             >
-                              Delete calendar
+                              删除日历
                             </DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>

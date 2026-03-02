@@ -82,19 +82,19 @@ export function NavUser({
               <DropdownMenuItem asChild className="cursor-pointer">
                 <Link to="/settings/account">
                   <CircleUser />
-                  Account
+                  账号
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="cursor-pointer">
                 <Link to="/settings/billing">
                   <CreditCard />
-                  Billing
+                  账单
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild className="cursor-pointer">
                 <Link to="/settings/notifications">
                   <BellDot />
-                  Notifications
+                  通知
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
@@ -102,7 +102,7 @@ export function NavUser({
             <DropdownMenuItem asChild className="cursor-pointer">
               <Link to="/sign-in">
                 <LogOut />
-                Log out
+                退出登录
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

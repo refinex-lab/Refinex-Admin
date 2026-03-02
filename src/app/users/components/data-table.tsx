@@ -138,7 +138,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
               (table.getIsSomePageRowsSelected() && "indeterminate")
             }
             onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-            aria-label="Select all"
+            aria-label="全选"
           />
         </div>
       ),
@@ -147,7 +147,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
           <Checkbox
             checked={row.getIsSelected()}
             onCheckedChange={(value) => row.toggleSelected(!!value)}
-            aria-label="Select row"
+            aria-label="选择行"
           />
         </div>
       ),
@@ -157,7 +157,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       accessorKey: "name",
-      header: "User",
+      header: "用户",
       cell: ({ row }) => {
         const user = row.original
         return (
@@ -177,7 +177,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       accessorKey: "role",
-      header: "Role",
+      header: "角色",
       cell: ({ row }) => {
         const role = row.getValue("role") as string
         return (
@@ -190,7 +190,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       accessorKey: "plan",
-      header: "Plan",
+      header: "套餐",
       cell: ({ row }) => {
         const plan = row.getValue("plan") as string
         return <span className="font-medium">{plan}</span>
@@ -199,7 +199,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       accessorKey: "billing",
-      header: "Billing",
+      header: "账单",
       cell: ({ row }) => {
         const billing = row.getValue("billing") as string
         return <span className="text-sm">{billing}</span>
@@ -207,7 +207,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       accessorKey: "status",
-      header: "Status",
+      header: "状态",
       cell: ({ row }) => {
         const status = row.getValue("status") as string
         return (
@@ -220,14 +220,14 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
     },
     {
       id: "actions",
-      header: "Actions",
+      header: "操作",
       cell: ({ row }) => {
         const user = row.original
         return (
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" className="h-8 w-8 cursor-pointer">
               <Eye className="size-4" />
-              <span className="sr-only">View user</span>
+              <span className="sr-only">查看用户</span>
             </Button>
             <Button
               variant="ghost"
@@ -236,24 +236,24 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
               onClick={() => onEditUser(user)}
             >
               <Pencil className="size-4" />
-              <span className="sr-only">Edit user</span>
+              <span className="sr-only">编辑用户</span>
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="h-8 w-8 cursor-pointer">
                   <EllipsisVertical className="size-4" />
-                  <span className="sr-only">More actions</span>
+                  <span className="sr-only">更多操作</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem className="cursor-pointer">
-                  View Details
+                  查看详情
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  Send Email
+                  发送邮件
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
-                  Reset Password
+                  重置密码
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
@@ -262,7 +262,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
                   onClick={() => onDeleteUser(user.id)}
                 >
                   <Trash2 className="mr-2 size-4" />
-                  Delete User
+                  删除用户
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -304,7 +304,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
           <div className="relative flex-1 max-w-sm">
             <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
-              placeholder="Search users..."
+              placeholder="搜索用户..."
               value={globalFilter ?? ""}
               onChange={(event) => setGlobalFilter(String(event.target.value))}
               className="pl-9"
@@ -314,7 +314,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
         <div className="flex items-center space-x-2">
           <Button variant="outline" className="cursor-pointer">
             <Download className="mr-2 size-4" />
-            Export
+            导出
           </Button>
           <UserFormDialog onAddUser={onAddUser} />
         </div>
@@ -323,7 +323,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
       <div className="grid gap-2 sm:grid-cols-4 sm:gap-4">
         <div className="space-y-2">
           <Label htmlFor="role-filter" className="text-sm font-medium">
-            Role
+            角色
           </Label>
           <Select
             value={roleFilter || ""}
@@ -332,10 +332,10 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
             }
           >
             <SelectTrigger className="cursor-pointer w-full" id="role-filter">
-              <SelectValue placeholder="Select Role" />
+              <SelectValue placeholder="选择角色" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Roles</SelectItem>
+              <SelectItem value="all">全部角色</SelectItem>
               <SelectItem value="Admin">Admin</SelectItem>
               <SelectItem value="Author">Author</SelectItem>
               <SelectItem value="Editor">Editor</SelectItem>
@@ -346,7 +346,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
         </div>
         <div className="space-y-2">
           <Label htmlFor="plan-filter" className="text-sm font-medium">
-            Plan
+            套餐
           </Label>
           <Select
             value={planFilter || ""}
@@ -355,10 +355,10 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
             }
           >
             <SelectTrigger className="cursor-pointer w-full" id="plan-filter">
-              <SelectValue placeholder="Select Plan" />
+              <SelectValue placeholder="选择套餐" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Plans</SelectItem>
+              <SelectItem value="all">全部套餐</SelectItem>
               <SelectItem value="Basic">Basic</SelectItem>
               <SelectItem value="Professional">Professional</SelectItem>
               <SelectItem value="Enterprise">Enterprise</SelectItem>
@@ -367,7 +367,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
         </div>
         <div className="space-y-2">
           <Label htmlFor="status-filter" className="text-sm font-medium">
-            Status
+            状态
           </Label>
           <Select
             value={statusFilter || ""}
@@ -376,10 +376,10 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
             }
           >
             <SelectTrigger className="cursor-pointer w-full" id="status-filter">
-              <SelectValue placeholder="Select Status" />
+              <SelectValue placeholder="选择状态" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Status</SelectItem>
+              <SelectItem value="all">全部状态</SelectItem>
               <SelectItem value="Active">Active</SelectItem>
               <SelectItem value="Pending">Pending</SelectItem>
               <SelectItem value="Error">Error</SelectItem>
@@ -390,12 +390,12 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
         <div className="space-y-2">
 
           <Label htmlFor="column-visibility" className="text-sm font-medium">
-            Column Visibility
+            列可见性
           </Label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild id="column-visibility">
               <Button variant="outline" className="cursor-pointer w-full">
-                Columns <ChevronDown className="ml-2 size-4" />
+                列 <ChevronDown className="ml-2 size-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -464,7 +464,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  暂无数据。
                 </TableCell>
               </TableRow>
             )}
@@ -476,7 +476,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
 
         <div className="flex items-center space-x-2">
           <Label htmlFor="page-size" className="text-sm font-medium">
-            Show
+            显示
           </Label>
           <Select
             value={`${table.getState().pagination.pageSize}`}
@@ -497,14 +497,14 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
           </Select>
         </div>
         <div className="flex-1 text-sm text-muted-foreground hidden sm:block">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
+          已选 {table.getFilteredSelectedRowModel().rows.length} / {" "}
+          {table.getFilteredRowModel().rows.length} 行
         </div>
         <div className="flex items-center space-x-6 lg:space-x-8">
           <div className="flex items-center space-x-2 hidden sm:flex">
-            <p className="text-sm font-medium">Page</p>
+            <p className="text-sm font-medium">页码</p>
             <strong className="text-sm">
-              {table.getState().pagination.pageIndex + 1} of{" "}
+              {table.getState().pagination.pageIndex + 1} /{" "}
               {table.getPageCount()}
             </strong>
           </div>
@@ -516,7 +516,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
               disabled={!table.getCanPreviousPage()}
               className="cursor-pointer"
             >
-              Previous
+              上一页
             </Button>
             <Button
               variant="outline"
@@ -525,7 +525,7 @@ export function DataTable({ users, onDeleteUser, onEditUser, onAddUser }: DataTa
               disabled={!table.getCanNextPage()}
               className="cursor-pointer"
             >
-              Next
+              下一页
             </Button>
           </div>
         </div>

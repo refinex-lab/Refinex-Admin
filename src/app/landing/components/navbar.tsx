@@ -30,32 +30,32 @@ import { ModeToggle } from '@/components/mode-toggle'
 import { useTheme } from '@/hooks/use-theme'
 
 const navigationItems = [
-  { name: 'Home', href: '#hero' },
-  { name: 'Features', href: '#features' },
-  { name: 'Solutions', href: '#features', hasMegaMenu: true },
-  { name: 'Team', href: '#team' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'FAQ', href: '#faq' },
-  { name: 'Contact', href: '#contact' },
+  { name: '首页', href: '#hero' },
+  { name: '功能', href: '#features' },
+  { name: '解决方案', href: '#features', hasMegaMenu: true },
+  { name: '团队', href: '#team' },
+  { name: '定价', href: '#pricing' },
+  { name: '常见问题', href: '#faq' },
+  { name: '联系', href: '#contact' },
 ]
 
 // Solutions menu items for mobile
 const solutionsItems = [
-  { title: 'Browse Products' },
-  { name: 'Free Blocks', href: '#free-blocks' },
-  { name: 'Premium Templates', href: '#premium-templates' },
-  { name: 'Admin Dashboards', href: '#admin-dashboards' },
-  { name: 'Landing Pages', href: '#landing-pages' },
-  { title: 'Categories' },
-  { name: 'E-commerce', href: '#ecommerce' },
-  { name: 'SaaS Dashboards', href: '#saas-dashboards' },
-  { name: 'Analytics', href: '#analytics' },
-  { name: 'Authentication', href: '#authentication' },
-  { title: 'Resources' },
-  { name: 'Documentation', href: '#docs' },
-  { name: 'Component Showcase', href: '#showcase' },
-  { name: 'GitHub Repository', href: '#github' },
-  { name: 'Design System', href: '#design-system' }
+  { title: '浏览产品' },
+  { name: '免费组件', href: '#free-blocks' },
+  { name: '高级模板', href: '#premium-templates' },
+  { name: '管理后台', href: '#admin-dashboards' },
+  { name: '落地页', href: '#landing-pages' },
+  { title: '分类' },
+  { name: '电商', href: '#ecommerce' },
+  { name: 'SaaS后台', href: '#saas-dashboards' },
+  { name: '分析', href: '#analytics' },
+  { name: '身份认证', href: '#authentication' },
+  { title: '资源' },
+  { name: '文档', href: '#docs' },
+  { name: '组件展示', href: '#showcase' },
+  { name: 'GitHub仓库', href: '#github' },
+  { name: '设计系统', href: '#design-system' }
 ]
 
 // Smooth scroll function
@@ -127,21 +127,21 @@ export function LandingNavbar() {
         <div className="hidden xl:flex items-center space-x-2">
           <ModeToggle variant="ghost" />
           <Button variant="ghost" size="icon" asChild className="cursor-pointer">
-            <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+            <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库">
               <Github className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="outline" asChild className="cursor-pointer">
             <a href={getAppUrl("/dashboard")} target="_blank" rel="noopener noreferrer">
               <LayoutDashboard className="h-4 w-4 mr-2" />
-              Dashboard
+              控制台
             </a>
           </Button>
           <Button variant="ghost" asChild className="cursor-pointer">
-            <a href={getAppUrl("/auth/sign-in")}>Sign In</a>
+            <a href={getAppUrl("/auth/sign-in")}>登录</a>
           </Button>
           <Button asChild className="cursor-pointer">
-            <a href={getAppUrl("/auth/sign-up")}>Get Started</a>
+            <a href={getAppUrl("/auth/sign-up")}>立即开始</a>
           </Button>
         </div>
 
@@ -150,7 +150,7 @@ export function LandingNavbar() {
           <SheetTrigger asChild className="xl:hidden">
             <Button variant="ghost" size="icon" className="cursor-pointer">
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
+              <span className="sr-only">切换菜单</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-full sm:w-[400px] p-0 gap-0 [&>button]:hidden overflow-hidden flex flex-col">
@@ -173,7 +173,7 @@ export function LandingNavbar() {
                       <Sun className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                     </Button>
                     <Button variant="ghost" size="icon" asChild className="cursor-pointer h-8 w-8">
-                      <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                      <a href="https://github.com/silicondeck/shadcn-dashboard-landing-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库">
                         <Github className="h-4 w-4" />
                       </a>
                     </Button>
@@ -251,16 +251,16 @@ export function LandingNavbar() {
                   <Button variant="outline" size="lg" asChild className="w-full cursor-pointer">
                     <a href={getAppUrl("/dashboard")}>
                       <LayoutDashboard className="size-4" />
-                      Dashboard
+                      控制台
                     </a>
                   </Button>
 
                   <div className="grid grid-cols-2 gap-3">
                     <Button variant="outline" size="lg" asChild className="cursor-pointer">
-                      <a href={getAppUrl("/auth/sign-in")}>Sign In</a>
+                      <a href={getAppUrl("/auth/sign-in")}>登录</a>
                     </Button>
                     <Button asChild size="lg" className="cursor-pointer" >
-                      <a href={getAppUrl("/auth/sign-up")}>Get Started</a>
+                      <a href={getAppUrl("/auth/sign-up")}>立即开始</a>
                     </Button>
                   </div>
                 </div>

@@ -29,9 +29,9 @@ export function QuickActions({
   onSettings 
 }: QuickActionsProps) {
   const quickStats = [
-    { label: "Today's Events", value: "3", color: "bg-blue-500" },
-    { label: "This Week", value: "12", color: "bg-green-500" },
-    { label: "Pending", value: "2", color: "bg-orange-500" }
+    { label: "今日事件", value: "3", color: "bg-blue-500" },
+    { label: "本周", value: "12", color: "bg-green-500" },
+    { label: "待处理", value: "2", color: "bg-orange-500" }
   ]
 
   return (
@@ -39,7 +39,7 @@ export function QuickActions({
       {/* Quick Stats */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-sm font-medium">Overview</CardTitle>
+          <CardTitle className="text-sm font-medium">概览</CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           {quickStats.map((stat, index) => (
@@ -57,7 +57,7 @@ export function QuickActions({
       {/* Quick Actions */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle className="text-sm font-medium">Quick Actions</CardTitle>
+          <CardTitle className="text-sm font-medium">快捷操作</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <Button 
@@ -66,7 +66,7 @@ export function QuickActions({
             onClick={onNewEvent}
           >
             <Plus className="w-4 h-4 mr-2" />
-            New Event
+            新建事件
           </Button>
           
           <Button 
@@ -75,7 +75,7 @@ export function QuickActions({
             onClick={onNewMeeting}
           >
             <Users className="w-4 h-4 mr-2" />
-            Schedule Meeting
+            安排会议
           </Button>
           
           <Button 
@@ -84,7 +84,7 @@ export function QuickActions({
             onClick={onNewReminder}
           >
             <Bell className="w-4 h-4 mr-2" />
-            Set Reminder
+            设置提醒
           </Button>
 
           <Separator className="my-3" />
@@ -95,7 +95,7 @@ export function QuickActions({
             className="w-full justify-start cursor-pointer" 
           >
             <Share className="w-4 h-4 mr-2" />
-            Share Calendar
+            共享日历
           </Button>
           
           <Button 
@@ -104,7 +104,7 @@ export function QuickActions({
             className="w-full justify-start cursor-pointer" 
           >
             <Download className="w-4 h-4 mr-2" />
-            Export
+            导出
           </Button>
           
           <Button 
@@ -114,7 +114,7 @@ export function QuickActions({
             onClick={onSettings}
           >
             <Settings className="w-4 h-4 mr-2" />
-            Settings
+            设置
           </Button>
         </CardContent>
       </Card>
@@ -124,7 +124,7 @@ export function QuickActions({
         <CardHeader className="pb-3">
           <CardTitle className="text-sm font-medium flex items-center gap-2">
             <Clock className="w-4 h-4" />
-            Next Up
+            即将发生
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
@@ -132,16 +132,16 @@ export function QuickActions({
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-blue-500 rounded-full mt-2" />
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium truncate">Team Standup</p>
-                <p className="text-xs text-muted-foreground">9:00 AM • Conference Room A</p>
+                <p className="text-sm font-medium truncate">团队站会</p>
+                <p className="text-xs text-muted-foreground">上午 9:00 • 会议室A</p>
               </div>
             </div>
             
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-purple-500 rounded-full mt-2" />
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium truncate">Design Review</p>
-                <p className="text-xs text-muted-foreground">2:00 PM • Virtual</p>
+                <p className="text-sm font-medium truncate">设计评审</p>
+                <p className="text-xs text-muted-foreground">下午 2:00 • 线上</p>
               </div>
             </div>
           </div>

@@ -20,15 +20,15 @@ const customerGrowthData = [
 
 const chartConfig = {
   new: {
-    label: "New Customers",
+    label: "新客户",
     color: "var(--chart-1)",
   },
   returning: {
-    label: "Returning",
+    label: "回头客",
     color: "var(--chart-2)",
   },
   churn: {
-    label: "Churned",
+    label: "流失",
     color: "var(--chart-3)",
   },
 }
@@ -50,47 +50,47 @@ const regionsData = [
 ]
 
 export function CustomerInsights() {
-  const [activeTab, setActiveTab] = useState("growth")
+  const [activeTab, setActiveTab] = useState("增长")
 
   return (
     <Card className="h-fit">
       <CardHeader>
-        <CardTitle>Customer Insights</CardTitle>
-        <CardDescription>Growth trends and demographics</CardDescription>
+        <CardTitle>客户洞察</CardTitle>
+        <CardDescription>增长趋势与人口统计</CardDescription>
       </CardHeader>
       <CardContent>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-3 bg-muted/50 p-1 rounded-lg h-12">
             <TabsTrigger
-              value="growth"
+              value="增长"
               className="cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-all data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground"
             >
               <TrendingUp className="h-4 w-4" />
-              <span className="hidden sm:inline">Growth</span>
+              <span className="hidden sm:inline">增长</span>
             </TabsTrigger>
             <TabsTrigger
-              value="demographics"
+              value="人口统计"
               className="cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-all data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground"
             >
               <UserIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">Demographics</span>
+              <span className="hidden sm:inline">人口统计</span>
             </TabsTrigger>
             <TabsTrigger
-              value="regions"
+              value="地区"
               className="cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-all data-[state=active]:bg-background data-[state=active]:shadow-sm data-[state=active]:text-foreground"
             >
               <MapPin className="h-4 w-4" />
-              <span className="hidden sm:inline">Regions</span>
+              <span className="hidden sm:inline">地区</span>
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="growth" className="mt-8 space-y-6">
+          <TabsContent value="增长" className="mt-8 space-y-6">
             <div className="grid gap-6">
-              {/* Chart and Key Metrics Side by Side */}
+              {/* Chart and 关键指标 Side by Side */}
               <div className="grid grid-cols-10 gap-6">
                 {/* Chart Area - 70% */}
                 <div className="col-span-10 xl:col-span-7">
-                  <h3 className="text-sm font-medium text-muted-foreground mb-6">Customer Growth Trends</h3>
+                  <h3 className="text-sm font-medium text-muted-foreground mb-6">客户增长趋势</h3>
                   <ChartContainer config={chartConfig} className="h-[375px] w-full">
                     <BarChart data={customerGrowthData} margin={{ top: 20, right: 20, bottom: 20, left: 0 }}>
                       <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
@@ -116,43 +116,43 @@ export function CustomerInsights() {
                   </ChartContainer>
                 </div>
 
-                {/* Key Metrics - 30% */}
+                {/* 关键指标 - 30% */}
                 <div className="col-span-10 xl:col-span-3 space-y-5">
-                  <h3 className="text-sm font-medium text-muted-foreground mb-6">Key Metrics</h3>
+                  <h3 className="text-sm font-medium text-muted-foreground mb-6">关键指标</h3>
                   <div className="grid grid-cols-3 gap-5">
                     <div className="p-4 rounded-lg max-lg:col-span-3 xl:col-span-3 border">
                       <div className="flex items-center gap-2 mb-2">
                         <TrendingUp className="h-4 w-4 text-primary" />
-                        <span className="text-sm font-medium">Total Customers</span>
+                        <span className="text-sm font-medium">客户总数</span>
                       </div>
                       <div className="text-2xl font-bold">15,847</div>
                       <div className="text-xs text-green-600 flex items-center gap-1 mt-1">
                         <ArrowUpIcon className="h-3 w-3" />
-                        +12.5% from last month
+                        较上月 +12.5%
                       </div>
                     </div>
 
                     <div className="p-4 rounded-lg max-lg:col-span-3 xl:col-span-3 border">
                       <div className="flex items-center gap-2 mb-2">
                         <Users className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm font-medium">Retention Rate</span>
+                        <span className="text-sm font-medium">留存率</span>
                       </div>
                       <div className="text-2xl font-bold">92.4%</div>
                       <div className="text-xs text-green-600 flex items-center gap-1 mt-1">
                         <ArrowUpIcon className="h-3 w-3" />
-                        +2.1% improvement
+                        提升 +2.1%
                       </div>
                     </div>
 
                     <div className="p-4 rounded-lg max-lg:col-span-3 xl:col-span-3 border">
                       <div className="flex items-center gap-2 mb-2">
                         <Target className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-sm font-medium">Avg. LTV</span>
+                        <span className="text-sm font-medium">平均生命周期价值</span>
                       </div>
                       <div className="text-2xl font-bold">$2,847</div>
                       <div className="text-xs text-green-600 flex items-center gap-1 mt-1">
                         <ArrowUpIcon className="h-3 w-3" />
-                        +8.3% growth
+                        +8.3% 增长
                       </div>
                     </div>
                   </div>
@@ -161,15 +161,15 @@ export function CustomerInsights() {
             </div>
           </TabsContent>
 
-          <TabsContent value="demographics" className="mt-8">
+          <TabsContent value="人口统计" className="mt-8">
             <div className="rounded-lg border bg-card">
               <Table>
                 <TableHeader>
                   <TableRow className="border-b">
-                    <TableHead className="py-5 px-6 font-semibold">Age Group</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Customers</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Percentage</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Growth</TableHead>
+                    <TableHead className="py-5 px-6 font-semibold">年龄段</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">客户数</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">占比</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">增长</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -188,29 +188,29 @@ export function CustomerInsights() {
             </div>
             <div className="flex items-center justify-end space-x-2 py-6">
               <div className="text-muted-foreground text-sm hidden sm:block">
-                0 of {demographicsData.length} row(s) selected.
+                已选 0 / {demographicsData.length} 行。
               </div>
               <div className="space-x-2 space-y-2">
                 <Button variant="outline" size="sm" disabled>
-                  Previous
+                  上一页
                 </Button>
                 <Button variant="outline" size="sm" disabled>
-                  Next
+                  下一页
                 </Button>
               </div>
             </div>
           </TabsContent>
 
 
-          <TabsContent value="regions" className="mt-8">
+          <TabsContent value="地区" className="mt-8">
             <div className="rounded-lg border bg-card">
               <Table>
                 <TableHeader>
                   <TableRow className="border-b">
-                    <TableHead className="py-5 px-6 font-semibold">Region</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Customers</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Revenue</TableHead>
-                    <TableHead className="text-right py-5 px-6 font-semibold">Growth</TableHead>
+                    <TableHead className="py-5 px-6 font-semibold">地区</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">客户数</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">收入</TableHead>
+                    <TableHead className="text-right py-5 px-6 font-semibold">增长</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -229,14 +229,14 @@ export function CustomerInsights() {
             </div>
             <div className="flex items-center justify-end space-x-2 py-6">
               <div className="text-muted-foreground text-sm hidden sm:block">
-                0 of {regionsData.length} row(s) selected.
+                已选 0 / {regionsData.length} 行。
               </div>
               <div className="space-x-2 space-y-2">
                 <Button variant="outline" size="sm" disabled>
-                  Previous
+                  上一页
                 </Button>
                 <Button variant="outline" size="sm" disabled>
-                  Next
+                  下一页
                 </Button>
               </div>
             </div>

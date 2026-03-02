@@ -96,7 +96,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
   }
 
   const renderCalendarGrid = () => {
-    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const weekDays = ['日', '一', '二', '三', '四', '五', '六']
 
     return (
       <div className="flex-1 bg-background">
@@ -246,7 +246,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
               <ChevronRight className="w-4 h-4" />
             </Button>
             <Button variant="outline" size="sm" onClick={goToToday} className="cursor-pointer">
-              Today
+              今天
             </Button>
           </div>
 
@@ -259,7 +259,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
           {/* Search */}
           <div className="relative">
             <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
-            <Input placeholder="Search events..." className="pl-10 w-64" />
+            <Input placeholder="搜索事件..." className="pl-10 w-64" />
           </div>
 
           {/* View Mode Toggle */}
@@ -268,18 +268,18 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
               <Button variant="outline" className="cursor-pointer">
                 {viewMode === "month" && <Grid3X3 className="w-4 h-4 mr-2" />}
                 {viewMode === "list" && <List className="w-4 h-4 mr-2" />}
-                {viewMode.charAt(0).toUpperCase() + viewMode.slice(1)}
+                {viewMode.charAt(0).toUpperCase() + viewMode.slice(1) === "Month" ? "月" : "列表"}
                 <ChevronDown className="w-4 h-4 ml-2" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem onClick={() => setViewMode("month")} className="cursor-pointer">
                 <Grid3X3 className="w-4 h-4 mr-2" />
-                Month
+                月
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setViewMode("list")} className="cursor-pointer">
                 <List className="w-4 h-4 mr-2" />
-                List
+                列表
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -293,9 +293,9 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
       <Dialog open={showEventDialog} onOpenChange={setShowEventDialog}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>{selectedEvent?.title || "Event Details"}</DialogTitle>
+            <DialogTitle>{selectedEvent?.title || "事件详情"}</DialogTitle>
             <DialogDescription>
-              View and manage this calendar event
+              查看并管理此日历事件
             </DialogDescription>
           </DialogHeader>
           {selectedEvent && (
@@ -315,7 +315,7 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-muted-foreground" />
                 <div className="flex items-center gap-2">
-                  <span>Attendees:</span>
+                  <span>参与者：</span>
                   <div className="flex -space-x-2">
                     {selectedEvent.attendees.map((attendee: string, index: number) => (
                       <Avatar key={index} className="w-6 h-6 border-2 border-background">
@@ -333,10 +333,10 @@ export function CalendarMain({ selectedDate, onDateSelect, onMenuClick, events, 
               <div className="flex gap-2 pt-4">
                 <Button variant="outline" className="flex-1 cursor-pointer" onClick={() => {
                   setShowEventDialog(false)
-                }}>Edit</Button>
+                }}>编辑</Button>
                 <Button variant="destructive" className="flex-1 cursor-pointer" onClick={() => {
                   setShowEventDialog(false)
-                }}>Delete</Button>
+                }}>删除</Button>
               </div>
             </div>
           )}

@@ -26,13 +26,13 @@ export function ForgotPasswordForm3({
                 </a>
               </div>
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold">Forgot your password?</h1>
+                <h1 className="text-2xl font-bold">忘记密码？</h1>
                 <p className="text-muted-foreground text-balance">
-                  Enter your email to reset your ShadcnStore account password
+                  请输入邮箱以重置您的 ShadcnStore 账号密码
                 </p>
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">邮箱</Label>
                 <Input
                   id="email"
                   type="email"
@@ -41,12 +41,12 @@ export function ForgotPasswordForm3({
                 />
               </div>
               <Button type="submit" className="w-full cursor-pointer">
-                Send Reset Link
+                发送重置链接
               </Button>
               <div className="text-center text-sm">
-                Remember your password?{" "}
+                想起密码了？{" "}
                 <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-in-3" className="underline underline-offset-4">
-                  Back to sign in
+                  返回登录
                 </a>
               </div>
             </div>
@@ -61,8 +61,8 @@ export function ForgotPasswordForm3({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+        点击继续，即表示您同意我们的 <a href="#">服务条款</a>{" "}
+        和 <a href="#">隐私政策</a>。
       </div>
     </div>
   )

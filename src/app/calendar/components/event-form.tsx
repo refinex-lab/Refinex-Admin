@@ -43,11 +43,11 @@ interface EventFormProps {
 }
 
 const eventTypes = [
-  { value: "meeting", label: "Meeting", color: "bg-blue-500" },
-  { value: "event", label: "Event", color: "bg-green-500" },
-  { value: "personal", label: "Personal", color: "bg-pink-500" },
-  { value: "task", label: "Task", color: "bg-orange-500" },
-  { value: "reminder", label: "Reminder", color: "bg-purple-500" }
+  { value: "meeting", label: "会议", color: "bg-blue-500" },
+  { value: "event", label: "事件", color: "bg-green-500" },
+  { value: "personal", label: "个人", color: "bg-pink-500" },
+  { value: "task", label: "任务", color: "bg-orange-500" },
+  { value: "reminder", label: "提醒", color: "bg-purple-500" }
 ]
 
 const timeSlots = [
@@ -58,7 +58,7 @@ const timeSlots = [
 ]
 
 const durationOptions = [
-  "15 min", "30 min", "45 min", "1 hour", "1.5 hours", "2 hours", "3 hours", "All day"
+  "15分钟", "30分钟", "45分钟", "1小时", "1.5小时", "2小时", "3小时", "全天"
 ]
 
 export function EventForm({ event, open, onOpenChange, onSave, onDelete }: EventFormProps) {
@@ -120,10 +120,10 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <div className={cn("w-3 h-3 rounded-full", selectedEventType?.color)} />
-            {event ? "Edit Event" : "Create New Event"}
+            {event ? "编辑事件" : "创建新事件"}
           </DialogTitle>
           <DialogDescription>
-            {event ? "Make changes to this event" : "Add a new event to your calendar"}
+            {event ? "修改此事件" : "在日历中添加新事件"}
           </DialogDescription>
         </DialogHeader>
 
@@ -132,11 +132,11 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
           <div className="space-y-2">
             <Label htmlFor="title" className="flex items-center gap-2">
               <Type className="w-4 h-4" />
-              Event Title
+              事件标题
             </Label>
             <Input
               id="title"
-              placeholder="Enter event title..."
+              placeholder="输入事件标题..."
               value={formData.title}
               onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
               className="text-lg font-medium"
@@ -148,7 +148,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
             <div className="space-y-2">
               <Label className="flex items-center gap-2">
                 <Tag className="w-4 h-4" />
-                Event Type
+                事件类型
               </Label>
               <Select value={formData.type} onValueChange={(value) => setFormData(prev => ({ ...prev, type: value as CalendarEvent["type"] }))}>
                 <SelectTrigger className="w-full">
@@ -173,7 +173,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
             <div className="space-y-2">
               <Label className="flex items-center gap-2">
                 <CalendarIcon className="w-4 h-4" />
-                Date
+                日期
               </Label>
               <Popover open={showCalendar} onOpenChange={setShowCalendar}>
                 <PopoverTrigger asChild>
@@ -200,7 +200,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
             <div className="space-y-2">
               <Label className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                Time
+                时间
               </Label>
               <Select value={formData.time} onValueChange={(value) => setFormData(prev => ({ ...prev, time: value }))}>
                 <SelectTrigger className="w-full">
@@ -218,7 +218,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
           {/* Duration and All Day */}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Duration</Label>
+              <Label>时长</Label>
               <Select value={formData.duration} onValueChange={(value) => setFormData(prev => ({ ...prev, duration: value }))}>
                 <SelectTrigger className="w-full">
                   <SelectValue />
@@ -232,7 +232,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
             </div>
 
             <div className="space-y-2">
-              <Label>Options</Label>
+              <Label>选项</Label>
               <div className="flex items-center space-x-4 h-10">
                 <div className="flex items-center space-x-2">
                   <Switch
@@ -240,7 +240,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
                     checked={formData.allDay}
                     onCheckedChange={(checked) => setFormData(prev => ({ ...prev, allDay: checked }))}
                   />
-                  <Label htmlFor="all-day" className="text-sm">All day</Label>
+                  <Label htmlFor="all-day" className="text-sm">全天</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Switch
@@ -248,7 +248,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
                     checked={formData.reminder}
                     onCheckedChange={(checked) => setFormData(prev => ({ ...prev, reminder: checked }))}
                   />
-                  <Label htmlFor="reminder" className="text-sm">Reminder</Label>
+                  <Label htmlFor="reminder" className="text-sm">提醒</Label>
                 </div>
               </div>
             </div>
@@ -258,11 +258,11 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
           <div className="space-y-2">
             <Label htmlFor="location" className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              Location
+              地点
             </Label>
             <Input
               id="location"
-              placeholder="Add location..."
+              placeholder="添加地点..."
               value={formData.location}
               onChange={(e) => setFormData(prev => ({ ...prev, location: e.target.value }))}
             />
@@ -272,16 +272,16 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
           <div className="space-y-2">
             <Label className="flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Attendees
+              参与者
             </Label>
             <div className="flex gap-2">
               <Input
-                placeholder="Add attendee..."
+                placeholder="添加参与者..."
                 value={newAttendee}
                 onChange={(e) => setNewAttendee(e.target.value)}
                 onKeyPress={(e) => e.key === "Enter" && addAttendee()}
               />
-              <Button onClick={addAttendee} variant="outline" className="cursor-pointer">Add</Button>
+              <Button onClick={addAttendee} variant="outline" className="cursor-pointer">添加</Button>
             </div>
             {formData.attendees.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-2">
@@ -311,7 +311,7 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
             <Label htmlFor="description">Description</Label>
             <Textarea
               id="description"
-              placeholder="Add description..."
+              placeholder="添加描述..."
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
               rows={3}
@@ -321,15 +321,15 @@ export function EventForm({ event, open, onOpenChange, onSave, onDelete }: Event
           {/* Actions */}
           <div className="flex gap-3 pt-6">
             <Button onClick={handleSave} className="flex-1 cursor-pointer">
-              {event ? "Update Event" : "Create Event"}
+              {event ? "更新事件" : "创建事件"}
             </Button>
             {event && onDelete && (
               <Button onClick={handleDelete} variant="destructive" className="cursor-pointer">
-                Delete
+                删除
               </Button>
             )}
             <Button onClick={() => onOpenChange(false)} variant="outline" className="cursor-pointer">
-              Cancel
+              取消
             </Button>
           </div>
         </div>

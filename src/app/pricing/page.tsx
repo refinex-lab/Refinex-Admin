@@ -9,7 +9,7 @@ import faqsData from "./data/faqs.json"
 
 export default function PricingPage() {
   return (
-    <BaseLayout title="Pricing Plans" description="Choose the perfect plan for your team">
+    <BaseLayout title="定价方案" description="为您的团队选择最佳方案">
       <div className="px-4 lg:px-6">
         {/* Pricing Cards */}
         <section className='pb-12' id='pricing'>

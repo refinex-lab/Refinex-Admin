@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "name": "Fast Performance",
-    "description": "Lightning-fast response times and optimized performance for all your business needs.",
+    "name": "高速性能",
+    "description": "极速响应，为您的所有业务需求优化性能。",
     "icon": "Rocket"
   },
   {
     "id": 2,
-    "name": "Enterprise Security",
-    "description": "Bank-level security with end-to-end encryption and advanced threat protection.",
+    "name": "企业级安全",
+    "description": "银行级安全，端到端加密及高级威胁防护。",
     "icon": "Shield"
   },
   {
     "id": 3,
-    "name": "Instant Setup",
-    "description": "Get up and running in minutes with our streamlined onboarding process.",
+    "name": "快速部署",
+    "description": "通过简化的引导流程，几分钟内即可上手运行。",
     "icon": "Zap"
   },
   {
     "id": 4,
-    "name": "Team Collaboration",
-    "description": "Seamless collaboration tools to keep your team connected and productive.",
+    "name": "团队协作",
+    "description": "无缝协作工具，让您的团队保持紧密连接和高效生产力。",
     "icon": "Users"
   },
   {
     "id": 5,
-    "name": "24/7 Support",
-    "description": "Round-the-clock expert support whenever you need help or have questions.",
+    "name": "全天候支持",
+    "description": "全天候专家支持，随时解答您的问题和需求。",
     "icon": "Headphones"
   },
   {
     "id": 6,
-    "name": "Real-time Analytics",
-    "description": "Monitor your business performance with real-time insights and detailed analytics.",
+    "name": "实时分析",
+    "description": "通过实时洞察和详细分析，监控您的业务绩效。",
     "icon": "Clock"
   }
 ]

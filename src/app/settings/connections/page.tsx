@@ -22,18 +22,18 @@ export default function ConnectionSettings() {
     <BaseLayout>
       <div className="space-y-6 px-4 lg:px-6">
         <div>
-          <h1 className="text-3xl font-bold">Connections</h1>
+          <h1 className="text-3xl font-bold">连接</h1>
           <p className="text-muted-foreground">
-            Connect your account with third-party services and integrations.
+            将您的账号与第三方服务和集成连接。
           </p>
         </div>
 
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle>Connected Accounts</CardTitle>
+              <CardTitle>已连接账号</CardTitle>
               <CardDescription>
-                Display content from your connected accounts on your site
+                在您的网站上显示已连接账号的内容
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -43,7 +43,7 @@ export default function ConnectionSettings() {
                     <Apple className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Apple</div>
-                      <div className="text-sm text-muted-foreground">Calendar and contacts</div>
+                      <div className="text-sm text-muted-foreground">日历和联系人</div>
                     </div>
                   </div>
                   <Switch
@@ -58,7 +58,7 @@ export default function ConnectionSettings() {
                     <Chrome className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Google</div>
-                      <div className="text-sm text-muted-foreground">Calendar and contacts</div>
+                      <div className="text-sm text-muted-foreground">日历和联系人</div>
                     </div>
                   </div>
                   <Switch
@@ -73,7 +73,7 @@ export default function ConnectionSettings() {
                     <Github className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Github</div>
-                      <div className="text-sm text-muted-foreground">Manage your Git repositories</div>
+                      <div className="text-sm text-muted-foreground">管理您的Git仓库</div>
                     </div>
                   </div>
                   <Switch
@@ -88,7 +88,7 @@ export default function ConnectionSettings() {
                     <Slack className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Slack</div>
-                      <div className="text-sm text-muted-foreground">Communication</div>
+                      <div className="text-sm text-muted-foreground">通讯</div>
                     </div>
                   </div>
                   <Switch
@@ -103,9 +103,9 @@ export default function ConnectionSettings() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Social Accounts</CardTitle>
+              <CardTitle>社交账号</CardTitle>
               <CardDescription>
-                Display content from your connected accounts on your site
+                在您的网站上显示已连接账号的内容
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -116,9 +116,9 @@ export default function ConnectionSettings() {
                     <div>
                       <div className="font-medium">
                         Facebook
-                        <Badge variant="outline" className="ml-2">Not Connected</Badge>
+                        <Badge variant="outline" className="ml-2">未连接</Badge>
                       </div>
-                      <div className="text-sm text-muted-foreground">Share updates on Facebook</div>
+                      <div className="text-sm text-muted-foreground">在Facebook上分享动态</div>
                     </div>
                   </div>
                   <Button variant="outline" size="icon" className="cursor-pointer">
@@ -132,9 +132,9 @@ export default function ConnectionSettings() {
                     <div>
                       <div className="font-medium">
                         Twitter
-                        <Badge variant="secondary" className="ml-2">connected</Badge>
+                        <Badge variant="secondary" className="ml-2">已连接</Badge>
                       </div>
-                      <div className="text-sm text-muted-foreground">Share updates on Twitter</div>
+                      <div className="text-sm text-muted-foreground">在Twitter上分享动态</div>
                     </div>
                   </div>
                   <Button variant="outline" size="icon" className="cursor-pointer text-destructive">
@@ -148,9 +148,9 @@ export default function ConnectionSettings() {
                     <div>
                       <div className="font-medium">
                         Instagram
-                        <Badge variant="secondary" className="ml-2">connected</Badge>
+                        <Badge variant="secondary" className="ml-2">已连接</Badge>
                       </div>
-                      <div className="text-sm text-muted-foreground">Stay connected at Instagram</div>
+                      <div className="text-sm text-muted-foreground">保持与Instagram的连接</div>
                     </div>
                   </div>
                   <Button variant="outline" size="icon" className="cursor-pointer text-destructive">
@@ -164,9 +164,9 @@ export default function ConnectionSettings() {
                     <div>
                       <div className="font-medium">
                         Dribbble
-                        <Badge variant="outline" className="ml-2">Not Connected</Badge>
+                        <Badge variant="outline" className="ml-2">未连接</Badge>
                       </div>
-                      <div className="text-sm text-muted-foreground">Stay connected at Dribbble</div>
+                      <div className="text-sm text-muted-foreground">保持与Dribbble的连接</div>
                     </div>
                   </div>
                   <Button variant="outline" size="icon" className="cursor-pointer">
@@ -182,9 +182,9 @@ export default function ConnectionSettings() {
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle>API Integrations</CardTitle>
+              <CardTitle>API集成</CardTitle>
               <CardDescription>
-                Configure API connections and webhooks.
+                配置API连接和Webhooks。
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -194,7 +194,7 @@ export default function ConnectionSettings() {
                     <Zap className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Zapier</div>
-                      <div className="text-sm text-muted-foreground">Automate workflows with Zapier</div>
+                      <div className="text-sm text-muted-foreground">使用Zapier自动化工作流</div>
                     </div>
                   </div>
                   <Switch
@@ -209,7 +209,7 @@ export default function ConnectionSettings() {
                     <Globe className="h-8 w-8" />
                     <div>
                       <div className="font-medium">Webhooks</div>
-                      <div className="text-sm text-muted-foreground">Configure custom webhook endpoints</div>
+                      <div className="text-sm text-muted-foreground">配置自定义Webhook端点</div>
                     </div>
                   </div>
                   <Switch
@@ -223,8 +223,8 @@ export default function ConnectionSettings() {
                   <div className="flex items-center space-x-3">
                     <Database className="h-8 w-8" />
                     <div>
-                      <div className="font-medium">Database Sync</div>
-                      <div className="text-sm text-muted-foreground">Sync data with external databases</div>
+                      <div className="font-medium">数据库同步</div>
+                      <div className="text-sm text-muted-foreground">与外部数据库同步数据</div>
                     </div>
                   </div>
                   <Switch
@@ -239,45 +239,45 @@ export default function ConnectionSettings() {
 
           <Card>
             <CardHeader>
-              <CardTitle>API Keys</CardTitle>
+              <CardTitle>API密钥</CardTitle>
               <CardDescription>
-                Manage your API keys and access tokens.
+                管理您的API密钥和访问令牌。
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <div className="font-medium">Production API Key</div>
+                    <div className="font-medium">生产环境API密钥</div>
                     <div className="text-sm text-muted-foreground font-mono">sk_live_••••••••••••••••••••••••4234</div>
                   </div>
                   <div className="flex space-x-2">
                     <Button variant="outline" size="sm" className="cursor-pointer">
-                      Regenerate
+                      重新生成
                     </Button>
                     <Button variant="outline" size="sm" className="cursor-pointer">
-                      Copy
+                      复制
                     </Button>
                   </div>
                 </div>
                 <Separator />
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <div className="font-medium">Development API Key</div>
+                    <div className="font-medium">开发环境API密钥</div>
                     <div className="text-sm text-muted-foreground font-mono">sk_test_••••••••••••••••••••••••5678</div>
                   </div>
                   <div className="flex space-x-2">
                     <Button variant="outline" size="sm" className="cursor-pointer">
-                      Regenerate
+                      重新生成
                     </Button>
                     <Button variant="outline" size="sm" className="cursor-pointer">
-                      Copy
+                      复制
                     </Button>
                   </div>
                 </div>
                 <Separator />
                 <div className="pt-4">
-                  <Button variant="outline" className="cursor-pointer">Add New API Key</Button>
+                  <Button variant="outline" className="cursor-pointer">添加新API密钥</Button>
                 </div>
               </div>
             </CardContent>

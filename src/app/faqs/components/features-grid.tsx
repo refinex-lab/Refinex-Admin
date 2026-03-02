@@ -41,7 +41,7 @@ export function FeaturesGrid({ features }: FeaturesGridProps) {
                   size='sm'
                   className='text-muted-foreground hover:text-foreground h-auto cursor-pointer !p-0 text-sm'
                 >
-                  Learn more
+                  了解更多
                   <ArrowRight className='ms-1.5 size-4' />
                 </Button>
               </CardContent>

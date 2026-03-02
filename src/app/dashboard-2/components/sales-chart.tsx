@@ -24,11 +24,11 @@ const salesData = [
 
 const chartConfig = {
   sales: {
-    label: "Sales",
+    label: "销售额",
     color: "var(--primary)",
   },
   target: {
-    label: "Target",
+    label: "目标",
     color: "var(--primary)",
   },
 }
@@ -40,8 +40,8 @@ export function SalesChart() {
     <Card className="cursor-pointer">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <div>
-          <CardTitle>Sales Performance</CardTitle>
-          <CardDescription>Monthly sales vs targets</CardDescription>
+          <CardTitle>销售业绩</CardTitle>
+          <CardDescription>月度销售额对比目标</CardDescription>
         </div>
         <div className="flex items-center space-x-2">
           <Select value={timeRange} onValueChange={setTimeRange}>
@@ -49,13 +49,13 @@ export function SalesChart() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="3m" className="cursor-pointer">Last 3 months</SelectItem>
-              <SelectItem value="6m" className="cursor-pointer">Last 6 months</SelectItem>
-              <SelectItem value="12m" className="cursor-pointer">Last 12 months</SelectItem>
+              <SelectItem value="3m" className="cursor-pointer">最近3个月</SelectItem>
+              <SelectItem value="6m" className="cursor-pointer">最近6个月</SelectItem>
+              <SelectItem value="12m" className="cursor-pointer">最近12个月</SelectItem>
             </SelectContent>
           </Select>
           <Button variant="outline" className="cursor-pointer">
-            Export
+            导出
           </Button>
         </div>
       </CardHeader>

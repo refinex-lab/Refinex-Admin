@@ -4,7 +4,7 @@ import { BaseLayout } from "@/components/layouts/base-layout"
 
 export default function MailPage() {
   return (
-    <BaseLayout title="Mail" description="Manage your email conversations">
+    <BaseLayout title="邮件" description="管理您的邮件往来">
       <div className="@container/main flex flex-1 flex-col">
         <div className="h-[calc(100vh-4rem)] px-4 md:px-6">
           <Mail

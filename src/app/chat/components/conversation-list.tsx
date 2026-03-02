@@ -41,7 +41,7 @@ function formatMessageTime(timestamp: string): string {
   if (isToday(date)) {
     return format(date, 'h:mm a') // 3:30 PM
   } else if (isYesterday(date)) {
-    return 'Yesterday'
+    return '昨天'
   } else if (isThisWeek(date)) {
     return format(date, 'EEEE') // Day name
   } else if (isThisYear(date)) {
@@ -83,7 +83,7 @@ export function ConversationList({
     <div className="flex flex-col h-full overflow-hidden">
       {/* Header - Hidden on mobile (handled by parent) */}
       <div className="hidden lg:flex items-center justify-between h-16 px-4 border-b flex-shrink-0">
-        <h2 className="text-lg font-semibold">Messages</h2>
+        <h2 className="text-lg font-semibold">消息</h2>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
@@ -97,16 +97,16 @@ export function ConversationList({
           <DropdownMenuContent align="end">
             <DropdownMenuItem className="cursor-pointer">
               <UserPlus className="h-4 w-4 mr-2" />
-              New Chat
+              新建聊天
             </DropdownMenuItem>
             <DropdownMenuItem className="cursor-pointer">
               <Filter className="h-4 w-4 mr-2" />
-              Filter Messages
+              筛选消息
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer">
               <Settings className="h-4 w-4 mr-2" />
-              Chat Settings
+              聊天设置
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -118,7 +118,7 @@ export function ConversationList({
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder="Search conversations..."
+            placeholder="搜索会话..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-9 cursor-text"

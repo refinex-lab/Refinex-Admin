@@ -24,9 +24,9 @@ import { Separator } from "@/components/ui/separator"
 import { Logo } from "@/components/logo"
 
 const userFormSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  email: z.string().email("Invalid email address"),
+  firstName: z.string().min(1, "名为必填项"),
+  lastName: z.string().min(1, "姓为必填项"),
+  email: z.string().email("邮箱地址无效"),
   phone: z.string().optional(),
   website: z.string().optional(),
   location: z.string().optional(),
@@ -91,14 +91,14 @@ export default function UserSettingsPage() {
   }
 
   return (
-    <BaseLayout title="User Settings" description="Manage your personal information and preferences">
+    <BaseLayout title="用户设置" description="管理您的个人信息和偏好">
       <div className="px-4 lg:px-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <Card>
               <CardHeader>
-                <CardTitle>Profile Settings</CardTitle>
-                <CardDescription>Update your personal information and preferences</CardDescription>
+                <CardTitle>个人资料设置</CardTitle>
+                <CardDescription>更新您的个人信息和偏好</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
             {/* Profile Picture Section */}
@@ -122,7 +122,7 @@ export default function UserSettingsPage() {
                     className="cursor-pointer"
                   >
                     <Upload className="mr-2 h-4 w-4" />
-                    Upload new photo
+                    上传新照片
                   </Button>
                   <Button 
                     variant="outline" 
@@ -134,7 +134,7 @@ export default function UserSettingsPage() {
                   </Button>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Allowed JPG, GIF or PNG. Max size of 800K
+                  支持JPG、GIF或PNG格式，最大800K
                 </p>
               </div>
               <input
@@ -149,30 +149,30 @@ export default function UserSettingsPage() {
             <Separator className="mb-10" />
             {/* Form Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* First Name */}
+              {/* 名 */}
               <FormField
                 control={form.control}
                 name="firstName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>First Name</FormLabel>
+                    <FormLabel>名</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your first name" {...field} />
+                      <Input placeholder="请输入您的名" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Last Name */}
+              {/* 姓 */}
               <FormField
                 control={form.control}
                 name="lastName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Last Name</FormLabel>
+                    <FormLabel>姓</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your last name" {...field} />
+                      <Input placeholder="请输入您的姓" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -185,95 +185,95 @@ export default function UserSettingsPage() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>E-mail</FormLabel>
+                    <FormLabel>电子邮箱</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Enter your email" {...field} />
+                      <Input type="email" placeholder="请输入您的邮箱" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Company */}
+              {/* 公司 */}
               <FormField
                 control={form.control}
                 name="company"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Company</FormLabel>
+                    <FormLabel>公司</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your company" {...field} />
+                      <Input placeholder="请输入您的公司" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Phone Number */}
+              {/* 电话号码 */}
               <FormField
                 control={form.control}
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone Number</FormLabel>
+                    <FormLabel>电话号码</FormLabel>
                     <FormControl>
-                      <Input type="tel" placeholder="Enter your phone number" {...field} />
+                      <Input type="tel" placeholder="请输入您的电话号码" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Location */}
+              {/* 位置 */}
               <FormField
                 control={form.control}
                 name="location"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Location</FormLabel>
+                    <FormLabel>位置</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your location" {...field} />
+                      <Input placeholder="请输入您的位置" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Website */}
+              {/* 网站 */}
               <FormField
                 control={form.control}
                 name="website"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Website</FormLabel>
+                    <FormLabel>网站</FormLabel>
                     <FormControl>
-                      <Input type="url" placeholder="Enter your website" {...field} />
+                      <Input type="url" placeholder="请输入您的网站" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Language */}
+              {/* 语言 */}
               <FormField
                 control={form.control}
                 name="language"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Language</FormLabel>
+                    <FormLabel>语言</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select Language" />
+                          <SelectValue placeholder="选择语言" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="english">English</SelectItem>
-                        <SelectItem value="spanish">Spanish</SelectItem>
-                        <SelectItem value="french">French</SelectItem>
-                        <SelectItem value="german">German</SelectItem>
-                        <SelectItem value="italian">Italian</SelectItem>
-                        <SelectItem value="portuguese">Portuguese</SelectItem>
+                        <SelectItem value="english">英语</SelectItem>
+                        <SelectItem value="spanish">西班牙语</SelectItem>
+                        <SelectItem value="french">法语</SelectItem>
+                        <SelectItem value="german">德语</SelectItem>
+                        <SelectItem value="italian">意大利语</SelectItem>
+                        <SelectItem value="portuguese">葡萄牙语</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -281,32 +281,32 @@ export default function UserSettingsPage() {
                 )}
               />
 
-              {/* Role */}
+              {/* 角色 */}
               <FormField
                 control={form.control}
                 name="role"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Role</FormLabel>
+                    <FormLabel>角色</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter your role" {...field} />
+                      <Input placeholder="请输入您的角色" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              {/* Timezone */}
+              {/* 时区 */}
               <FormField
                 control={form.control}
                 name="timezone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Timezone</FormLabel>
+                    <FormLabel>时区</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select Timezone" />
+                          <SelectValue placeholder="选择时区" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -326,16 +326,16 @@ export default function UserSettingsPage() {
               />
             </div>
 
-            {/* Bio - Full Width */}
+            {/* 个人简介 - Full Width */}
             <FormField
               control={form.control}
               name="bio"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Bio</FormLabel>
+                  <FormLabel>个人简介</FormLabel>
                   <FormControl>
                     <Textarea 
-                      placeholder="Tell us a little about yourself..." 
+                      placeholder="请介绍一下您自己..." 
                       className="min-h-[100px]"
                       {...field}
                     />
@@ -348,10 +348,10 @@ export default function UserSettingsPage() {
             {/* Action Buttons */}
             <div className="flex justify-start gap-3">
               <Button type="submit" className="cursor-pointer">
-                Save Changes
+                保存更改
               </Button>
               <Button variant="outline" type="button" className="cursor-pointer">
-                Cancel
+                取消
               </Button>
             </div>
           </CardContent>

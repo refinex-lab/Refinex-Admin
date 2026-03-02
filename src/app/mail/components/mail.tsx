@@ -87,7 +87,7 @@ export function Mail({
           <Separator className="mx-0" />
           <div className="m-3">
             <Button className="w-full cursor-pointer">
-               {isCollapsed ? "" : "Compose"}
+               {isCollapsed ? "" : "撰写"}
               <Send className="size-4" />
             </Button>
           </div>
@@ -96,37 +96,37 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Inbox",
+                title: "收件箱",
                 label: "128",
                 icon: Inbox,
                 variant: "default",
               },
               {
-                title: "Drafts",
+                title: "草稿箱",
                 label: "9",
                 icon: File,
                 variant: "ghost",
               },
               {
-                title: "Sent",
+                title: "已发送",
                 label: "",
                 icon: Send,
                 variant: "ghost",
               },
               {
-                title: "Junk",
+                title: "垃圾邮件",
                 label: "23",
                 icon: ArchiveX,
                 variant: "ghost",
               },
               {
-                title: "Trash",
+                title: "垃圾箱",
                 label: "",
                 icon: Trash2,
                 variant: "ghost",
               },
               {
-                title: "Archive",
+                title: "归档",
                 label: "",
                 icon: Archive,
                 variant: "ghost",
@@ -138,31 +138,31 @@ export function Mail({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Social",
+                title: "社交",
                 label: "972",
                 icon: Users2,
                 variant: "ghost",
               },
               {
-                title: "Updates",
+                title: "更新",
                 label: "342",
                 icon: AlertCircle,
                 variant: "ghost",
               },
               {
-                title: "Forums",
+                title: "论坛",
                 label: "128",
                 icon: MessagesSquare,
                 variant: "ghost",
               },
               {
-                title: "Shopping",
+                title: "购物",
                 label: "8",
                 icon: ShoppingCart,
                 variant: "ghost",
               },
               {
-                title: "Promotions",
+                title: "促销",
                 label: "21",
                 icon: Archive,
                 variant: "ghost",
@@ -174,10 +174,10 @@ export function Mail({
         <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
           <Tabs defaultValue="all" className="gap-1">
             <div className="flex items-center px-4 py-1.5">
-              <h1 className="text-foreground text-xl font-bold">Inbox</h1>
+              <h1 className="text-foreground text-xl font-bold">收件箱</h1>
               <TabsList className="ml-auto">
-                <TabsTrigger value="all" className="cursor-pointer">All mail</TabsTrigger>
-                <TabsTrigger value="unread" className="cursor-pointer">Unread</TabsTrigger>
+                <TabsTrigger value="all" className="cursor-pointer">所有邮件</TabsTrigger>
+                <TabsTrigger value="unread" className="cursor-pointer">未读</TabsTrigger>
               </TabsList>
             </div>
             <Separator />
@@ -185,7 +185,7 @@ export function Mail({
               <form>
                 <div className="relative">
                   <Search className="text-muted-foreground absolute top-2.5 left-2 size-4 cursor-pointer" />
-                  <Input placeholder="Search" className="pl-8 cursor-text" />
+                  <Input placeholder="搜索" className="pl-8 cursor-text" />
                 </div>
               </form>
             </div>

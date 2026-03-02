@@ -34,22 +34,22 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 const userFormSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "名称至少需要2个字符。",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "请输入有效的邮箱地址。",
   }),
   role: z.string().min(1, {
-    message: "Please select a role.",
+    message: "请选择角色。",
   }),
   plan: z.string().min(1, {
-    message: "Please select a plan.",
+    message: "请选择套餐。",
   }),
   billing: z.string().min(1, {
-    message: "Please select a billing method.",
+    message: "请选择账单方式。",
   }),
   status: z.string().min(1, {
-    message: "Please select a status.",
+    message: "请选择状态。",
   }),
 })
 
@@ -85,14 +85,14 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
       <DialogTrigger asChild>
         <Button className="cursor-pointer">
           <Plus className="mr-2 h-4 w-4" />
-          Add New User
+          添加新用户
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Add New User</DialogTitle>
+          <DialogTitle>添加新用户</DialogTitle>
           <DialogDescription>
-            Create a new user account. Click save when you're done.
+            创建新用户账户。完成后点击保存。
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -102,9 +102,9 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>姓名</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter full name" {...field} />
+                    <Input placeholder="请输入姓名" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -115,9 +115,9 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>邮箱</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter email address" {...field} />
+                    <Input placeholder="请输入邮箱地址" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -129,11 +129,11 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
                 name="role"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Role</FormLabel>
+                    <FormLabel>角色</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="cursor-pointer w-full">
-                          <SelectValue placeholder="Select role" />
+                          <SelectValue placeholder="选择角色" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -153,11 +153,11 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
                 name="plan"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Plan</FormLabel>
+                    <FormLabel>套餐</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="cursor-pointer w-full">
-                          <SelectValue placeholder="Select plan" />
+                          <SelectValue placeholder="选择套餐" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -177,15 +177,15 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
                 name="billing"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Billing</FormLabel>
+                    <FormLabel>账单方式</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="cursor-pointer w-full">
-                          <SelectValue placeholder="Select billing" />
+                          <SelectValue placeholder="选择账单方式" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="Auto Debit">Auto Debit</SelectItem>
+                        <SelectItem value="Auto Debit">自动扣款</SelectItem>
                         <SelectItem value="UPI">UPI</SelectItem>
                         <SelectItem value="Paypal">Paypal</SelectItem>
                       </SelectContent>
@@ -199,11 +199,11 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
                 name="status"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Status</FormLabel>
+                    <FormLabel>状态</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger className="cursor-pointer w-full">
-                          <SelectValue placeholder="Select status" />
+                          <SelectValue placeholder="选择状态" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -220,7 +220,7 @@ export function UserFormDialog({ onAddUser }: UserFormDialogProps) {
             </div>
             <DialogFooter>
               <Button type="submit" className="cursor-pointer">
-                Save User
+                保存用户
               </Button>
             </DialogFooter>
           </form>

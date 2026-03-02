@@ -12,34 +12,34 @@ export function LoginForm2({
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props} action="/dashboard">
       <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-2xl font-bold">Login to your account</h1>
+        <h1 className="text-2xl font-bold">登录您的账号</h1>
         <p className="text-muted-foreground text-sm text-balance">
-          Enter your email below to login to your account
+          请输入您的邮箱以登录账号
         </p>
       </div>
       <div className="grid gap-6">
         <div className="grid gap-3">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email">邮箱</Label>
           <Input id="email" type="email" placeholder="test@example.com" defaultValue="test@example.com" required />
         </div>
         <div className="grid gap-3">
           <div className="flex items-center">
-            <Label htmlFor="password">Password</Label>
+            <Label htmlFor="password">密码</Label>
             <a
               href="/templates/dashboard/shadcn-dashboard-landing-template/auth/forgot-password-2"
               className="ml-auto text-sm underline-offset-4 hover:underline"
             >
-              Forgot your password?
+              忘记密码？
             </a>
           </div>
           <Input id="password" type="password" defaultValue="password" required />
         </div>
         <Button type="submit" className="w-full cursor-pointer">
-          Login
+          登录
         </Button>
         <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
           <span className="bg-background text-muted-foreground relative z-10 px-2">
-            Or continue with
+            或使用以下方式继续
           </span>
         </div>
         <Button variant="outline" className="w-full cursor-pointer">
@@ -49,13 +49,13 @@ export function LoginForm2({
               fill="currentColor"
             />
           </svg>
-          Login with GitHub
+          使用 GitHub 登录
         </Button>
       </div>
       <div className="text-center text-sm">
-        Don&apos;t have an account?{" "}
+        还没有账号？{" "}
         <a href="/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-up-2" className="underline underline-offset-4">
-          Sign up
+          注册
         </a>
       </div>
     </form>

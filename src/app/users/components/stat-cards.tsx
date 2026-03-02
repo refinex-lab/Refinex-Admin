@@ -6,28 +6,28 @@ import { cn } from '@/lib/utils'
 
 const performanceMetrics = [
   {
-    title: 'Total Users',
+    title: '总用户数',
     current: '$2.4M',
     previous: '$1.8M',
     growth: 33.3,
     icon: Users,
   },
   {
-    title: 'Paid Users',
+    title: '付费用户',
     current: '12.5K',
     previous: '9.2K',
     growth: 35.9,
     icon: CreditCard,
   },
   {
-    title: 'Active Users',
+    title: '活跃用户',
     current: '8.9k',
     previous: '6.7k',
     growth: 32.8,
     icon: UserCheck,
   },
   {
-    title: 'Pending Users',
+    title: '待处理用户',
     current: '17%',
     previous: '24%',
     growth: -8.0,
@@ -70,7 +70,7 @@ export function StatCards() {
               <p className='text-muted-foreground text-sm font-medium'>{metric.title}</p>
               <div className='text-2xl font-bold'>{metric.current}</div>
               <div className='text-muted-foreground flex items-center gap-2 text-sm'>
-                <span>from {metric.previous}</span>
+                <span>较上期 {metric.previous}</span>
                 <ArrowUpRight className='size-3' />
               </div>
             </div>

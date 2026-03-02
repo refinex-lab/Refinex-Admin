@@ -36,7 +36,7 @@ interface MessageInputProps {
 export function MessageInput({
   onSendMessage,
   disabled = false,
-  placeholder = "Type a message..."
+  placeholder = "输入消息..."
 }: MessageInputProps) {
   const [message, setMessage] = useState("")
   const [isTyping, setIsTyping] = useState(false)
@@ -106,7 +106,7 @@ export function MessageInput({
                 </DropdownMenuTrigger>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Attach file</p>
+                <p>附加文件</p>
               </TooltipContent>
             </Tooltip>
             <DropdownMenuContent side="top" align="start">
@@ -115,14 +115,14 @@ export function MessageInput({
                 className="cursor-pointer"
               >
                 <ImageIcon className="h-4 w-4 mr-2" />
-                Photo or video
+                照片或视频
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => handleFileUpload("file")}
                 className="cursor-pointer"
               >
                 <FileText className="h-4 w-4 mr-2" />
-                Document
+                文档
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -159,7 +159,7 @@ export function MessageInput({
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Add emoji</p>
+                  <p>添加表情</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -177,7 +177,7 @@ export function MessageInput({
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>More options</p>
+                  <p>更多选项</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -208,7 +208,7 @@ export function MessageInput({
               )}
             </TooltipTrigger>
             <TooltipContent>
-              <p>{message.trim() ? "Send message" : "Voice message"}</p>
+              <p>{message.trim() ? "发送消息" : "语音消息"}</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -217,7 +217,7 @@ export function MessageInput({
       {/* Typing indicator */}
       {isTyping && (
         <div className="text-xs text-muted-foreground mt-2">
-          You are typing...
+          正在输入...
         </div>
       )}
     </div>

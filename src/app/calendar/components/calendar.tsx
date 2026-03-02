@@ -47,9 +47,9 @@ export function Calendar({ events, eventDates }: CalendarProps) {
         <Sheet open={calendar.showCalendarSheet} onOpenChange={calendar.setShowCalendarSheet}>
           <SheetContent side="left" className="w-80 p-0" style={{ position: 'absolute' }}>
             <SheetHeader className="p-4 pb-2">
-              <SheetTitle>Calendar</SheetTitle>
+              <SheetTitle>日历</SheetTitle>
               <SheetDescription>
-                Browse dates and manage your calendar events
+                浏览日期并管理您的日历事件
               </SheetDescription>
             </SheetHeader>
             <CalendarSidebar

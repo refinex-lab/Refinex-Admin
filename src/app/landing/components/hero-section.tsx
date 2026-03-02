@@ -21,38 +21,37 @@ export function HeroSection() {
           <div className="mb-8 flex justify-center">
             <Badge variant="outline" className="px-4 py-2 border-foreground">
               <Star className="w-3 h-3 mr-2 fill-current" />
-              New: Premium Template Collection
+              最新：高级模板合集
               <ArrowRight className="w-3 h-3 ml-2" />
             </Badge>
           </div>
 
           {/* Main Headline */}
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-            Build Better
+            构建更好的
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              {" "}Web Applications{" "}
+              {" "}网络应用{" "}
             </span>
-            with Ready-Made Components
+            使用现成组件
           </h1>
 
           {/* Subheading */}
           <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Accelerate your development with our curated collection of blocks, templates, landing pages,
-            and admin dashboards. From free components to complete solutions, built with shadcn/ui.
+            使用我们精选的组件块、模板、落地页和管理后台，加速您的开发。从免费组件到完整解决方案，均基于 shadcn/ui 构建。
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" className="text-base cursor-pointer" asChild>
               <a href={getAppUrl("/auth/sign-up")}>
-                Get Started Free
+                免费开始
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="lg" className="text-base cursor-pointer" asChild>
               <a href="#">
                 <Play className="mr-2 h-4 w-4" />
-                Watch Demo
+                观看演示
               </a>
             </Button>
           </div>
@@ -68,14 +67,14 @@ export function HeroSection() {
               {/* Light mode dashboard image */}
               <img
                 src={assetUrl("dashboard-light.png")}
-                alt="Dashboard Preview - Light Mode"
+                alt="控制台预览 - 亮色模式"
                 className="w-full rounded-xl object-cover block dark:hidden"
               />
 
               {/* Dark mode dashboard image */}
               <img
                 src={assetUrl("dashboard-dark.png")}
-                alt="Dashboard Preview - Dark Mode"
+                alt="控制台预览 - 暗色模式"
                 className="w-full rounded-xl object-cover hidden dark:block"
               />
 
@@ -89,7 +88,7 @@ export function HeroSection() {
                   className="rounded-full h-16 w-16 p-0 cursor-pointer hover:scale-105 transition-transform"
                   asChild
                 >
-                  <a href="#" aria-label="Watch demo video">
+                  <a href="#" aria-label="观看演示视频">
                     <Play className="h-6 w-6 fill-current" />
                   </a>
                 </Button>

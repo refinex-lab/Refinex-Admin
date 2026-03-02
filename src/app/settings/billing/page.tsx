@@ -20,9 +20,9 @@ export default function BillingSettings() {
     <BaseLayout>
       <div className="space-y-6 px-4 lg:px-6">
         <div>
-          <h1 className="text-3xl font-bold">Plans & Billing</h1>
+          <h1 className="text-3xl font-bold">套餐与账单</h1>
           <p className="text-muted-foreground">
-            Manage your subscription and billing information.
+            管理您的订阅和账单信息。
           </p>
         </div>
 
@@ -34,9 +34,9 @@ export default function BillingSettings() {
         <div className="grid gap-6">
           <Card>
             <CardHeader>
-              <CardTitle>Available Plans</CardTitle>
+              <CardTitle>可用套餐</CardTitle>
               <CardDescription>
-                Choose a plan that works best for you.
+                选择最适合您的套餐。
               </CardDescription>
             </CardHeader>
             <CardContent>
