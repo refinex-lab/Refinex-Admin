@@ -1,551 +1,379 @@
-# ShadCN Dashboard + Landing Page Template
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GitHub Stars](https://img.shields.io/github/stars/silicondeck/shadcn-dashboard-landing-template?style=social)](https://github.com/silicondeck/shadcn-dashboard-landing-template)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
-![Dashboard Preview](vite-version/public/dashboard.png)
-
-
 <div align="center">
 
-🎯 <a href="https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/dashboard" target="_blank">**View Live Demo**</a> | 🧩 <a href="https://shadcnstore.com/blocks" target="_blank">**Explore Premium Blocks**</a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Refinex-Admin&fontSize=52&fontColor=fff&animation=twinkling&fontAlignY=36&desc=Enterprise%20AI%20Platform%20Admin%20Dashboard%20%C2%B7%20React%20%2B%20Vite%20%2B%20shadcn%2Fui%20v3%20%2B%20Tailwind%20CSS%20v4&descAlignY=58&descSize=16" alt="Refinex-Admin Banner" width="100%"/>
+
+<br/>
+
+<p>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 19"/>
+  <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Vite-7.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/shadcn%2Fui-v3-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui v3"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS v4"/>
+  <img src="https://img.shields.io/badge/React_Router-v7-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router v7"/>
+</p>
+
+<p>
+  <img src="https://img.shields.io/github/stars/refinex-lab/Refinex-Admin?style=for-the-badge&color=FFD700&logo=github" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/refinex-lab/Refinex-Admin?style=for-the-badge&color=1E90FF&logo=git&logoColor=white" alt="Forks"/>
+  <img src="https://img.shields.io/github/issues/refinex-lab/Refinex-Admin?style=for-the-badge&color=FF6B6B&logo=github&logoColor=white" alt="Issues"/>
+  <img src="https://img.shields.io/github/license/refinex-lab/Refinex-Admin?style=for-the-badge&color=4CAF50" alt="License"/>
+  <img src="https://img.shields.io/github/last-commit/refinex-lab/Refinex-Admin?style=for-the-badge&color=9C27B0&logo=git&logoColor=white" alt="Last Commit"/>
+</p>
+
+<br/>
+
+**Refinex-Admin** 是 Refinex 平台的后台管理前端，基于 **shadcn/ui v3 + Tailwind CSS v4** 构建，深度对接 **Refinex-Cloud** 企业级 AI 微服务后端。覆盖用户权限管理、AI 对话监控、知识库管理、Agent 编排、多媒体任务追踪、系统配置等完整管理场景，致力于提供极致流畅的后台管理体验。
+
+<br/>
+
+[🚀 快速开始](#-快速开始) · [📐 项目结构](#-项目结构) · [✨ 功能模块](#-功能模块) · [🛠 技术栈](#-技术栈) · [🤝 贡献指南](#-贡献指南)
+
+<br/>
 
 </div>
 
-Introducing a sleek, modern, and open-source admin dashboard template built with the latest web technologies, including React + TypeScript + Vite and Next.js + TypeScript. Powered by shadcn/ui v3 and Tailwind CSS v4, this project offers a clean, responsive, and highly customizable UI. Developed and maintained by [ShadcnStore](https://shadcnstore.com), this free and open-source template is designed to accelerate your development process. Whether you're building an admin panel, SaaS dashboard, or launching an AI-driven product, this dashboard provides a beautiful, production-ready interface for your application — complete with a seamless dashboard and a fully-featured landing page to help you hit the ground running.
+## 🔗 相关项目
 
-🚀 **Free & Open Source** by [**ShadcnStore**](https://shadcnstore.com) - Your gateway to premium UI components and templates.
+本仓库为 Refinex 平台的**后台管理前端**，与后端服务及用户端前端共同构成完整的全栈 AI 平台。
 
+<table>
+  <thead>
+    <tr>
+      <th>项目</th>
+      <th>仓库地址</th>
+      <th>描述</th>
+      <th>核心技术</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>⚙️ Refinex-Cloud</b></td>
+      <td><a href="https://github.com/refinex-lab/Refinex-Cloud"><code>refinex-lab/Refinex-Cloud</code></a></td>
+      <td>企业级 AI 微服务后端平台，提供 AI 对话、RAG 知识库、Agent 编排、多模态媒体生成等核心能力</td>
+      <td>Spring Cloud Alibaba · Spring AI · Java 21</td>
+    </tr>
+    <tr>
+      <td><b>🖥️ Refinex-Agent</b></td>
+      <td><a href="https://github.com/refinex-lab/Refinex-Agent"><code>refinex-lab/Refinex-Agent</code></a></td>
+      <td>面向 AI Agent 交互场景深度设计的现代化用户端前端，以极致视觉体验驱动对话、知识库管理与多媒体创作</td>
+      <td>shadcn/ui · Tailwind CSS v4 · AI Elements</td>
+    </tr>
+    <tr>
+      <td><b>🔧 Refinex-Admin</b></td>
+      <td><a href="https://github.com/refinex-lab/Refinex-Admin"><code>refinex-lab/Refinex-Admin</code></a></td>
+      <td>本仓库 — 企业级 AI 平台后台管理系统</td>
+      <td>React · Vite · shadcn/ui v3 · Tailwind CSS v4</td>
+    </tr>
+  </tbody>
+</table>
 
----
+> 📖 完整使用文档、部署指南及 API 参考请访问 **[www.refinex.cn](https://www.refinex.cn)**
 
-## 🌟 Live Demo
+## ✨ 功能模块
 
-Experience the template in action:
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔐 权限与用户管理</h3>
+      <ul>
+        <li>用户列表、角色分配、账号启停管理</li>
+        <li>RBAC 角色权限模型，细粒度菜单与数据权限配置</li>
+        <li>部门/组织架构管理</li>
+        <li>操作日志审计，登录记录追踪</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🤖 AI 对话管理</h3>
+      <ul>
+        <li>会话记录查看与管理，支持多模型筛选</li>
+        <li>模型提供商配置（OpenAI、通义千问、Ollama 等）</li>
+        <li>系统 Prompt 模板管理与角色预设配置</li>
+        <li>Token 用量统计与费用分析</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📚 知识库管理</h3>
+      <ul>
+        <li>知识库创建、文档上传与解析状态监控</li>
+        <li>向量化任务进度追踪</li>
+        <li>召回测试与相关度评分可视化</li>
+        <li>分块策略配置与文档版本管理</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛠 Agent & MCP 管理</h3>
+      <ul>
+        <li>Agent 列表管理与工作流配置</li>
+        <li>工具集注册与 MCP Server 配置</li>
+        <li>Agent 执行记录与调用链追踪</li>
+        <li>工作流可视化设计与调试</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎨 多媒体任务管理</h3>
+      <ul>
+        <li>文生图 / 文生视频任务队列监控</li>
+        <li>TTS 语音合成任务管理</li>
+        <li>文件存储（MinIO/OSS）资源管理</li>
+        <li>异步任务状态实时追踪</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚙️ 系统配置</h3>
+      <ul>
+        <li>字典数据、系统参数配置</li>
+        <li>通知公告、定时任务（XXL-Job）管理</li>
+        <li>服务健康监控与 JVM 指标看板</li>
+        <li>接口限流与 Sentinel 规则配置</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-- **[🖥️ Dashboard Demo](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/dashboard)** - Complete admin dashboard with apps
-- **[🌐 Landing Page Demo](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/landing)** - Beautiful marketing landing page
-
-> **Note**: This template includes both a complete dashboard (with mail, tasks, chat, calendar apps) and a marketing landing page in both Vite and Next.js versions.
-
----
-
-## ✨ What's Included
-
-🎯 **Two Complete Templates:**
-
-- **🖥️ Admin Dashboard** - Modern, feature-rich dashboard with 30+ pages
-- **🌐 Landing Page** - Business-ready landing page template
-
-⚡ **Dual Framework Support:**
-
-- **Vite** - Lightning-fast development experience
-- **Next.js 15** - Production-ready with App Router
-
-🎨 **Live Theme Customization:**
-
-- **tweakcn integration** - Real-time theme editing
-- **Built-in customizer** - Preview all possible combinations live
-- **Multiple layouts** - Sidebar variants & collapsible options
-
----
-
-## 🚀 Key Features
-
-### 📊 **Dashboard Features**
-
-- **2 Dashboard Variants** - Overview & Analytics dashboards
-- **App Demos** - Mail, Tasks, Chat, Calendar, Users applications
-- **30+ Pages** - Authentication, Settings, Errors, FAQ, Pricing
-- **Data Tables** - Advanced tables with sorting, filtering, and pagination
-- **Charts & Analytics** - Recharts integration with beautiful visualizations
-
-### 🎨 **Design & Theming**
-
-- **Live Theme Customizer** - Real-time color and layout switching
-- **tweakcn Integration** - Professional theme management
-- **Multiple Layouts** - Sidebar variants, collapsible navigation
-- **Responsive Design** - Mobile-first approach with container queries
-- **Dark/Light Mode** - Seamless theme switching
-
-### ⚡ **Developer Experience**
-
-- **Modern Tech Stack** - React 19, TypeScript, Tailwind CSS v4
-- **Cross-Platform** - Works with both Vite and Next.js
-- **Type Safety** - Full TypeScript support throughout
-- **Component Library** - Latest shadcn/ui v3 with Radix UI
-- **Easy Customization** - Well-structured, modular codebase
-
----
-
-## 🏗️ Project Structure
+## 📐 项目结构
 
 ```text
-📁 shadcn-dashboard/
-├── 📁 vite-version/              # Vite + React version
-│   ├── 📁 src/
-│   │   ├── 📁 app/               # Demo pages & applications
-│   │   │   ├── 📁 dashboard/     # Dashboard variants
-│   │   │   ├── 📁 dashboard-2/   # Alternative dashboard layout
-│   │   │   ├── 📁 landing/       # Landing page template
-│   │   │   ├── 📁 auth/          # Authentication pages
-│   │   │   ├── 📁 mail/          # Email application demo
-│   │   │   ├── 📁 tasks/         # Task management demo
-│   │   │   ├── 📁 chat/          # Chat application demo
-│   │   │   ├── 📁 calendar/      # Calendar demo
-│   │   │   ├── 📁 settings/      # User settings pages
-│   │   │   ├── 📁 errors/        # Error pages (404, 500, etc.)
-│   │   │   ├── 📁 users/         # User management pages
-│   │   │   ├── 📁 faqs/          # FAQ pages
-│   │   │   └── 📁 pricing/       # Pricing pages
-│   │   ├── 📁 components/        # UI components
-│   │   │   ├── 📁 ui/            # shadcn/ui v3 components
-│   │   │   ├── 📁 layouts/       # Layout components
-│   │   │   └── 📁 theme-customizer/ # Live theme editor
-│   │   ├── 📁 hooks/             # Custom React hooks
-│   │   ├── 📁 lib/               # Utilities & configurations
-│   │   └── 📁 types/             # TypeScript type definitions
-│   └── 📄 package.json           # Vite dependencies
-│
-├── 📁 nextjs-version/            # Next.js 15 version
-│   ├── 📁 src/
-│   │   ├── 📁 app/               # App Router with route groups
-│   │   │   ├── 📁 (auth)/        # Authentication route group
-│   │   │   │   ├── 📁 login/     # Login pages
-│   │   │   │   ├── 📁 signup/    # Registration pages
-│   │   │   │   ├── 📁 forgot-password/ # Password recovery
-│   │   │   │   └── 📁 errors/    # Error pages (404, 500, etc.)
-│   │   │   ├── 📁 (dashboard)/   # Dashboard route group
-│   │   │   │   ├── 📁 dashboard/ # Main dashboard
-│   │   │   │   ├── 📁 dashboard-2/ # Alternative dashboard
-│   │   │   │   ├── 📁 mail/      # Email application
-│   │   │   │   ├── 📁 tasks/     # Task management
-│   │   │   │   ├── 📁 chat/      # Chat application
-│   │   │   │   ├── 📁 calendar/  # Calendar demo
-│   │   │   │   ├── 📁 settings/  # User settings
-│   │   │   │   ├── 📁 users/     # User management
-│   │   │   │   ├── 📁 faqs/      # FAQ pages
-│   │   │   │   ├── 📁 pricing/   # Pricing pages
-│   │   │   │   └── 📄 layout.tsx # Dashboard layout
-│   │   │   ├── 📁 landing/       # Landing page template
-│   │   │   ├── 📄 layout.tsx     # Root layout
-│   │   │   ├── 📄 loading.tsx    # Global loading component
-│   │   │   ├── 📄 not-found.tsx  # 404 page
-│   │   │   └── 📄 page.tsx       # Homepage
-│   │   ├── 📁 components/        # Same component structure as Vite
-│   │   ├── 📁 hooks/             # Custom React hooks
-│   │   ├── 📁 lib/               # Utilities & configurations
-│   │   └── 📁 types/             # TypeScript type definitions
-│   └── 📄 package.json           # Next.js dependencies
-│
-├── 📄 README.md                  # This file
-└── 📄 LICENSE                    # MIT License
+📁 Refinex-Admin/
+├── 📁 src/
+│   ├── 📁 app/                   # 页面模块（按业务域划分）
+│   │   ├── 📁 auth/              # 登录 / 注册 / 找回密码（3 套样式）
+│   │   ├── 📁 dashboard/         # 数据总览仪表盘
+│   │   ├── 📁 dashboard-2/       # 数据总览仪表盘（备选布局）
+│   │   ├── 📁 users/             # 用户管理
+│   │   ├── 📁 tasks/             # 任务管理（含高级数据表格）
+│   │   ├── 📁 chat/              # 消息 / 会话管理
+│   │   ├── 📁 mail/              # 邮件 / 通知管理
+│   │   ├── 📁 calendar/          # 日历 / 日程管理
+│   │   ├── 📁 settings/          # 系统设置（账号、外观、计费、通知）
+│   │   ├── 📁 faqs/              # 帮助与常见问题
+│   │   ├── 📁 pricing/           # 套餐与计费页
+│   │   ├── 📁 landing/           # 平台落地页
+│   │   └── 📁 errors/            # 错误页（401 / 403 / 404 / 500 / 维护中）
+│   ├── 📁 components/            # 公共组件
+│   │   ├── 📁 ui/                # shadcn/ui v3 基础组件
+│   │   ├── 📁 layouts/           # 布局组件
+│   │   ├── 📁 landing/           # 落地页专用组件
+│   │   └── 📁 theme-customizer/  # 实时主题编辑器
+│   ├── 📁 config/                # 路由、主题常量配置
+│   ├── 📁 contexts/              # React Context（侧边栏、主题）
+│   ├── 📁 hooks/                 # 自定义 Hooks
+│   ├── 📁 lib/                   # 工具函数
+│   └── 📁 types/                 # TypeScript 类型定义
+├── 📁 public/                    # 静态资源
+├── 📄 index.html
+├── 📄 vite.config.ts
+├── 📄 tsconfig.json
+└── 📄 package.json
 ```
 
----
+## 🛠 技术栈
 
-## � Quick Start
+<table>
+  <thead>
+    <tr>
+      <th>分类</th>
+      <th>技术</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>核心框架</b></td>
+      <td>React 19 + TypeScript 5.x + Vite 7.x</td>
+      <td>并发特性 · 完整类型安全 · 极速构建</td>
+    </tr>
+    <tr>
+      <td><b>UI 组件库</b></td>
+      <td>shadcn/ui v3 + Radix UI</td>
+      <td>最新版组件 · 可访问性原语</td>
+    </tr>
+    <tr>
+      <td><b>样式</b></td>
+      <td>Tailwind CSS v4 + tw-animate-css</td>
+      <td>原子化 CSS · 动画扩展</td>
+    </tr>
+    <tr>
+      <td><b>路由</b></td>
+      <td>React Router v7</td>
+      <td>客户端路由</td>
+    </tr>
+    <tr>
+      <td><b>表单与校验</b></td>
+      <td>React Hook Form + Zod v4</td>
+      <td>高性能表单 · Schema 校验</td>
+    </tr>
+    <tr>
+      <td><b>数据表格</b></td>
+      <td>TanStack Table v8</td>
+      <td>排序 · 筛选 · 分页 · 虚拟滚动</td>
+    </tr>
+    <tr>
+      <td><b>图表</b></td>
+      <td>Recharts</td>
+      <td>可组合式图表库</td>
+    </tr>
+    <tr>
+      <td><b>拖拽</b></td>
+      <td>@dnd-kit</td>
+      <td>可访问性优先的拖拽方案</td>
+    </tr>
+    <tr>
+      <td><b>状态管理</b></td>
+      <td>Zustand v5</td>
+      <td>轻量全局状态</td>
+    </tr>
+    <tr>
+      <td><b>主题</b></td>
+      <td>next-themes + tweakcn</td>
+      <td>暗色模式 · 实时主题定制</td>
+    </tr>
+    <tr>
+      <td><b>图标</b></td>
+      <td>Lucide React</td>
+      <td>一致性 SVG 图标库</td>
+    </tr>
+    <tr>
+      <td><b>代码规范</b></td>
+      <td>ESLint + Prettier + TypeScript</td>
+      <td>统一代码风格</td>
+    </tr>
+  </tbody>
+</table>
 
-### Prerequisites
+## 🚀 快速开始
 
-- **Node.js** 18+
-- **pnpm** (recommended) or npm
+### 环境要求
 
-### 1. Clone the Repository
+| 依赖 | 最低版本 |
+|------|---------|
+| Node.js | 18.x+ |
+| pnpm | 8.x+（推荐）|
+
+### 第一步：克隆仓库
 
 ```bash
-git clone https://github.com/silicondeck/shadcn-dashboard-landing-template
-cd shadcn-dashboard
+git clone https://github.com/refinex-lab/Refinex-Admin.git
+cd Refinex-Admin
 ```
 
-### 2. Choose Your Framework
-
-#### 🔥 **Vite Version** (Recommended for Development)
+### 第二步：安装依赖
 
 ```bash
-cd vite-version
 pnpm install
+```
+
+### 第三步：配置环境变量
+
+```bash
+cp .env.example .env
+```
+
+根据实际环境修改 `.env` 中的后端接口地址等配置：
+
+```env
+VITE_API_BASE_URL=http://localhost:9000
+```
+
+### 第四步：启动开发服务器
+
+```bash
 pnpm dev
 ```
 
-**Access at:** `http://localhost:5173`
+启动完成后，访问 `http://localhost:5173` 即可使用。
 
-#### ⚡ **Next.js Version** (Production-Ready)
-
-```bash
-cd nextjs-version
-pnpm install
-pnpm dev
-```
-
-**Access at:** `http://localhost:3000`
-
-### 3. Start Building
-
-- **Dashboard:** Navigate to [/dashboard](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/dashboard) or [/dashboard-2](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/dashboard-2)
-- **Landing Page:** Visit [/landing](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/landing) for the business template
-- **Theme Customizer:** Use the built-in customizer to preview themes live
-- **Apps:** Explore [Mail](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/mail), [Tasks](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/tasks), [Chat](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/chat), [Calendar](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/calendar), [Users](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/users)
-- **Authentication:** Check out [Signin](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-in), [Signup](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/auth/sign-up), [Forgot Password](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/auth/forgot-password)
-- **Settings:** Visit [Account](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/settings/account), [Appearance](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/settings/appearance), [Billing](https://shadcnstore.com/templates/dashboard/shadcn-dashboard-landing-template/settings/billing)
-
----
-
-## 🛠️ Development Commands
-
-### Vite Version
+### 常用命令
 
 ```bash
-pnpm dev          # Start development server
-pnpm build        # Build for production
-pnpm preview      # Preview production build
-pnpm lint         # Run ESLint
+pnpm dev        # 启动开发服务器
+pnpm build      # 生产构建
+pnpm preview    # 预览生产构建
+pnpm lint       # 运行 ESLint
 ```
 
-### Next.js Version
+> 如需对接 Refinex-Cloud 后端，请参阅 **[后端仓库](https://github.com/refinex-lab/Refinex-Cloud)** 中的快速开始指南完成后端服务的部署。
+
+## 🗺 路线图
+
+<table>
+  <tr>
+    <td align="center" width="33%"><b>✅ 已完成</b></td>
+    <td align="center" width="33%"><b>🚧 进行中</b></td>
+    <td align="center" width="33%"><b>📋 规划中</b></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      &nbsp;✔&nbsp; 基础仪表盘 & 数据概览<br/>
+      &nbsp;✔&nbsp; 登录 / 注册 / 找回密码页面<br/>
+      &nbsp;✔&nbsp; 用户管理基础界面<br/>
+      &nbsp;✔&nbsp; 系统设置（账号、外观、通知）<br/>
+      &nbsp;✔&nbsp; 实时主题定制器<br/>
+      &nbsp;✔&nbsp; 暗色模式支持<br/>
+      &nbsp;✔&nbsp; 响应式布局
+    </td>
+    <td valign="top">
+      &nbsp;⚙&nbsp; 对接 Refinex-Cloud 认证接口<br/>
+      &nbsp;⚙&nbsp; RBAC 权限菜单动态渲染<br/>
+      &nbsp;⚙&nbsp; AI 对话会话管理页面<br/>
+      &nbsp;⚙&nbsp; 知识库文档管理页面<br/>
+      &nbsp;⚙&nbsp; 多媒体任务队列监控<br/>
+      &nbsp;⚙&nbsp; 系统日志审计页面
+    </td>
+    <td valign="top">
+      &nbsp;📌&nbsp; Agent 工作流可视化配置<br/>
+      &nbsp;📌&nbsp; MCP Server/Client 管理<br/>
+      &nbsp;📌&nbsp; AI 用量统计与计费看板<br/>
+      &nbsp;📌&nbsp; Sentinel 限流规则可视化<br/>
+      &nbsp;📌&nbsp; 多租户管理支持<br/>
+      &nbsp;📌&nbsp; 多语言国际化（i18n）
+    </td>
+  </tr>
+</table>
+
+## 🤝 贡献指南
+
+我们热忱欢迎来自社区的任何形式贡献，无论是功能开发、问题修复还是文档完善。
 
 ```bash
-pnpm dev          # Start development server
-pnpm build        # Build for production
-pnpm start        # Start production server
-pnpm lint         # Run Next.js linter
+# 1. Fork 本仓库并克隆到本地
+git clone https://github.com/<your-username>/Refinex-Admin.git
+
+# 2. 基于 master 分支创建功能分支
+git checkout -b feat/your-feature-name
+
+# 3. 完成开发后提交（遵循 Conventional Commits 规范）
+git commit -m "feat(dashboard): add AI usage statistics chart"
+
+# 4. 推送分支并在 GitHub 上创建 Pull Request
+git push origin feat/your-feature-name
 ```
 
----
+**Commit 类型约定：** `feat` 新功能 · `fix` 缺陷修复 · `docs` 文档变更 · `refactor` 代码重构 · `perf` 性能优化 · `style` 样式调整 · `chore` 构建 / 工具变更
 
-## 🎨 Theme Customization
+## 📄 许可证
 
-### **Live Theme Customizer**
+本项目基于 [MIT License](./LICENSE) 开源协议发布，可免费用于个人与商业项目。
 
-This template includes a powerful **live theme customizer** powered by **tweakcn**:
-
-![Customizer Preview](vite-version/public/customizer.png)
-
-1. **Open the customizer** - Click the theme customizer button
-2. **Choose colors** - Pick from preset themes or create custom palettes
-3. **Layout options** - Switch between sidebar variants and layouts
-4. **Real-time preview** - See changes instantly across all components
-5. **Export themes** - Save your custom themes for production use
-
-### **Built-in Themes**
-
-- 🌊 **Default** - Clean blue theme
-- 🌙 **Dark** - Professional dark theme
-- 🌸 **Rose** - Warm pink accents
-- 🌿 **Green** - Fresh green palette
-- 🌅 **Orange** - Vibrant orange theme
-- 🔴 **Red** - Bold red accents
-- 💜 **Violet** - Modern purple theme
-
-### **Custom Theme Creation**
-
-#### **Adding Custom Themes to the Customizer**
-To add your own custom themes to the live customizer, create theme objects in your theme configuration:
-
-```typescript
-// src/config/theme-data.ts (or similar file)
-export const customTheme = {
-  name: "Custom Brand",
-  cssVars: {
-    light: {
-      primary: "210 100% 50%",
-      "primary-foreground": "0 0% 98%",
-      secondary: "210 100% 95%",
-      "secondary-foreground": "210 100% 20%",
-      accent: "210 100% 90%",
-      "accent-foreground": "210 100% 15%",
-      // Add more color variables as needed
-    },
-    dark: {
-      primary: "210 100% 60%",
-      "primary-foreground": "210 100% 15%",
-      // Dark mode variants
-    }
-  }
-}
-```
-
-#### **Manual CSS Variable Customization**
-To directly modify theme colors, update your CSS variables in `globals.css` or `index.css`:
-
-```css
-:root {
-  --primary: oklch(0.5 0.2 240);
-  --primary-foreground: oklch(0.98 0.02 240);
-  --secondary: oklch(0.96 0.01 240);
-  --secondary-foreground: oklch(0.2 0.02 240);
-  /* Customize other variables */
-}
-
-.dark {
-  --primary: oklch(0.7 0.2 240);
-  --primary-foreground: oklch(0.15 0.02 240);
-  /* Dark mode variants */
-}
-```
-
-### **Removing the Theme Customizer**
-
-If you want to remove the theme customizer from your project:
-
-#### **Vite Version:**
-1. Remove the theme customizer component: `src/components/theme-customizer.tsx`
-2. Remove the theme customizer button from your layout
-3. Remove theme-related imports from your main layout file
-4. Delete the `src/components/theme-customizer/` folder if it exists
-
-#### **Next.js Version:**
-1. Remove the theme customizer component: `src/components/theme-customizer.tsx`
-2. Remove the theme customizer button from `src/app/layout.tsx`
-3. Remove theme-related imports from your layout files
-4. Delete the `src/components/theme-customizer/` folder if it exists
-
-> 📖 **Learn More:** For comprehensive theming documentation, visit the [official shadcn/ui theming guide](https://ui.shadcn.com/docs/theming) which covers CSS variables, color formats, and advanced customization techniques.
-
----
-
-## 📦 Tech Stack
-
-### **Core Framework**
-
-- **React 19** - Latest React with concurrent features
-- **TypeScript** - Full type safety
-- **Vite** - Ultra-fast development
-- **Next.js 15** - Production-ready with App Router
-
-### **UI & Styling**
-
-- **shadcn/ui v3** - Latest component library
-- **Radix UI** - Accessible primitives
-- **Tailwind CSS v4** - Utility-first styling
-- **tweakcn** - Advanced theme management
-- **Lucide React** - Beautiful icons
-
-### **State & Data**
-
-- **Zustand** - Lightweight state management
-- **React Hook Form** - Forms with validation
-- **Zod** - Schema validation
-- **TanStack Table** - Advanced data tables
-
-### **Development**
-
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
-- **TypeScript** - Static type checking
-
----
-
-## 📋 What's Included
-
-### **🖥️ Dashboard Pages**
-
-- **Dashboard** - Overview with analytics cards and charts
-- **Dashboard v2** - Alternative dashboard with different metrics
-
-### **📱 Application Demos**
-
-![Apps Preview](vite-version/public/apps.png)
-
-- **📧 Mail** - Complete email interface (Inbox, Read, Compose)
-- **✅ Tasks** - Task management with drag & drop
-- **💬 Chat** - Real-time chat interface
-- **📅 Calendar** - Event scheduling and management
-- **👥 Users** - User management and profiles with advanced tables
-
-### **🔐 Authentication**
-
-- **Login** - 3 login page variants with different layouts
-- **Sign Up** - 3 registration page variants with different designs  
-- **Forgot Password** - 3 password recovery page variants
-
-### **⚙️ Settings & Profile**
-
-- **User Settings** - Manage your personal information and preferences
-- **Account Settings** - Profile management
-- **Plans & Billing** - Subscription and payment pages
-- **Appearance** - Theme and display preferences
-- **Notifications** - Notification preferences
-- **Connections** - Social media integrations
-
-### **❌ Error Pages**
-
-- **404** - Page not found
-- **401** - Unauthorized access
-- **403** - Forbidden
-- **500** - Internal server error
-- **Under Maintenance** - Maintenance mode page
-
-### **🌐 Landing Page Template**
-
-- **Hero Section** - Compelling headlines and CTAs
-- **About Section** - Company/product introduction with interactive elements
-- **Features Section** - Product/service highlights with icons
-- **Stats Section** - Key metrics and achievements display
-- **Logo Carousel** - Partner/client logos showcase
-- **Team Section** - Team member profiles and information
-- **Testimonials Section** - Customer reviews and social proof
-- **Blog Section** - Latest blog posts and articles
-- **Pricing Section** - Pricing tables and plans
-- **FAQ Section** - Frequently asked questions with expandable answers
-- **Contact Section** - Contact forms and information
-- **CTA Section** - Call-to-action components
-- **Navigation & Footer** - Complete navigation and footer components
-- **Theme Customizer** - Live theme switching for landing page
-
-### **📄 Additional Pages**
-
-- **FAQ** - Frequently asked questions
-- **Pricing** - Detailed pricing pages
-
----
-
-## 🌟 Why Choose This Template?
-
-### **🆓 Completely Free & Open Source**
-
-- **MIT Licensed** - Use for personal and commercial projects
-- **No restrictions** - Modify, distribute, and sell
-- **Community driven** - Contributions welcome
-
-### **🏢 Business Ready**
-
-- **Production code** - Clean, maintainable, and scalable
-- **Professional design** - Modern UI that looks great
-- **Complete templates** - Dashboard + Landing page included
-
-### **🎨 Advanced Theming**
-
-- **Live customization** - See changes in real-time
-- **tweakcn integration** - Professional theme management
-- **Multiple layouts** - Sidebar variants and options
-
-### **⚡ Developer Friendly**
-
-- **Modern stack** - Latest React, TypeScript, Tailwind CSS
-- **Great DX** - Fast development with Vite
-- **Type safe** - Full TypeScript coverage
-- **Well documented** - Clear code and comments
-
----
-
-## 🚀 Take It Further with ShadcnStore
-
-This free template is just the beginning! **ShadcnStore** offers a complete ecosystem of free & premium UI components, dashboards and templates to accelerate your development:
-
-### **🎁 Available Now**
-
-- **[Premium Blocks](https://shadcnstore.com/blocks)** - 150+ production-ready UI blocks
-  - **Application Blocks** - Advanced dashboard components
-  - **Marketing Blocks** - Landing page sections
-  - **E-commerce Blocks** - Online store components
-  - **Free Blocks** - No-cost starter components
-
-### **🔜 Coming Soon**
-
-- **Premium Templates** - Complete application templates
-- **Landing Page Collection** - Business-ready landing pages
-- **Premium Dashboards** - Advanced dashboard solutions
-
-### **💡 Perfect For**
-
-- **SaaS Applications** - Complete dashboard solutions
-- **Marketing Sites** - Beautiful landing pages
-- **E-commerce** - Online store interfaces
-- **Internal Tools** - Admin panels and dashboards
-
-> **🎯 [Explore ShadcnStore](https://shadcnstore.com)** - Premium blocks, dashboards and templates for modern web applications.
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-### **Ways to Contribute**
-
-- 🐛 **Report bugs** - Found an issue? Let us know!
-- 💡 **Suggest features** - Have ideas for improvements?
-- 🔧 **Submit PRs** - Fix bugs or add new features
-- 📖 **Improve docs** - Help make documentation better
-- ⭐ **Star the repo** - Show your support!
-
-### **Getting Started**
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b my-feature`
-3. Make your changes and test thoroughly
-4. Commit: `git commit -m "Add new feature"`
-5. Push: `git push origin my-feature`
-6. Open a Pull Request
-
-### **Code Style**
-
-- Use **TypeScript** for all new code
-- Follow **ESLint** and **Prettier** configurations
-- Add **type definitions** for props and data
-- Write **clear commit messages**
-- Test your changes in both **Vite** and **Next.js** versions
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-**You are free to:**
-
-- ✅ Use commercially
-- ✅ Modify and distribute
-- ✅ Include in private projects
-- ✅ Sell products built with this template
-
-**Attribution to [ShadcnStore](https://shadcnstore.com) is appreciated but not required.**
-
----
-
-## 🙏 Credits & Acknowledgments
-
-This template is built on the shoulders of amazing open-source projects:
-
-- **[shadcn/ui](https://ui.shadcn.com)** - Beautiful and accessible components
-- **[Radix UI](https://www.radix-ui.com)** - Low-level accessible primitives
-- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
-- **[Lucide Icons](https://lucide.dev)** - Beautiful & consistent icons
-- **[tweakcn](https://tweakcn.com)** - Advanced theme customization
-- **[Recharts](https://recharts.org)** - Composable charting library
-- **[TanStack Table](https://tanstack.com/table)** - Powerful data tables
-
----
-
-## 📞 Support & Community
-
-### **Get Help**
-
-- 📖 **Documentation** - This README covers everything
-- 🐛 **Issues** - [Report bugs](https://github.com/silicondeck/shadcn-dashboard-landing-template/issues)
-- 💬 **Discussions** - [Join conversations](https://github.com/silicondeck/shadcn-dashboard-landing-template/discussions)
-
-### **Stay Connected**
-
-- 🌐 **Website** - [ShadcnStore.com](https://shadcnstore.com)
-- 🐦 **Twitter** - [@shadcnstore](https://twitter.com/shadcnstore)
-- 💬 **Discord** - [Join our server](https://discord.com/invite/XEQhPc9a6p)
-- 📧 **Email** - [hello@shadcnstore.com](mailto:hello@shadcnstore.com)
-
----
+本项目基于 [shadcn-dashboard-landing-template](https://github.com/shadcnstore/shadcn-dashboard-landing-template) 进行二次开发，感谢原作者的出色工作。
 
 <div align="center">
 
-**⭐ Star this repo if it helped you!**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
 
-[![ShadcnStore](https://img.shields.io/badge/Built%20by-ShadcnStore-blue?style=for-the-badge)](https://shadcnstore.com)
+<br/>
 
-_A free & open-source template by **[ShadcnStore](https://shadcnstore.com)** - Premium UI components, dashboards and templates for modern web development._
+如果 Refinex-Admin 对你有所帮助，欢迎点亮 ⭐ **Star** 支持我们，这是对开源最直接的鼓励。
+
+<br/>
+
+**Made with ❤️ by the [Refinex Team](https://www.refinex.cn)**
 
 </div>
